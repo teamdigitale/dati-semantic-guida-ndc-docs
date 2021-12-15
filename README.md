@@ -1,6 +1,9 @@
-# Documento di esempio - Docs Italia
+# Guida per il Catalogo Nazionale Dati per l'interoperabilità semantica - Docs Italia
 
-Descrizione scopo del documento.
+Questo repository contiene la Guida per il Catalogo Nazionale Dati
+per l'interoperabilità semantica in formato sorgente.
+
+L'anteprima elaborata dalla CI [è disponibile qui](https://teamdigitale.github.io/dati-semantic-guida-ndc-docs/).
 
 # Dipendenze
 
