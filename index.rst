@@ -2,10 +2,6 @@
 Documento di esempio - Docs Italia
 ==================================
 
-.. raw:: latex 
-
-   \makeatletter\@openrightfalse
-	\chapter{Introduzione}
 
 Descrizione scopo del documento.
 
@@ -14,5 +10,7 @@ Descrizione scopo del documento.
    :caption: Indice dei contenuti
    :numbered:
 
-   introduzione.rst  
+   ./docs/01-progetto.md
+   ./docs/02-faq.md
+   ./docs/04-guida-sviluppo/index.md  
    

@@ -1,7 +1,10 @@
---- 
-document: 
-  name: "Documento di prova"
-  short_name: doc-proca
-  description: "Descrizione"
+document:
+  name: Catalogo Nazionale Dati per l'Interoperabilità Semantica
+
+  description: |-
+      Catalogo Nazionale Dati per l'Interoperabilità Semantica
   tags:
-    - Docs Italia
+    - interoperabilità
+    - API
+    - semantica
+    - dati
