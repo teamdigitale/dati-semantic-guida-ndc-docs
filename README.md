@@ -8,8 +8,8 @@ L'anteprima elaborata dalla CI [è disponibile qui](https://teamdigitale.github.
 # Dipendenze
 
 Il repository è strutturato per essere compatibile con la piattaforma [Docs
-Italia](https://docs.italia.it/). 
-La piattaforma accetta documenti in formato RST o MD. 
+Italia](https://docs.italia.it/).
+La piattaforma accetta documenti in formato RST o MD.
 Per informazioni sulla struttura di questo repository visita il [repository
 dedicato](https://github.com/italia/docs-italia-starter-kit).
 
@@ -31,6 +31,6 @@ richiesta di nuove funzionalità.
 Inoltre, è possibile aprire delle Pull Request per proporre direttamente delle
 modifiche.
 
-# Licenza 
+# Licenza
 
 Questo documento è rilasciato con una licenza CC BY 4.0.

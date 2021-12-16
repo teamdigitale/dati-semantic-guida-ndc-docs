@@ -9,25 +9,25 @@ Conformemente alle norme ISO/IEC Directives, Part 3 per la stesura dei documenti
 - DOVREBBE o NON DOVREBBE, indicano che le implicazioni devono essere comprese e attentamente pesate prima di scegliere approcci alternativi;
 - PUÒ o POSSONO o l’aggettivo OPZIONALE, indica che il lettore può scegliere di applicare o meno senza alcun tipo di implicazione o restrizione la specifica.
 
-
 ## Registrazione dell'istituzione
+
 TODO:
 
 Come e a chi si registra l'URL del repository?
 Quali altri dati descrittivi dell'istituzione sono necessari? Email?
 Repository
 
-
 ## Contenuto del repository
 
 Ogni repository può contenere una o più risorse semantiche. Quelle supportate sono:
+
 - Ontologie;
 - Vocabolari controllati (e.g., tassonomie, code list, tesauri);
 - Schemi dati in formato OAS3 (OpenAPI Specifications versione 3).
- Future versioni del catalogo possono supportare altre risorse semantiche ed altri formati.
-
+  Future versioni del catalogo possono supportare altre risorse semantiche ed altri formati.
 
 ## Layout del repository
+
 Il repository DEVE contenere i seguenti file:
 publiccode.yaml: contenente tutte le informazioni richieste dal Catalogo del Riuso.
 Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso, e DEVE contenere un file publiccode.yml conforme alle relative Linee Guida col riferimento al codice IPA dell'ente che gestisce il repository.
@@ -44,15 +44,13 @@ it:
     codiceIPA: pcm
 ```
 
-
-
- Tutte le risorse fornite DEVONO risiedere all'interno della directory asset/. 
+Tutte le risorse fornite DEVONO risiedere all'interno della directory asset/.
 Le risorse al di fuori di asset/ non saranno elaborate.
 
 Ogni tipo di asset (ontologie, vocabolari controllati, schemi) DEVE risiedere in una directory specifica con un nome predefinito.
 
-I nomi di file e directory DEVONO corrispondere al pattern [A-ZA-Z0-9 _-.]{, 64}. 
-Gli spazi NON DEVONO essere utilizzati nei file o nei nomi delle directory. 
+I nomi di file e directory DEVONO corrispondere al pattern \[A-ZA-Z0-9 \_-.\]{, 64}.
+Gli spazi NON DEVONO essere utilizzati nei file o nei nomi delle directory.
 Le directory DEVONO essere in minuscolo.
 
 I contenuti degli asset DEVONO essere codificati in UTF-8 o ASCII.
@@ -103,9 +101,9 @@ Le directory Onto2 e Onto3 sono annidate all'interno di un'altra directory, per 
 La directory Onto2 non contiene alcun contenuto ttl. Questo viene segnalato come possibile anomalia, ma non viene considerato un errore e non fa terminare il processamento del repository.
 La directory Onto4 contiene un'altra directory al suo interno, quindi non è considerata come contenitore di ontologia, bensì come directory intermedia nel cammino per altre directory foglia; il file onto4.tll è ignorato e non processato.
 Versionamento
-Le directory degli asset POSSONO essere strutturate con ulteriori sub-directory per supportare il versionamento. Il nome delle sub-directory DEVE corrispondere al pattern: 
+Le directory degli asset POSSONO essere strutturate con ulteriori sub-directory per supportare il versionamento. Il nome delle sub-directory DEVE corrispondere al pattern:
 
-(latest|v?[0-9]+(\.[0-9]+){0,2}). 
+(latest|v?[0-9]+(\.[0-9]+){0,2}).
 
 Una directory contenente  asset NON DEVE contenere contemporaneamente sub-directory versionate con e senza il prefisso v.
 
@@ -243,7 +241,7 @@ Le directory del vocabolario controllato DOVREBBERO contenere una proiezioni in 
 
 I metadati di cui sopra DEVONO essere espressi tramite un @context JSON-LD 1.1.
 
-Di seguito l'esempio di un'alberatura contenente un vocabolario controllato e la sua proiezione in formato CSV. 
+Di seguito l'esempio di un'alberatura contenente un vocabolario controllato e la sua proiezione in formato CSV.
 
 assets/
   controlled-vocabulary/

@@ -1,12 +1,14 @@
 #!/usr/bin/env python
-from argparse import ArgumentParser
-from pathlib import Path
-from base64 import urlsafe_b64encode, b64encode
 import json
-from requests import get
-from tempfile import NamedTemporaryFile
-from subprocess import check_output
 import logging
+from argparse import ArgumentParser
+from base64 import b64encode
+from pathlib import Path
+from subprocess import check_output
+from tempfile import NamedTemporaryFile
+
+from requests import get
+
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger()
 

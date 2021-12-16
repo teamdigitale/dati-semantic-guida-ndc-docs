@@ -13,7 +13,8 @@ settings_discourse_url = "https://forum.italia.it/"
 
 # -- No need to change below here
 
-import sys, os
+import os
+import sys
 
 docs_italia_theme = __import__("docs-italia-theme")
 
@@ -54,8 +55,8 @@ extensions = [
     "sphinxcontrib.discourse",
     "sphinxcontrib.httpspec",
     "sphinxcontrib.mermaid",
-    'sphinx.ext.ifconfig',
-    'sphinx_markdown_tables',
+    "sphinx.ext.ifconfig",
+    "sphinx_markdown_tables",
     "recommonmark",
 ]
 
@@ -107,7 +108,7 @@ exclude_patterns = [
     "LICENSE.md",
     ".venv*",
     ".tox",
-#    "*.md",
+    #    "*.md",
     ".pytest_cache",
 ]
 
@@ -116,16 +117,17 @@ pygments_style = "sphinx"
 
 # -- AutoStructify --------------------------------------------------------
 from recommonmark.transform import AutoStructify
+
+
 def setup(app):
     app.add_config_value(
         "recommonmark_config",
-        {
-            "auto_toc_tree_section": "Contents",
-            "enable_eval_rst": True,
-        },
+        {"auto_toc_tree_section": "Contents", "enable_eval_rst": True},
         True,
     )
     app.add_transform(AutoStructify)
+
+
 #    print("AutoStructify")
 
 
@@ -140,7 +142,7 @@ html_theme_path = [docs_italia_theme.get_html_theme_path()]
 html_theme_options = {
     # This option can be used with docs-italia-theme to customise how the versions "badge" is shown:
     # 'False': default (alabaster) badge | 'True': custom (italia) badge
-    "custom_versions_badge": "True",
+    "custom_versions_badge": "True"
 }
 # -- ReadTheDoc requirements and local template generation---------------------
 
@@ -159,7 +161,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 else:
     # Override default css to get a larger width for ReadTheDoc build
     html_context = {
-        "css_files": ["_static/css/theme.css", "_static/css/badge_only.css",],
+        "css_files": ["_static/css/theme.css", "_static/css/badge_only.css"]
     }
 
 
@@ -242,25 +244,27 @@ latex_elements = {
     # DocsItalia uses Sphinx==1.7 which uses a static latex mapping for characters.
     #  here we extend the list of chars to support further stuff
     #  https://github.com/sphinx-doc/sphinx/blob/1.7/sphinx/writers/latex.py#L119
-    'utf8extra': ('\\ifdefined\\DeclareUnicodeCharacter\n'
-                  ' \\ifdefined\\DeclareUnicodeCharacterAsOptional\n'
-                  '  \\DeclareUnicodeCharacter{"00A0}{\\nobreakspace}\n'
-                  '  \\DeclareUnicodeCharacter{"2500}{\\sphinxunichar{2500}}\n'
-                  '  \\DeclareUnicodeCharacter{"2502}{\\sphinxunichar{2502}}\n'
-                  '  \\DeclareUnicodeCharacter{"2514}{\\sphinxunichar{2514}}\n'
-                  '  \\DeclareUnicodeCharacter{"251C}{\\sphinxunichar{251C}}\n'
-                  '  \\DeclareUnicodeCharacter{"2572}{\\textbackslash}\n'
-                  ' \\else\n'
-                  '  \\DeclareUnicodeCharacter{00A0}{\\nobreakspace}\n'
-                  '  \\DeclareUnicodeCharacter{2500}{\\sphinxunichar{2500}}\n'
-                  '  \\DeclareUnicodeCharacter{2502}{\\sphinxunichar{2502}}\n'
-                  '  \\DeclareUnicodeCharacter{2514}{\\sphinxunichar{2514}}\n'
-                  '  \\DeclareUnicodeCharacter{251C}{\\sphinxunichar{251C}}\n'
-                  '  \\DeclareUnicodeCharacter{0301}{\\sphinxunichar{0301}}\n'
-                  '  \\DeclareUnicodeCharacter{200B}{\\sphinxunichar{200B}}\n'
-                  '  \\DeclareUnicodeCharacter{2572}{\\textbackslash}\n'
-                  ' \\fi\n'
-                  '\\fi'),
+    "utf8extra": (
+        "\\ifdefined\\DeclareUnicodeCharacter\n"
+        " \\ifdefined\\DeclareUnicodeCharacterAsOptional\n"
+        '  \\DeclareUnicodeCharacter{"00A0}{\\nobreakspace}\n'
+        '  \\DeclareUnicodeCharacter{"2500}{\\sphinxunichar{2500}}\n'
+        '  \\DeclareUnicodeCharacter{"2502}{\\sphinxunichar{2502}}\n'
+        '  \\DeclareUnicodeCharacter{"2514}{\\sphinxunichar{2514}}\n'
+        '  \\DeclareUnicodeCharacter{"251C}{\\sphinxunichar{251C}}\n'
+        '  \\DeclareUnicodeCharacter{"2572}{\\textbackslash}\n'
+        " \\else\n"
+        "  \\DeclareUnicodeCharacter{00A0}{\\nobreakspace}\n"
+        "  \\DeclareUnicodeCharacter{2500}{\\sphinxunichar{2500}}\n"
+        "  \\DeclareUnicodeCharacter{2502}{\\sphinxunichar{2502}}\n"
+        "  \\DeclareUnicodeCharacter{2514}{\\sphinxunichar{2514}}\n"
+        "  \\DeclareUnicodeCharacter{251C}{\\sphinxunichar{251C}}\n"
+        "  \\DeclareUnicodeCharacter{0301}{\\sphinxunichar{0301}}\n"
+        "  \\DeclareUnicodeCharacter{200B}{\\sphinxunichar{200B}}\n"
+        "  \\DeclareUnicodeCharacter{2572}{\\textbackslash}\n"
+        " \\fi\n"
+        "\\fi"
+    ),
     # The font size ('10pt', '11pt' or '12pt').
     #'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
@@ -277,7 +281,7 @@ latex_documents = [
         settings_project_name,
         settings_copyright_copyleft,
         "manual",
-    ),
+    )
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -327,7 +331,7 @@ texinfo_documents = [
         settings_project_name,
         settings_project_name,
         "Miscellaneous",
-    ),
+    )
 ]
 
 numfig = True

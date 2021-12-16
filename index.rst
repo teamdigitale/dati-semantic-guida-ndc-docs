@@ -12,5 +12,4 @@ Descrizione scopo del documento.
 
    ./docs/01-progetto.md
    ./docs/02-faq.md
-   ./docs/04-guida-sviluppo/index.md  
-   
+   ./docs/04-guida-sviluppo/index.md
