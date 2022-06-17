@@ -1,19 +1,22 @@
 # FAQ
 
-1. 1. Cos’è l’interoperabilità semantica?
-      L'interoperabilità semantica è la capacità di garantire che il formato e il significato delle informazioni scambiate siano preservati e compresi durante gli scambi tra le parti.
-1. 1. Che cos’è il catalogo nazionale per l’interoperabilità semantica?
-      E’ un catalogo previsto dall’investimento 1.3.1 del Piano Nazionale di Ripresa e Resilienza che contiene ontologie, vocabolari controllati e schemi dati della pubblica amministrazione italiana accessibile a chiunque voglia consultare o utilizzare degli asset semantici per sviluppare servizi digitali semanticamente e sintatticamente coerenti.
-1. 1. A chi è rivolto il catalogo?
-      Il catalogo è rivolto a tutti gli enti della pubblica amministrazione ed ai privati che vogliono ricercare, consultare e utilizzare asset semantici ed in particolare agli sviluppatori di servizi digitali ed agli esperti di semantica.
-1. 1. A cosa serve e quali sono le sue funzionalità?
-      Il catalogo serve a ricercare, consultare e riutilizzare ontologie, vocabolari controllati e schemi dati. In particolare è rivolto a quegli enti che creano servizi digitali basati su API di altri enti per poter riutilizzare direttamente sia i modelli semantici che i vocabolari controllati esposti dal catalogo.
+1. Cos’è l’interoperabilità semantica?
+   L'interoperabilità semantica è la capacità di garantire che il formato e il significato delle informazioni scambiate siano preservati e compresi durante gli scambi tra le parti.
+1. Che cos’è il catalogo nazionale per l’interoperabilità semantica?
+   E’ un catalogo previsto dall’investimento 1.3.1 del Piano Nazionale di Ripresa e Resilienza che contiene ontologie, vocabolari controllati e schemi dati della pubblica amministrazione italiana accessibile a chiunque voglia consultare o utilizzare degli asset semantici per sviluppare servizi digitali semanticamente e sintatticamente coerenti.
+1. A chi è rivolto il catalogo?
+   Il catalogo è rivolto a tutti gli enti della pubblica amministrazione ed ai privati che vogliono ricercare, consultare e utilizzare asset semantici ed in particolare agli sviluppatori di servizi digitali ed agli esperti di semantica.
+1. A cosa serve e quali sono le sue funzionalità?
+   Il catalogo serve a ricercare, consultare e riutilizzare ontologie, vocabolari controllati e schemi dati. In particolare è rivolto a quegli enti che creano servizi digitali basati su API di altri enti per poter riutilizzare direttamente sia i modelli semantici che i vocabolari controllati esposti dal catalogo.
 
 Le sue funzionalità principali sono:
-Harvesting: automaticamente scarica gli asset semantici dai repository ufficiali pubblicati dai vari enti;
-Ricerca: permette di ricercare e consultare assets semantici tramite una semplice web UI;
-Consultazione: espone API REST per la ricerca e per la lettura dei vocabolari controllati ed espone uno SPARQL endpoint per la ricerca di ontologie.
-Inoltre, è ancora in fase di sviluppo una funzionalità di validazione della semantica e della sintassi delle API REST rispetto ai contenuti semantici pubblicati nel catalogo. Questa funzionalità sarà rilasciata entro Giugno 2022.
+
+- Harvesting: automaticamente scarica gli asset semantici dai repository ufficiali pubblicati dai vari enti;
+- Ricerca: permette di ricercare e consultare assets semantici tramite una semplice web UI;
+- Consultazione: espone API REST per la ricerca e per la lettura dei vocabolari controllati ed espone uno SPARQL endpoint per la ricerca di ontologie.
+
+Inoltre, è ancora in fase di sviluppo una funzionalità di validazione della semantica e della sintassi delle API REST rispetto ai contenuti semantici pubblicati nel catalogo.
+Questa funzionalità sarà rilasciata entro Giugno 2022.
 
 1. Quali problemi risolve il catalogo?
    Il catalogo risolve dei problemi di scalabilità, riuso, interpretazione, cultura e creazione di nuovi servizi legati all’interoperabilità semantica.

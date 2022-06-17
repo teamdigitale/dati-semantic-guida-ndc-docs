@@ -29,8 +29,10 @@ Ogni repository può contenere una o più risorse semantiche. Quelle supportate 
 ## Layout del repository
 
 Il repository DEVE contenere i seguenti file:
-publiccode.yaml: contenente tutte le informazioni richieste dal Catalogo del Riuso.
-Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso, e DEVE contenere un file publiccode.yml conforme alle relative Linee Guida col riferimento al codice IPA dell'ente che gestisce il repository.
+
+- publiccode.yaml: contenente tutte le informazioni richieste dal Catalogo del Riuso.
+
+Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso, e DEVE contenere un file `publiccode.yml` conforme alle relative Linee Guida col riferimento al codice IPA dell'ente che gestisce il repository.
 Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
 
 ```yaml
@@ -44,8 +46,8 @@ it:
     codiceIPA: pcm
 ```
 
-Tutte le risorse fornite DEVONO risiedere all'interno della directory asset/.
-Le risorse al di fuori di asset/ non saranno elaborate.
+Tutte le risorse fornite DEVONO risiedere all'interno della directory `asset/`.
+Le risorse al di fuori di `asset/` non saranno elaborate.
 
 Ogni tipo di asset (ontologie, vocabolari controllati, schemi) DEVE risiedere in una directory specifica con un nome predefinito.
 
@@ -70,7 +72,7 @@ Le directory degli asset POSSONO contenere file di documentazione in formato Mar
 Esempi
 A titolo di esempio, si consideri un repository che abbia la struttura delle directory come quella di seguito.
 
-```
+```bash
 ┌─ publiccode.yaml
 ┌─ assets/ontologieOntologie/
 │  ├─ Onto1/
@@ -94,7 +96,7 @@ A titolo di esempio, si consideri un repository che abbia la struttura delle dir
 Il repository non riporta una directory per gli schemi, quindi non contribuisce con schemi OAS3. Questo non rappresenta un problema e non è considerato un errore durante l'harvesting.
 Nella radice (così come dentro le directory ontologies e other) sono presenti dei file di testo informativi che il provider ha ritenuto di voler aggiungere. Questo non rappresenta un problema, ma i file sono semplicemente ignorati.
 Per quanto riguarda la directory Onto1:
-essa non contiene sotto-directoryqaltre cartelle al suo interno, ed è quindi una cartella foglia. Quindi viene processata come potenzialmente contenente un'ontologia.
+essa non contiene sotto-directoryqaltre directory al suo interno, ed è quindi una cartella foglia. Quindi viene processata come potenzialmente contenente un'ontologia.
 contiene un file RDF/Turtle che verrà processato correttamente (di seguito le specifiche interne ai file delle ontologie)
 contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML. Questo non rappresenta un problema e il file xml viene ignorato.
 Le directory Onto2 e Onto3 sono annidate all'interno di un'altra directory, per motivi di organizzazione logica del provider. Questo non rappresenta un problema e le directory verranno navigate. Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
@@ -108,51 +110,75 @@ Le directory degli asset POSSONO essere strutturate con ulteriori sub-directory 
 Una directory contenente  asset NON DEVE contenere contemporaneamente sub-directory versionate con e senza il prefisso v.
 
 Sei esempi di path validi per le sub-directory:
+
+```
 assets/ontologies/MyOntology/202101/
 assets/ontologies/MyOntology/1.3/
 assets/ontologies/MyOntology/4.5.6/
 assets/ontologies/MyOntology/v1.3/
 assets/ontologies/MyOntology/v4.5.6/
 assets/schemas/Person/latest/
+```
 
 Sei esempi di path non validi
+
+```
 assets/ontologies/MyOntology/v.5
 assets/ontologies/MyOntology/4.3.
 assets/ontologies/MyOntology/v1..5
 assets/ontologies/MyOntology/versione 2.9
 v1.5-beta
+```
 
 Ordinamento delle versioni
+
 Il Catalogo elabora solo:
-la directory latest se presente;
-La directory con l'ultima versione, secondo l'ordinamento indicato dal semantic versioning.
+
+- la directory latest se presente;
+- la directory con l'ultima versione, secondo l'ordinamento indicato dal semantic versioning.
 
 Nota: Il versionamento si applica solamente alle Ontologie.
+
 All'interno di un repository è possibile mantenere versioni precedenti delle ontologie per tenere traccia di uno storico, al di là del supporto che fornisce lo strumento git.
-L'harvesting delle ontologie considera che le cartelle che contengono ontologie possano essere versionate, non i singoli file. Questo vale anche per cartelle che contengono altre cartelle.
-In un qualsiasi punto della gerarchia delle cartelle che occorrono all'interno della cartella Ontologie, qualora vi siano più cartelle i cui nomi rappresentino delle versioni, la logica di harvesting ignorerà tutte le cartelle precedenti all'ultima, considerandole obsolete.
+L'harvesting delle ontologie considera che le directory che contengono ontologie possano essere versionate, non i singoli file. Questo vale anche per le sotto-directory.
+In un qualsiasi punto della gerarchia delle directory che occorrono all'interno della cartella Ontologie, qualora vi siano più directory i cui nomi rappresentino delle versioni, la logica di harvesting ignorerà tutte le directory precedenti all'ultima, considerandole obsolete.
+
 Come si rappresentano le versioni
-I nomi delle cartelle, per essere considerate tabelle di versione, devono avere un nome che segue il seguente pattern:
-v?[0-9]+(\.[0-9]+){0,2}un carattere iniziale v, opzionale.
+
+I nomi delle directory, per essere considerate tabelle di versione, devono avere un nome che segue il seguente pattern:
+v?[0-9]+(\.[0-9]+){0,2}
+un carattere iniziale v, opzionale.
 un numero di versione
 opzionalmente una serie di coppie punto (.) seguito da un altro numero, per indicare sotto versioni.
 Come unica eccezione al pattern appena descritto, è supportato il nome latest, che rappresenta la versione più recente confrontata rispetto a qualsiasi altra versione numerata.
-A titolo di esempio, sono validi nomi di cartelle per le versioni:
+A titolo di esempio, sono validi nomi di directory per le versioni:
+
+```
 v1, v2 ma anche semplicemente 1 e 2
 v1.3, v4.5.6 e anche 1.3, 4.5.6
+```
+
 Non sono validi
+
+```
 v.5
 4.3.
 v1..5
 versione 2.9
 v1.5-beta
-Ordinamento delle versioni
+```
+
+## Ordinamento delle versioni
+
 latest è sempre più recente di qualsiasi altra versione
 Tra due versioni espresse come forme numeriche (con punti), si segue l'ordinamento comunemente condiviso per cui i numeri a sinistra sono i più significativi
 Qualora due versioni abbiano lunghezza diversa ma una sia prefisso dell'altra, la più lunga viene considerata più recente; ad esempio v4.5 è considerata obsoleta in presenza di v4.5.2.
 Dove possono trovarsi le directory versionate
 La directory versionate possono trovarsi in ogni punto dell'alberatura della directory delle ontologie, discendendo verso le foglie della struttura gerarchica.
+
 Sono esempi validi:
+
+```bash
 ┌─ Ontologie/
 │  ├─ Onto1/
 │  │  ├─ latest/
@@ -168,9 +194,12 @@ Sono esempi validi:
 │  │     └─ onto2.ttl
 │  └─ ...
 └─ ...
+```
 
 Nel caso della struttura precedente, ogni ontologia ha diverse versioni al proprio interno.
 È altresì valido un approccio in cui si strutturano in versioni insiemi di directory di ontologie, come segue:
+
+```bash
 ┌─ Ontologie/
 │  ├─ latest/
 │  │  ├─ Onto1/
@@ -186,10 +215,13 @@ Nel caso della struttura precedente, ogni ontologia ha diverse versioni al propr
 │  │     └─ onto3.ttl
 │  └─ ...
 └─ ...
+```
 
 Si noti, per esempio, che questo permette di rimuovere dal catalogo anche versioni precedenti di ontologie che, nella versione più recente, non si vogliono più pubblicare. Nell'esempio precedente, infatti, il file onto3.ttl non sarebbe processato, poiché durante la navigazione delle directory, la directory v0.8 è saltata perché considerata come resa obsoleta dalla presenza della sorella latest.
 Qualora fosse necessario versionare gruppi di ontologie che variano più frequentemente nel tempo, mentre mantenerne stabili altre, è possibile raggruppare in versioni solo quelle che variano. Durante la navigazione, infatti, sono ignorate le directory che contengono versioni obsolete di contenuti aggiornati, mentre le directory i cui nomi non rappresentano versioni sono processari normalmente.
 Il seguente esempio illustra questa possibilità (i contenuti delle directory foglia sono omessi per brevità):
+
+```bash
 ┌─ Ontologie/
 │  ├─ latest/
 │  │  ├─ Onto1/
@@ -201,6 +233,7 @@ Il seguente esempio illustra questa possibilità (i contenuti delle directory fo
 │  ├─ Onto4/
 │  └─ ...
 └─ ...
+```
 
 In questo esempio le ontologie contenute in Onto3 e Onto4 sono stabili, per cui non vale la pena di replicarle in diverse directory. Diversamente le ontologie in Onto1 e Onto2 sono aggiornate e, plausibilmente, vengono aggiornate di pari passo perché hanno una qualche correlazione; può valere la pena evolvere la loro versione parallelamente.
 
@@ -209,7 +242,8 @@ Le directory degli asset NON DEVONO contenere risorse RDF in altre serializzazio
 
 Questi file POSSONO essere inseriti nello stesso repository al di fuori della directory asset/; In questo caso, essi DOVREBBERO essere generati automaticamente dai file originali in asset/.
 
-Ontologie
+## Ontologie
+
 Le ontologie pubblicate DEVONO essere conformi alle relative Linee guida nazionali.
 
 Le ontologie DEVONO essere pubblicate solo in formato RDF/Turtle (media-type text/turtle) e l'estensione del file DEVE essere .ttl.
@@ -218,6 +252,7 @@ Le ontologie DEVONO utilizzare delle directory versionate come descritto sopra.
 
 Esempio di alberatura contenente i file che definiscono un'ontologia. In questo caso viene processata solo la directory latest/. Nell'esempio, l'alberatura contiene una serie di file di documentazione opzionali che non vengono processati.
 
+```bash
 assets/
   ontologies/
     MyOntology/
@@ -230,9 +265,10 @@ assets/
       latest/
         MyOntology.ttl
         LATEST.md
+```
 
+## Vocabolari controllati
 
-Vocabolari controllati
 I vocabolari controllati pubblicati DEVONO essere conformi agli associati Linee guida nazionali.
 
 I vocabolari controllati DEVONO essere pubblicati solo in formato RDF/Turtle (media-type text/turtle) e l'estensione del file DEVE essere .ttl.
@@ -250,17 +286,24 @@ assets/
       README.md
       my-codelist.ttl
       my-codelist.csv
-Schemi
+
+## Schemi
+
 Gli schemi pubblicati devono essere conformi agli associati Linee guida nazionali.
 
-Gli schemi per le API dell'OAS3 devono essere pubblicati in formato OpenAPI3, Incorporato nella sezione #/components/schema del file OAS. L'estensione del file DEVE essere .oas3.yaml.
+Gli schemi per le API dell'OAS3 devono essere pubblicati in formato OpenAPI3, incorporato nella sezione #/components/schema del file OAS.
+L'estensione del file DEVE essere .oas3.yaml.
 
 In futuro potranno essere supportati altri tipi di schemi.
 
-Il file YAML DOVREBBE contenere i riferimenti semantici attraverso il campo custom x-jsonld-context conforme alle indicazioni contenute in JSON-LD 1.1.
+Il file YAML DOVREBBE contenere i riferimenti semantici attraverso:
 
-Un esempio di file OAS3 metadatato con il campo x-jsonld-context:
+- il campo custom `x-jsonld-context` contenente un `@context` JSON-LD conforem alle indicazioni contenute in JSON-LD 1.1;
+- il campo custom `x-jsonld-type` contenente il riferimento ad un `rdf:type`.
 
+Un esempio di file OAS3 metadatato con il campo `x-jsonld-context`:
+
+```yaml
 openapi: 3.0.1
 ...
 components:
@@ -275,13 +318,16 @@ components:
         nome_proprio: {type: string, ..}
         cognome: {type: string, ..}
       ...
+```
 
-I metadati associati DEVONO essere pubblicati solo in formato RDF/Turtle (media-type text/turtle) e l'estensione del file DEVE essere .ttl. Questo file DOVREBBE essere generato automaticamente dal file YAML.
+I metadati associati DEVONO essere pubblicati solo in formato RDF/Turtle (media type `text/turtle`) e l'estensione del file DEVE essere `.ttl`.
+Questo file DOVREBBE essere generato automaticamente dal documento OAS3.
 
-Gli schemi forniti POSSONO essere verificati sintatticamente utilizzando l'OpenAPI Checker.
+Gli schemi forniti POSSONO essere verificati sintatticamente utilizzando l'[OpenAPI Checker](https://github.com/italia/api-oas-checker).
 
 Di seguito l'esempio di un'alberatura contenente uno schema
 
+```bash
 assets/
   schemas/
     Person/
@@ -289,8 +335,10 @@ assets/
       README.md
       person.oas3.yaml
       person.index.ttl
+```
 
-Controlli automatici
+## Controlli automatici
+
 Il repository DOVREBBE utilizzare strumenti di continuous integratio come github-actions o gitlab-ci per verificare la consistenza dei contenuti.
 
 
