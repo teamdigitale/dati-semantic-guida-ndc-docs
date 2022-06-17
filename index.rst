@@ -1,9 +1,10 @@
 ==================================
-Documento di esempio - Docs Italia
+Guida all´uso del Catalogo Nazionale Dati per l´interoperabilità semantica - Docs Italia
 ==================================
 
 
-Descrizione scopo del documento.
+Questo document descrive come utilizzare e pubblicare informazioni
+sul Catalogo Nazionale Dati per l´interoperabilità semantica.
 
 .. toctree::
    :maxdepth: 3

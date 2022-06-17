@@ -292,5 +292,3 @@ assets/
 
 Controlli automatici
 Il repository DOVREBBE utilizzare strumenti di continuous integratio come github-actions o gitlab-ci per verificare la consistenza dei contenuti.
-
-
