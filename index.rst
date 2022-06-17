@@ -1,6 +1,6 @@
-==================================
+========================================================================================
 Guida all´uso del Catalogo Nazionale Dati per l´interoperabilità semantica - Docs Italia
-==================================
+========================================================================================
 
 
 Questo document descrive come utilizzare e pubblicare informazioni
