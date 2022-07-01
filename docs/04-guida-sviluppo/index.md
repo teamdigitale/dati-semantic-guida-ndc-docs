@@ -9,6 +9,24 @@ Conformemente alle norme ISO/IEC Directives, Part 3 per la stesura dei documenti
 - DOVREBBE o NON DOVREBBE, indicano che le implicazioni devono essere comprese e attentamente pesate prima di scegliere approcci alternativi;
 - PUÒ o POSSONO o l’aggettivo OPZIONALE, indica che il lettore può scegliere di applicare o meno senza alcun tipo di implicazione o restrizione la specifica.
 
+I termini Erogatore, Fruitore, e-service, API sono da intendersi ai sensi
+del Modello di interoperabilità delle Pubbliche Amministrazioni composto
+dalle Linee Guida emanate da Agid.
+
+Il documento descrive l'interfaccia di processamento dei repository semantici
+pubblicati dai vari Erogatori.
+
+Il termine "harvesting" identifica il processo di raccolta funzionale alla pubblicazione su NDC
+delle informazioni contenute nei repository semantici.
+Nel quadro dell'harvesting, si adottano i seguenti termini:
+
+* "ERRORE" indica che l'harvesting è terminato in maniera anomala;
+* "WARNING" indica che l'harvesting ha notificato un messaggio di allerta
+  ma il processamento non è terminato;
+* "IGNORATA" indica che l'harvesting non ha processato una specifica
+  risorsa (e.g. un file, una directory) ma che ciò non costituisce
+  né un ERRORE né un WARNING.
+
 ## Registrazione dell'istituzione
 
 TODO:
@@ -19,7 +37,9 @@ Repository
 
 ## Contenuto del repository
 
-Ogni repository può contenere una o più risorse semantiche. Quelle supportate sono:
+Ogni repository può contenere una o più risorse semantiche
+che verranno elaborate dal NDC.
+Quelle supportate sono:
 
 - Ontologie;
 - Vocabolari controllati (e.g., tassonomie, code list, tesauri);
@@ -28,11 +48,16 @@ Ogni repository può contenere una o più risorse semantiche. Quelle supportate 
 
 ## Layout del repository
 
+Per essere correttamente processato, il repository deve rispettare una serie di regole
+che rendono il processamento semplice ed efficiente.
+
 Il repository DEVE contenere i seguenti file:
 
 - publiccode.yaml: contenente tutte le informazioni richieste dal Catalogo del Riuso.
 
-Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso, e DEVE contenere un file `publiccode.yml` conforme alle relative Linee Guida col riferimento al codice IPA dell'ente che gestisce il repository.
+Un repository è un oggetto pubblico indicizzato dal Catalogo del Riuso,
+e DEVE contenere un file `publiccode.yml` conforme alle relative Linee Guida
+col riferimento al codice IPA dell'ente che gestore.
 Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
 
 ```yaml
@@ -46,35 +71,41 @@ it:
     codiceIPA: pcm
 ```
 
-Tutte le risorse fornite DEVONO risiedere all'interno della directory `asset/`.
+Tutte le risorse fornite DEVONO risiedere nella directory `asset/`.
 Le risorse al di fuori di `asset/` non saranno elaborate.
 
-Ogni tipo di asset (ontologie, vocabolari controllati, schemi) DEVE risiedere in una directory specifica con un nome predefinito.
+Ogni tipo di asset (ontologie, vocabolari controllati, schemi)
+DEVE risiedere in una directory specifica con un nome predefinito.
 
-I nomi di file e directory DEVONO corrispondere al pattern \[A-ZA-Z0-9 \_-.\]{, 64}.
-Gli spazi NON DEVONO essere utilizzati nei file o nei nomi delle directory.
-Le directory DEVONO essere in minuscolo.
+I nomi di file e directory DEVONO corrispondere al pattern :code:`[A-Za-z0-9_.-]{, 64}`,
+non possono quindi contenere spazi.
+Le directory associate ai dataset DOVREBBERO essere in minuscolo.
 
-I contenuti degli asset DEVONO essere codificati in UTF-8 o ASCII.
+I contenuti degli asset DEVONO essere codificati in UTF-8.
 
 Ogni risorsa DEVE risiedere sotto una sua directory specifica dipendente dalla sua tipologia:
 
-Ontologie: in assets/ontologies/;
-Vocabolari controllati: in assets/controlled-vocabularies/;
-Schemi: in assets/schemas/.
+* Ontologie: in :code:`assets/ontologies/`;
+* Vocabolari controllati: in :code:`assets/controlled-vocabularies/`;
+* Schemi: in assets/schemas/.
 
 Ad esempio:
 il percorso dell'ontologia MyOntology sarà assets/ontologies/MyOntology/
 il percorso del Vocabolario my-vocabulary sarà assets/controlled-vocabularies/my-vocabulary/
 
-File di documentazione
-Le directory degli asset POSSONO contenere file di documentazione in formato Markdown. L'estensione del file DEVE essere .md (ad esempio README.md). Questi file non saranno elaborati.
-Esempi
+## Documentazione
+
+Le directory degli asset POSSONO contenere file di documentazione in formato Markdown.
+L'estensione del file DEVE essere .md (ad esempio README.md).
+Questi file vengono ignorati durante il processamento da parte di NDC.
+
+## Esempi
+
 A titolo di esempio, si consideri un repository che abbia la struttura delle directory come quella di seguito.
 
 ```bash
 ┌─ publiccode.yaml
-┌─ assets/ontologieOntologie/
+┌─ assets/ontologies/
 │  ├─ Onto1/
 │  │  ├─ onto1.ttl
 │  │  └─ onto1.rdf
@@ -85,25 +116,44 @@ A titolo di esempio, si consideri un repository che abbia la struttura delle dir
 │  │  │  └─ onto3.ttl
 │  ├─ Onto4/
 │  │  ├─ Other/
-│  │  │  └─ temp.txt
+│  │  │  └─ temp.md
 │  │  └─ onto4.ttl
-│  └─ notes.txt
-├─ assets/vocabolari-controllatiVocabolariControllati/
+│  └─ notes.md
+├─ assets/controlled-vocabularies/
 │  └─ ...
 └─ README.md
 ```
 
-Il repository non riporta una directory per gli schemi, quindi non contribuisce con schemi OAS3. Questo non rappresenta un problema e non è considerato un errore durante l'harvesting.
-Nella radice (così come dentro le directory ontologies e other) sono presenti dei file di testo informativi che il provider ha ritenuto di voler aggiungere. Questo non rappresenta un problema, ma i file sono semplicemente ignorati.
+Il repository non contiene schemi, quindi NDC non aggiungerà schemi al catalogo durante l'harvesting.
+Questo non rappresenta un problema e non è considerato un errore;
+dei file informativi (e.g. README.md, notes.md) sono presenti sia nella radice che 
+nelle sottodirectory: questi file vengono ignorati durante l'harversting.
+
 Per quanto riguarda la directory Onto1:
-essa non contiene sotto-directoryqaltre directory al suo interno, ed è quindi una cartella foglia. Quindi viene processata come potenzialmente contenente un'ontologia.
-contiene un file RDF/Turtle che verrà processato correttamente (di seguito le specifiche interne ai file delle ontologie)
-contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML. Questo non rappresenta un problema e il file xml viene ignorato.
-Le directory Onto2 e Onto3 sono annidate all'interno di un'altra directory, per motivi di organizzazione logica del provider. Questo non rappresenta un problema e le directory verranno navigate. Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
-La directory Onto2 non contiene alcun contenuto ttl. Questo viene segnalato come possibile anomalia, ma non viene considerato un errore e non fa terminare il processamento del repository.
-La directory Onto4 contiene un'altra directory al suo interno, quindi non è considerata come contenitore di ontologia, bensì come directory intermedia nel cammino per altre directory foglia; il file onto4.tll è ignorato e non processato.
-Versionamento
-Le directory degli asset POSSONO essere strutturate con ulteriori sub-directory per supportare il versionamento. Il nome delle sub-directory DEVE corrispondere al pattern:
+
+* essa non contiene sotto-directory né altre directory al suo interno
+  ed è quindi una cartella foglia.
+  Quindi viene processata come potenzialmente contenente un'ontologia;
+* contiene un file RDF/Turtle che verrà processato;
+* contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
+  Poiché NDC processa solo i file di tipo text/turtle con estensione .ttl, questo file viene ignorato.
+
+L'Erogatore ha organizzato logicamente le directory Onto2 e Onto3
+come subdirectory di Sottoargomento.
+Questo non rappresenta un problema e le directory vengono harvestate.
+Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
+
+La directory Onto2 non contiene file .ttl: questo viene segnalato solamente come WARNING.
+
+La directory Onto4 ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
+bensì come directory intermedia nel cammino per altre directory foglia:
+il file onto4.tll è ignorato e non processato.
+
+## Versionamento
+
+Le directory degli asset POSSONO essere avere sub-directory 
+per supportare il versionamento. 
+Il nome delle sub-directory DEVE corrispondere al pattern:
 
 (latest|v?[0-9]+(\.[0-9]+){0,2}).
 

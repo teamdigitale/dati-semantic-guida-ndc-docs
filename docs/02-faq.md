@@ -40,8 +40,16 @@ Questa funzionalità sarà rilasciata entro Giugno 2022.
 
 1. Il catalogo nazionale è open source? Come posso contribuire al suo sviluppo?
    Si, le componenti di frontend e backend del catalogo sono open source ed accessibili nei seguenti repositories:
-   https://github.com/teamdigitale/dati-semantic-backend
-   https://github.com/teamdigitale/dati-semantic-frontend
+
+   * https://github.com/teamdigitale/dati-semantic-backend
+   * https://github.com/teamdigitale/dati-semantic-frontend
+   * https://github.com/teamdigitale/dati-semantic-kubernetes
+
+
+   Trovi anche repository per la documentazione e la pubblicazione di asset semantici:
+
+   * https://github.com/teamdigitale/dati-semantic-cookiecutter
+   * https://github.com/teamdigitale/dati-semantic-guida-ndc-docs
 
 Puoi contribuire al miglioramento del catalogo aprendo una issue in uno dei repository menzionati.
 
