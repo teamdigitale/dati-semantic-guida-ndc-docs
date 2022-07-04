@@ -90,13 +90,13 @@ Ad esempio:
 - il percorso dell'ontologia `MyOntology` sarà `assets/ontologies/MyOntology/`;
 - il percorso del vocabolario `my-vocabulary` sarà `assets/controlled-vocabularies/my-vocabulary/`.
 
-## Documentazione
+### File di Documentazione
 
 Le directory degli asset POSSONO contenere file di documentazione in formato Markdown.
 L'estensione del file DEVE essere .md (ad esempio README.md).
 Questi file vengono ignorati durante il processamento da parte di NDC.
 
-## Esempi
+### Esempi
 
 Ad esempio, analizziamo un repository strutturato come segue.
 
@@ -140,11 +140,11 @@ Per quanto riguarda la directory Onto1:
   Poiché NDC processa solo i file di tipo text/turtle con estensione .ttl, questo file viene ignorato.
 
 L'Erogatore ha organizzato logicamente le directory `Onto2` e `Onto3`
-come subdirectory di Sottoargomento.
+come subdirectory di `Sottoargomento`.
 Questo non rappresenta un problema e le directory vengono harvestate.
 Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
 
-La directory `Onto2` non contiene file .ttl: questo viene segnalato solamente come WARNING.
+La directory `Onto2` non contiene file `.ttl`: questo viene segnalato solamente come WARNING.
 
 La directory `Onto4` ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
 ma come directory intermedia nel cammino per altre directory foglia:
@@ -263,9 +263,12 @@ Le ontologie pubblicate DEVONO essere conformi alle relative Linee guida naziona
 Le ontologie DEVONO essere pubblicate solo in formato RDF/Turtle (media type text/turtle)
  e l'estensione del file DEVE essere .ttl.
 
-Le ontologie DEVONO utilizzare delle directory versionate come descritto sopra.
+Le ontologie DEVONO utilizzare delle directory versionate come descritto in [versionamento].
 
-Esempio di alberatura contenente i file che definiscono un'ontologia. In questo caso viene processata solo la directory latest/.
+### Esempi
+
+Esempio di alberatura contenente i file che definiscono un'ontologia.
+In questo caso viene processata solo la directory `latest/`.
 Nell'esempio, l'alberatura contiene una serie di file di documentazione opzionali che non vengono processati.
 
 ```bash
@@ -298,8 +301,12 @@ L'estensione del file DEVE essere .csv.
 
 I metadati di cui sopra DEVONO essere espressi tramite un `@context` JSON-LD 1.1.
 
-Di seguito l'esempio di un'alberatura contenente un vocabolario controllato e la sua proiezione in formato CSV.
+### Esempi
 
+Di seguito l'esempio di un'alberatura contenente
+un vocabolario controllato e la sua proiezione in formato CSV.
+
+```bash
 assets/
   controlled-vocabulary/
     my-codelist/
@@ -307,6 +314,7 @@ assets/
       README.md
       my-codelist.ttl
       my-codelist.csv
+```
 
 ### Versionamento
 
@@ -334,6 +342,8 @@ attraverso:
 
 - il campo custom `x-jsonld-context` contenente un `@context` JSON-LD conforme alle indicazioni contenute in JSON-LD 1.1;
 - il campo custom `x-jsonld-type` contenente il riferimento ad un `rdf:type`.
+
+### Esempi
 
 Un esempio di file OAS3 metadatato con i campi `x-jsonld-context` e `x-jsonld-type`:
 
@@ -372,6 +382,10 @@ assets/
       person.oas3.yaml
       person.index.ttl
 ```
+
+### Versionamento
+
+TBD
 
 ## Controlli automatici
 
