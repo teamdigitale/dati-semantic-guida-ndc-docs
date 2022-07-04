@@ -51,13 +51,9 @@ Quelle supportate sono:
 Per essere correttamente processato, il repository deve rispettare una serie di regole
 che rendono il processamento semplice ed efficiente.
 
-Il repository DEVE contenere i seguenti file:
-
-- publiccode.yaml: contenente tutte le informazioni richieste dal Catalogo del Riuso.
-
 Un repository è un oggetto pubblico indicizzato dal Catalogo del Riuso,
-e DEVE contenere un file `publiccode.yml` conforme alle relative Linee Guida
-col riferimento al codice IPA dell'ente che gestore.
+e DEVE contenere il file `publiccode.yml` conforme alle relative Linee Guida [PUBLICCODE_YML]
+col riferimento al Codice `IPA`_ dell'Erogatore.
 Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
 
 ```yaml
@@ -85,13 +81,14 @@ I contenuti degli asset DEVONO essere codificati in UTF-8.
 
 Ogni risorsa DEVE risiedere sotto una sua directory specifica dipendente dalla sua tipologia:
 
-* Ontologie: in `assets/ontologies/`;
-* Vocabolari controllati: in `assets/controlled-vocabularies/`;
-* Schemi: in assets/schemas/.
+- Ontologie: in `assets/ontologies/`;
+- Vocabolari controllati: in `assets/controlled-vocabularies/`;
+- Schemi: in `assets/schemas/`.
 
 Ad esempio:
-il percorso dell'ontologia MyOntology sarà assets/ontologies/MyOntology/
-il percorso del Vocabolario my-vocabulary sarà assets/controlled-vocabularies/my-vocabulary/
+
+- il percorso dell'ontologia `MyOntology` sarà `assets/ontologies/MyOntology/`;
+- il percorso del vocabolario `my-vocabulary` sarà `assets/controlled-vocabularies/my-vocabulary/`.
 
 ## Documentazione
 
@@ -101,11 +98,13 @@ Questi file vengono ignorati durante il processamento da parte di NDC.
 
 ## Esempi
 
-A titolo di esempio, si consideri un repository che abbia la struttura delle directory come quella di seguito.
+Ad esempio, analizziamo un repository strutturato come segue.
 
 ```bash
-┌─ publiccode.yaml
-┌─ assets/ontologies/
+┌─ README.md
+├─ publiccode.yaml
+|
+├─ assets/ontologies/
 │  ├─ Onto1/
 │  │  ├─ onto1.ttl
 │  │  └─ onto1.rdf
@@ -119,23 +118,25 @@ A titolo di esempio, si consideri un repository che abbia la struttura delle dir
 │  │  │  └─ temp.md
 │  │  └─ onto4.ttl
 │  └─ notes.md
-├─ assets/controlled-vocabularies/
-│  └─ ...
-└─ README.md
+|
+└─ assets/controlled-vocabularies/
+   └─ ...
+
 ```
 
 Il repository non contiene schemi, quindi NDC non aggiungerà schemi al catalogo durante l'harvesting.
-Questo non rappresenta un problema e non è considerato un errore;
-dei file informativi (e.g. README.md, notes.md) sono presenti sia nella radice che
-nelle sottodirectory: questi file vengono ignorati durante l'harversting.
+Questo non rappresenta un problema e non è considerato un errore.
+
+I file informativi (e.g. README.md, notes.md) presenti sia nella radice che
+nelle sottodirectory vengono semplicemente ignorati durante l'harversting.
 
 Per quanto riguarda la directory Onto1:
 
-* essa non contiene sotto-directory né altre directory al suo interno
+- essa non contiene sotto-directory né altre directory al suo interno
   ed è quindi una cartella foglia.
   Quindi viene processata come potenzialmente contenente un'ontologia;
-* contiene un file RDF/Turtle che verrà processato;
-* contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
+- contiene un file RDF/Turtle che verrà processato;
+- contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
   Poiché NDC processa solo i file di tipo text/turtle con estensione .ttl, questo file viene ignorato.
 
 L'Erogatore ha organizzato logicamente le directory `Onto2` e `Onto3`
@@ -379,3 +380,6 @@ come github-actions o gitlab-ci per verificare la consistenza dei contenuti.
 
 E' possibile utilizzare il repository https://github.com/teamdigitale/dati-semantic-cookiecutter
 come template per i repository semantici.
+
+.. [PUBLICCODE_YML]: https://docs.italia.it/italia/developers-italia/publiccodeyml/
+.. _IPA: https://indicepa.gov.it
