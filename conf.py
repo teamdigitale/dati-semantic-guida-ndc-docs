@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_project_name = u"Catalogo Nazionale Dati per l'Interoperabilità Semantica"
+settings_project_name = "Catalogo Nazionale Dati per l'Interoperabilità Semantica"
 settings_copyright_copyleft = "Dipartimento per la Trasformazione Digitale"
 settings_editor_name = "Dipartimento per la Trasformazione Digitale"
 settings_doc_version = "Bozza"
@@ -57,7 +57,7 @@ extensions = [
     "sphinxcontrib.mermaid",
     "sphinx.ext.ifconfig",
     "sphinx_markdown_tables",
-    "recommonmark",
+    "myst_parser",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -266,9 +266,9 @@ latex_elements = {
         "\\fi"
     ),
     # The font size ('10pt', '11pt' or '12pt').
-    #'pointsize': '10pt',
+    # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    #'preamble': '',
+    # 'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

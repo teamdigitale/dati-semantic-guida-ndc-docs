@@ -85,7 +85,7 @@ e migliora la qualità complessiva dei dati.
 Ad esempio, è possible processare il vocabolario degli Stati ed erogarlo sotto forma di CSV,
 JSON o addirittura JSON Schema, in modo che possano essere utilizzato in delle API o per un modulo online.
 
-```mermaid
+```{mermaid}
     C4Context
       title System Context diagram for Internet Banking System
       Enterprise_Boundary(s0, "Semantics") {
