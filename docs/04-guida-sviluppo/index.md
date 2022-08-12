@@ -13,26 +13,26 @@ I termini Erogatore, Fruitore, e-service, API sono da intendersi ai sensi
 del Modello di interoperabilità delle Pubbliche Amministrazioni composto
 dalle Linee Guida emanate da Agid.
 
-Il documento descrive l'interfaccia di processamento dei repository semantici
+Il documento descrive l’interfaccia di processamento dei repository semantici
 pubblicati dai vari Erogatori.
 
 Il termine "harvesting" identifica il processo di raccolta funzionale alla pubblicazione su NDC
 delle informazioni contenute nei repository semantici.
-Nel quadro dell'harvesting, si adottano i seguenti termini:
+Nel quadro dell’harvesting, si adottano i seguenti termini:
 
-* "ERRORE" indica che l'harvesting è terminato in maniera anomala;
-* "WARNING" indica che l'harvesting ha notificato un messaggio di allerta
+* "ERRORE" indica che l’harvesting è terminato in maniera anomala;
+* "WARNING" indica che l’harvesting ha notificato un messaggio di allerta
   ma il processamento non è terminato;
-* "IGNORATA" indica che l'harvesting non ha processato una specifica
+* "IGNORATA" indica che l’harvesting non ha processato una specifica
   risorsa (e.g. un file, una directory) ma che ciò non costituisce
   né un ERRORE né un WARNING.
 
-## Registrazione dell'istituzione
+## Registrazione dell’istituzione
 
 TODO:
 
-Come e a chi si registra l'URL del repository?
-Quali altri dati descrittivi dell'istituzione sono necessari? Email?
+Come e a chi si registra l’URL del repository?
+Quali altri dati descrittivi dell’istituzione sono necessari? Email?
 Repository
 
 ## Contenuto del repository
@@ -53,7 +53,7 @@ che rendono il processamento semplice ed efficiente.
 
 Un repository è un oggetto pubblico indicizzato dal Catalogo del Riuso,
 e DEVE contenere il file `publiccode.yml` conforme alle relative Linee Guida [PUBLICCODE_YML]
-col riferimento al Codice `IPA`_ dell'Erogatore.
+col riferimento al Codice `IPA`_ dell’Erogatore.
 Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
 
 ```yaml
@@ -70,35 +70,32 @@ it:
 Tutte le risorse fornite DEVONO risiedere nella directory `asset/`.
 Le risorse al di fuori di `asset/` non saranno elaborate.
 
-Ogni tipo di asset (ontologie, vocabolari controllati, schemi)
-DEVE risiedere in una directory specifica con un nome predefinito.
-
-I nomi di file e directory DEVONO corrispondere al pattern `[A-Za-z0-9_.-]{,64}`,
-non possono quindi contenere spazi.
-Le directory associate ai dataset DOVREBBERO essere in minuscolo.
-
-I contenuti degli asset DEVONO essere codificati in UTF-8.
-
 Ogni risorsa DEVE risiedere sotto una sua directory specifica dipendente dalla sua tipologia:
 
 - Ontologie: in `assets/ontologies/`;
 - Vocabolari controllati: in `assets/controlled-vocabularies/`;
 - Schemi: in `assets/schemas/`.
 
+I nomi di file e directory DEVONO corrispondere al pattern `[A-Za-z0-9_.-]{,64}`,
+e non possono contenere spazi.
+Le directory associate ai dataset DOVREBBERO essere in minuscolo.
+
+I contenuti degli asset DEVONO essere codificati in UTF-8.
+
 Ad esempio:
 
-- il percorso dell'ontologia `MyOntology` sarà `assets/ontologies/MyOntology/`;
+- il percorso dell’ontologia `MyOntology` sarà `assets/ontologies/MyOntology/`;
 - il percorso del vocabolario `my-vocabulary` sarà `assets/controlled-vocabularies/my-vocabulary/`.
 
 ### File di Documentazione
 
 Le directory degli asset POSSONO contenere file di documentazione in formato Markdown.
-L'estensione del file DEVE essere .md (ad esempio README.md).
+L’estensione del file DEVE essere .md (ad esempio README.md).
 Questi file vengono ignorati durante il processamento da parte di NDC.
 
 ### Esempi
 
-Ad esempio, analizziamo un repository strutturato come segue.
+Ad esempio, analizziamo un repository strutturato come segue
 
 ```bash
 ┌─ README.md
@@ -124,29 +121,29 @@ Ad esempio, analizziamo un repository strutturato come segue.
 
 ```
 
-Il repository non contiene schemi, quindi NDC non aggiungerà schemi al catalogo durante l'harvesting.
+Il repository non contiene schemi, quindi NDC non aggiungerà schemi al catalogo durante l’harvesting.
 Questo non rappresenta un problema e non è considerato un errore.
 
 I file informativi (e.g. README.md, notes.md) presenti sia nella radice che
-nelle sottodirectory vengono semplicemente ignorati durante l'harversting.
+nelle sottodirectory vengono semplicemente ignorati durante l’harversting.
 
-Per quanto riguarda la directory Onto1:
+Per quanto riguarda la directory Onto1/:
 
 - essa non contiene sotto-directory né altre directory al suo interno
   ed è quindi una cartella foglia.
-  Quindi viene processata come potenzialmente contenente un'ontologia;
+  Quindi viene processata come potenzialmente contenente un’ontologia;
 - contiene un file RDF/Turtle che verrà processato;
 - contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
   Poiché NDC processa solo i file di tipo text/turtle con estensione .ttl, questo file viene ignorato.
 
-L'Erogatore ha organizzato logicamente le directory `Onto2` e `Onto3`
-come subdirectory di `Sottoargomento`.
+L’Erogatore ha organizzato logicamente le directory `Onto2/` e `Onto3/`
+come subdirectory di `Sottoargomento/`.
 Questo non rappresenta un problema e le directory vengono harvestate.
 Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
 
-La directory `Onto2` non contiene file `.ttl`: questo viene segnalato solamente come WARNING.
+La directory `Onto2/` non contiene file `.ttl`: questo viene segnalato solamente come WARNING.
 
-La directory `Onto4` ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
+La directory `Onto4/` ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
 ma come directory intermedia nel cammino per altre directory foglia:
 il file `onto4.tll` è ignorato e non processato.
 
@@ -163,8 +160,8 @@ sub-directory versionate con e senza il prefisso `v`
 perché questo rende impossibile ordinare le versioni.
 
 Sei esempi di path validi per le sub-directory.
-Notare che le versioni dell'ontologia Car  non sono prefissate da `v`
-mentre quelle di Person sono tutte prefissate da `v`.
+Notare che le versioni dell’ontologia `Car` non sono prefissate da `v`
+mentre quelle di `Person` sono tutte prefissate da `v`.
 
 ```bash
 └── assets
@@ -198,34 +195,30 @@ versioni prefissate da `v` che senza prefisso.
 
 ### Ordinamento delle versioni
 
+All’interno delle sotto-directory di ontologies/,
 NDC elabora solo la directory con la versione più recente, ossia:
 
-- `latest` se presente;
+- `latest/` se presente;
 - quella maggiore secondo il seguente ordinamento:
 
-  * tra due versioni espresse come forme numeriche (con punti), si segue l'ordinamento comunemente condiviso
+  * tra due versioni espresse come forme numeriche (con punti), si segue l’ordinamento comunemente condiviso
     per cui i numeri a sinistra sono i più significativi
-  * qualora due versioni abbiano lunghezza diversa ma una sia prefisso dell'altra,
+  * qualora due versioni abbiano lunghezza diversa ma una sia prefisso dell’altra,
     la più lunga viene considerata più recente;
     ad esempio v4.5 è considerata obsoleta in presenza di v4.5.2.
 
-Nota: la versione attuale del catalogo permette di versionare solamente le ontologie.
+Nota: la versione attuale di NDC indicizza in maniera versionata solamente le ontologie.
 
-Un repository PUO' contenere versioni precedenti delle ontologie
+Un repository PUO’ contenere versioni precedenti delle ontologie
 per fini storici, al di là del versionamento supportato da git.
 
-L'harvesting delle ontologie considera che le directory che contengono ontologie possano essere versionate,
+L’harvesting delle ontologie considera che le directory che contengono ontologie possano essere versionate,
 non i singoli file.
 Questo vale anche per le sotto-directory.
 
-In un qualsiasi punto della gerarchia delle directory che occorrono all'interno della cartella Ontologie,
-qualora vi siano più directory i cui nomi rappresentino delle versioni,
-la logica di harvesting ignorerà tutte le directory precedenti all'ultima,
-considerandole obsolete.
-
 #### Esempi
 
-Le directory versionate possono trovarsi in ogni punto dell'alberatura
+Le directory versionate possono trovarsi in ogni punto dell’alberatura
 delle ontologie, discendendo verso le foglie della struttura gerarchica.
 
 Sono esempi validi:
@@ -251,7 +244,8 @@ Sono esempi validi:
 ## Nessuna rappresentazione RDF alternativa
 
 Le directory degli asset NON DOVREBBERO contenere risorse RDF in altre serializzazioni
-(ad es. RDF / XML, JSON-LD, ..). Queste non saranno elaborate.
+(ad es. RDF/XML, JSON-LD, ..).
+Se presenti, queste non saranno comunque elaborate da NDC.
 
 Questi file POSSONO essere inseriti nello stesso repository al di fuori della directory `asset/`;
 In questo caso, essi DOVREBBERO essere generati automaticamente dai file originali in `asset/`.
@@ -261,15 +255,15 @@ In questo caso, essi DOVREBBERO essere generati automaticamente dai file origina
 Le ontologie pubblicate DEVONO essere conformi alle relative Linee guida nazionali.
 
 Le ontologie DEVONO essere pubblicate solo in formato RDF/Turtle (media type text/turtle)
- e l'estensione del file DEVE essere .ttl.
+e l’estensione del file DEVE essere .ttl.
 
 Le ontologie DEVONO utilizzare delle directory versionate come descritto in [versionamento].
 
 ### Esempi
 
-Esempio di alberatura contenente i file che definiscono un'ontologia.
+Esempio di alberatura contenente i file che definiscono un’ontologia.
 In questo caso viene processata solo la directory `latest/`.
-Nell'esempio, l'alberatura contiene una serie di file di documentazione opzionali che non vengono processati.
+Nell’esempio, l’alberatura contiene una serie di file di documentazione opzionali che non vengono processati.
 
 ```bash
 assets/
@@ -292,18 +286,18 @@ I vocabolari controllati pubblicati DEVONO essere conformi
 alle relative Linee guida nazionali.
 
 I vocabolari controllati DEVONO essere pubblicati solo in formato RDF/Turtle (media type `text/turtle`)
-e l'estensione del file DEVE essere `.ttl`.
+e l’estensione del file DEVE essere `.ttl`.
 
 Le directory del vocabolario controllato DOVREBBERO contenere una proiezioni in formato CSV del vocabolario
-insieme ai metadati necessari per mappare i campi del CSV alle risorse presenti nell'RDF.
+insieme ai metadati necessari per mappare i campi del CSV alle risorse presenti nell’RDF.
 Questa proiezione in formato CSV viene esposta dalla NDC tramite API REST.
-L'estensione del file DEVE essere .csv.
+L’estensione del file DEVE essere .csv.
 
 I metadati di cui sopra DEVONO essere espressi tramite un `@context` JSON-LD 1.1.
 
 ### Esempi
 
-Di seguito l'esempio di un'alberatura contenente
+Di seguito l’esempio di un’alberatura contenente
 un vocabolario controllato e la sua proiezione in formato CSV.
 
 ```bash
@@ -318,22 +312,22 @@ assets/
 
 ### Versionamento
 
-La versione attuale di NDC pubblica solamente l'ultima versione dei vocabolari controllati.
-L'Erogatore è responsabile della pubblicazione delle versioni precedenti dei vocabolari
+La versione attuale di NDC pubblica solamente l’ultima versione dei vocabolari controllati.
+L’Erogatore è responsabile della pubblicazione delle versioni precedenti dei vocabolari
 tramite il repository git.
 
 I vocabolari che pubblicano informazioni soggette a variazioni nel tempo,
 DOVREBBERO versionare i singoli record.
 Si veda a questo proposito il vocabolario controllato dei Paesi pubblicato
-dall'Unione Europea: https://publication.europa.eu/resource/authority/country/
-dove i singoli record contengono l'intervallo di validità dei dati.
+dall’Unione Europea: https://publication.europa.eu/resource/authority/country/
+dove i singoli record contengono l’intervallo di validità dei dati.
 
 ## Schemi
 
 Gli schemi pubblicati devono essere conformi alle relative Linee guida nazionali.
 
 Gli schemi per le API devono essere pubblicati in formato OpenAPI3, incorporato nella sezione `#/components/schema` del file OAS.
-L'estensione del file DEVE essere `.oas3.yaml`.
+L’estensione del file DEVE essere `.oas3.yaml`.
 
 In futuro potranno essere supportati altri formati di schemi.
 
@@ -366,12 +360,12 @@ components:
 ```
 
 I metadati associati DEVONO essere pubblicati solo in formato RDF/Turtle (media type `text/turtle`)
-e l'estensione del file DEVE essere `.ttl`.
+e l’estensione del file DEVE essere `.ttl`.
 Questo file DOVREBBE essere generato automaticamente dal documento OpenAPI.
 
-Gli schemi forniti POSSONO essere verificati sintatticamente utilizzando l'[OpenAPI Checker](https://github.com/italia/api-oas-checker).
+Gli schemi forniti POSSONO essere verificati sintatticamente utilizzando l’[OpenAPI Checker](https://github.com/italia/api-oas-checker).
 
-Di seguito l'esempio di un'alberatura contenente uno schema
+Di seguito l’esempio di un’alberatura contenente uno schema
 
 ```bash
 assets/
@@ -392,7 +386,7 @@ TBD
 Il repository DOVREBBE utilizzare strumenti di continuous integration
 come github-actions o gitlab-ci per verificare la consistenza dei contenuti.
 
-E' possibile utilizzare il repository https://github.com/teamdigitale/dati-semantic-cookiecutter
+E’ possibile utilizzare il repository https://github.com/teamdigitale/dati-semantic-cookiecutter
 come template per i repository semantici.
 
 .. [PUBLICCODE_YML]: https://docs.italia.it/italia/developers-italia/publiccodeyml/

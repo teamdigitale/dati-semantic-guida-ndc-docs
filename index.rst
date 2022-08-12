@@ -13,4 +13,5 @@ sul Catalogo Nazionale Dati per l´interoperabilità semantica.
 
    ./docs/01-progetto.md
    ./docs/02-faq.md
+   ./docs/03-introduzione/index.md
    ./docs/04-guida-sviluppo/index.md
