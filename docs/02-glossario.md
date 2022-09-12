@@ -9,6 +9,11 @@ Conformemente alle norme ISO/IEC Directives, Part 3 per la stesura dei documenti
 - DOVREBBE o NON DOVREBBE, indicano che le implicazioni devono essere comprese e attentamente pesate prima di scegliere approcci alternativi;
 - PUÒ o POSSONO o l’aggettivo OPZIONALE, indica che il lettore può scegliere di applicare o meno senza alcun tipo di implicazione o restrizione la specifica.
 
+Per compattezza, gli esempi di JSON possono essere serializzati anche in formato YAML
+(vedi anche https://www.w3.org/TR/json-ld11/#data-model-overview).
+E’ in corso la standardizzazione del formato [YAML-LD](https://github.com/json-ld/yaml-ld)
+utile a rappresentare nel più conciso formato YAML contenuti Linked Data.
+
 ## Riferimenti normativi
 
 - [CAD art. 50](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art50!vig=2050-01-01)
