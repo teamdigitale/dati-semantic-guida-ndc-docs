@@ -13,6 +13,9 @@ La piattaforma accetta documenti in formato RST o MD.
 Per informazioni sulla struttura di questo repository visita il [repository
 dedicato](https://github.com/italia/docs-italia-starter-kit).
 
+Per una guida alla scrittura in formato markdown
+si veda https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html
+
 # Preview
 
 Per lavorare utilizzando una preview del documento è sufficiente lanciare Docker
