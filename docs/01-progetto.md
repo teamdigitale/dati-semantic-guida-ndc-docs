@@ -1,6 +1,6 @@
 ## Il Progetto
 
-Il catalogo nazionale per l’interoperabilità semantica, accesibile tramite schema.gov.it, è frutto della collaborazione tra la Presidenza del Consiglio dei Ministri, l’ISTAT, Agid, ISTC-CNR e PagoPa.
+Il catalogo nazionale per l’interoperabilità semantica, accesibile tramite schema.gov.it, è frutto della collaborazione tra la Presidenza del Consiglio dei Ministri, l’ISTAT, Agid, ISTC-CNR e PagoPA.
 
 Nell’ambito degli investimenti del Piano Nazionale di Ripresa e Resilienza, il Dipartimento per la Trasformazione Digitale come soggetto titolare della misura ha affidato la realizzazione del catalogo ad ISTAT.
 ISTAT come ente attuatore gestisce e mantiene il catalogo mentre gli enti esperti di dominio sono responsabili e titolari dei contenuti pubblicati.

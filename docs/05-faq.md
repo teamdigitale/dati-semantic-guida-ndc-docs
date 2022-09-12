@@ -27,21 +27,68 @@
 1. Quali problemi risolve il catalogo?
 
    Il catalogo risolve dei problemi di scalabilità, riuso, interpretazione, cultura e creazione di nuovi servizi legati all’interoperabilità semantica.
-   Scalabilità. Ogni nuovo servizio richiede lo sviluppo di codice ad-hoc per validare, interpretare ed uniformare i dati ricevuti da enti diversi e l’interazione tra enti per verificare il significato e il contesto dei dati non è scalabile;
-   Riuso degli schemi. Gli schemi dati non sono condivisi e quindi non sono facilmente riutilizzabili (né gli schemi, né il codice collegato);
-   Interpretazione dei dati. Il significato dei dati scambiati è ambiguo e spesso lasciato a interpretazione, con il rischio di inconsistenze anche sintattiche nei vari dataset e le API non sono semanticamente e sintatticamente Interoperabili;
-   Cultura della semantica. Le barriere all’ingresso per l’interoperabilità semantica sono alte;
-   Creazione di nuovi servizi. Risulta difficile creare nuovi servizi se i dati scambiati non hanno un significato chiaro (ad esempio se si confonde il nucleo familiare con la famiglia anagrafica, o un tampone molecolare con uno rapido).
+
+   - Scalabilità: Ogni nuovo servizio richiede lo sviluppo di codice ad-hoc per validare, interpretare ed uniformare i dati ricevuti da enti diversi e l’interazione tra enti per verificare il significato e il contesto dei dati non è scalabile;
+   - Riuso degli schemi. Gli schemi dati non sono condivisi e quindi non sono facilmente riutilizzabili (né gli schemi, né il codice collegato);
+   - Interpretazione dei dati. Il significato dei dati scambiati è ambiguo e spesso lasciato a interpretazione, con il rischio di inconsistenze anche sintattiche nei vari dataset e le API non sono semanticamente e sintatticamente Interoperabili;
+   - Cultura della semantica. Le barriere all’ingresso per l’interoperabilità semantica sono alte;
+   -Creazione di nuovi servizi. Risulta difficile creare nuovi servizi se i dati scambiati non hanno un significato chiaro (ad esempio se si confonde il nucleo familiare con la famiglia anagrafica, o un tampone molecolare con uno rapido).
 
 1. Qual è un caso d’uso di esempio?
 
-   Il catalogo può semplificare ed uniformare la creazione e la gestione della modulistica online e dei servizi digitali fruibili anche tramite siti web. Ad esempio, un comune invece di ridefinire i possibili  titoli di studio e la loro sintassi, potrà riusare tramite API i valori pubblicati dal catalogo a partire dal vocabolario nazionale education-level.csv.
+   Il catalogo può semplificare ed uniformare la creazione e la gestione della modulistica online e dei servizi digitali fruibili anche tramite siti web. Ad esempio, un comune invece di ridefinire i possibili titoli di studio e la loro sintassi, potrà riusare tramite API i valori pubblicati dal catalogo a partire dal vocabolario nazionale education-level.csv.
 
 1. Chi pubblica i contenuti? I dati provengono da fonti ufficiali?
 
+   Il cuore del catalogo è costituito da [OntoPiA](https://github.com/italia/daf-ontologie-vocabolari-controllati),
+   la rete di ontologie e vocabolari controllati sviluppati nell'ambito delle azioni previste dal piano triennale per l'informatica della Pubblica Amministrazione.
+   Oltre ad OntoPiA, il Catalogo permetterà la pubblicazione di asset semantici da parte di altri enti.
    Le ontologie, i vocabolari controllati e gli schemi dati sono scaricati dai repository ufficiali (e.g. Github o Gitlab) degli enti della pubblica amministrazione.
    Il catalogo scarica i dati contenuti nella directory che ha subito l'aggiornamento più recente.
-   I dati provengono da fonti ufficiali in quanto ogni ente è titolare dei metadati pubblicati.
+   I dati provengono da fonti ufficiali in quanto ogni ente è titolare dei metadati pubblicati. L'aggiornamento dei dati è responsabilità degli enti.
+
+   ```{mermaid}
+   flowchart TB
+      classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
+      classDef cluster font-weight: bold,fill:none,color:darkgray,stroke:#3344d0,stroke-width:2px
+      classDef subgraph_padding fill:none, stroke:none, opacity:0
+      classDef bounded_context stroke-dasharray:5 5
+
+      subgraph schema.gov.it
+      subgraph pad
+         Ontopia
+         Altri
+      end
+      end
+      subgraph Altri
+         Ente1
+         Ente2
+      end
+
+      subgraph Ontopia
+         o0[Ontologie ]
+         v0[Vocabolari]
+         s0[Schemi ]
+            end
+
+      subgraph Ente1 [...]
+         o1[Ontologie ]
+         v1[Vocabolari]
+         s1[Schemi ]
+      end
+
+      subgraph Ente2 [Ente]
+         o2[Ontologie ]
+         v2[Vocabolari]
+         s2[Schemi ]
+      end
+
+      %% layout
+      Ente2 --- Ente1
+      linkStyle 0 stroke:none
+      class Altri bounded_context
+      class pad subgraph_padding
+   ```
 
 1. I dati contenuti rispettano le norme vigenti sulla privacy?
 
@@ -69,5 +116,5 @@
 
 1. Come faccio ad utilizzare il catalogo?
 
-   La consultazione del catalogo non necessita di autenticazione: chiunque voglia consultare degli asset semantici lo può fare tramite web UI all'indirizzo schema.gov.it.
-   Inoltre, chiunque voglia scaricare i dati in modalità machine to machine potrà usare le API REST (per quanto riguarda i vocabolari controllati) oppure lo SPARQL endpoint (per interrogare le ontologie).
+   Per consultare il catalogo non serve autenticazione: chiunque voglia consultare degli asset semantici lo può fare tramite web UI all'indirizzo https://schema.gov.it.
+   Inoltre, chiunque voglia scaricare i dati in modalità machine to machine potrà usare le API REST (per quanto riguarda i vocabolari controllati) oppure lo [SPARQL endpoint](https://www.schema.gov.it/sparql) (per interrogare le ontologie).
