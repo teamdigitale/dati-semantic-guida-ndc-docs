@@ -2,7 +2,8 @@
 
 Gli schemi pubblicati devono essere conformi alle relative Linee guida nazionali.
 
-Gli schemi per le API devono essere pubblicati in formato OpenAPI3, incorporato nella sezione `#/components/schema` del file OAS.
+Gli schemi per le API devono essere pubblicati in formato OpenAPI3 (corrispondenti ad una estensione di [JSON Schema Draft 4](https://spec.openapis.org/oas/v3.0.3#data-types)), incorporato nella sezione `#/components/schema` del file OAS
+compatibilmente con le Linee Guida per l'interoperabilità tecnica.
 L’estensione del file DEVE essere `.oas3.yaml`.
 
 In futuro potranno essere supportati altri formati di schemi (e.g. versioni più recenti di JSON Schema).
@@ -67,6 +68,10 @@ assets/
 
 
 ## Schemi XSD
+
+Attualmente il materiale semantico pubblicato dalla UE si basa sui formati RDF ed XSD.
+NDC non supporta il processamento di file XSD.
+Questi potranno essere supportati in un secondo momento.
 
 ### Esempio: Countries Authority Table
 

@@ -225,92 +225,6 @@ graph LR
 
 ```
 
-### Specificare la semantica tramite JSON LD
-
-JSON LD, oltre che indicare una serializzazione basata su JSON di RDF, permette di interpretare un JSON object
-come RDF specificando una mappatura tra le chiavi dell'oggetto ed i predicati dell'RDF.
-
-Ad esempio, usando la mappatura definita in https://schema.org/docs/jsonldcontext.jsonld
-è possibile interpretare questo oggetto JSON
-
-```json
-{
-  "@context": "http://schema.org/",
-  "@type": "Person",
-  "name": "Jane Doe",
-  "jobTitle": "Professor",
-  "telephone": "(425) 123-4567"
-}
-```
-
-È anche possibile ridefinire o localizzare i campi come di seguito, eventualmente usando diversi namespace.
-
-```
-"@context":
-  "sdo": "http://schema.org/"
-  "nome":"sdo:name"
-  "nome_proprio": "sdo:givenName"
-"@type": "Person"
-"nome": "Jane Doe"
-"nome_proprio": "Jane"
-"sdo:jobTitle": "Professor"
-"sdo:telephone": "(425) 123-4567"
-```
-
-Poiché un oggetto definito esclusivamente tramite json-ld porta con sé la propria definizione,
-per validarlo occorre innanzitutto risolvere le referenze, quindi verificarle.
-Questo si presta bene ad un processamento batch,
-ma è complesso da usare in un contesto sincrono:
-anche perché fino al momento del processamento del `@context`
-non c'è nessuna garanzia della correttezza dei campi da processare.
-
-Nella creazione di un'API di solito gli schemi utilizzati sono consolidati in fase di specifica, quindi i dati indicati in @context e @type sono desunti dall'operazione. Può essere utile in alcuni casi ritornare il contesto semantico di un oggetto solo quando il client lo richiede (eg. `Accept: application/ld+json` o tramite un HTTP header `Link`): anche in questo caso è utile definirlo chiaramente a priori e stabilire un modello che minimizzi:
-
-- la dimensione del payload;
-- le operazioni di verifica, considerando sempre che in ogni processo in cui il mittente può guidare il meccanismo di verifica (ad esempio indicando il parser per deserializzare una stringa) si possono configurare dei problemi di sicurezza come nei seguenti casi:
-
-```python
-yaml.load("!!python/object/new:os.system [echo BOOM!]")
-```
-
-- https://www.ws-attacks.org/Soap_Array_Attack
-- "@context" duplicato in json-ld, dove la specifica indica che l'ultimo valore è sovrascrive il primo, vedi https://w3c.github.io/json-ld-bp/#example-12-overriding-name-term;
-- "@context" mangling, dove cambiando il "@context" di una risposta eventualmente firmata si riesce a modificare la semantica di un oggetto senza modificarne la forma (eg, https://github.com/json-ld/json-ld.org/issues/213);
-
-Nel caso di informazioni localizzate, JSON-LD permette di trasmettere l'informazione in diversi modi semanticamente equivalenti, eg.
-
-```
--- come lista
-occupation:
--  @value: "Student"
-   @language: en
--  @value: "Etudiant"
-   @language: fr
-```
-
-o
-
-```
--- come oggetto
-@context:
-  occupation:
-    @container: @language
-occupation:
-  en: Student
-  fr: Etudiant
-```
-
-Quello più simile al modello di content-negotiation usato comunemente con `Accept-Language` (dove basta rimuovere il "@context" è questo
-
-```
---- tramite elementi multipli, utile anche per la serializzazione di API semplici
-@context:
-  occupation: {@language: en}
-  occupation_fr: {@language: fr}
-occupation: Student
-occupation_fr: Etudiant
-```
-
 ## Rendere la semantica accessibile
 
 Chi sviluppa servizi web di solito non conosce i meccanismi e gli standard del web semantico
@@ -392,9 +306,12 @@ SchemaVocabulary:
 
 ## Standardizzazione sintattica
 
-Per standardizzare sintatticamente i servizi serve pubblicare degli schemi dati a cui tutte le organizzazioni devono conformarsi. Storicamente la standardizzazione degli schemi dati si basa sul concetto di namespace eventualmente distribuiti - vedi il formato di specifica XSD.
-Se in ecosistemi ben definiti questo approccio funziona, al crescere della loro dimensione si pongono una serie di problematiche legate sia alla compattezza dei dati trasportati che del contesto di sicurezza legato ad esempio alla eventuale necessità di dereferenziare gli URI (eg. https://owasp.org/www-pdf-archive/XML_Based_Attacks_-_OWASP.pdf ) .
-Mentre poi la metadatazione delle pagine (eg.  tramite microformati o json-ld) ha come platea principale i sistemi di processamento batch dei motori di ricerca, i dati convogliati tramite API vengono per lo più processati da applicazioni mobile che hanno dei vincoli sia in termini di banda che di consumo di risorse (eg. batteria dei cellulari, riscaldamento) più stringenti.
+Per standardizzare sintatticamente i servizi serve pubblicare degli schemi dati a cui tutte le organizzazioni devono conformarsi.
+
+Storicamente la standardizzazione degli schemi dati si basa sul concetto di namespace distribuiti - vedi il formato di specifica XSD.
+Se in ecosistemi ben definiti questo approccio funziona, al crescere della loro dimensione si pongono una serie di problematiche legate sia alla compattezza dei dati trasportati che del contesto di sicurezza legato ad esempio alla eventuale necessità di dereferenziare gli URI (eg. [XML Based Attacks - OWASP](https://owasp.org/www-pdf-archive/XML_Based_Attacks_-_OWASP.pdf) ).
+
+Mentre la metadatazione delle pagine (eg.  tramite [microformati](https://en.wikipedia.org/wiki/Microformat) o json-ld) ha come platea principale i sistemi di processamento batch dei motori di ricerca, i dati convogliati tramite API vengono per lo più processati da applicazioni mobile che hanno dei vincoli sia in termini di banda che di consumo di risorse (eg. batteria dei cellulari, riscaldamento) più stringenti.
 Inoltre la creazione di servizi sempre più integrati porta ad un aumento del numero di richieste, e della conseguente necessità di supportare in maniera sostenibile i carichi sui sistemi IT.
 
 ## Semantica e sintassi
