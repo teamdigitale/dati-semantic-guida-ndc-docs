@@ -1,20 +1,14 @@
 # Contribuire al National Data Catalog
 
-## Terminologia
-
-Conformemente alle norme ISO/IEC Directives, Part 3 per la stesura dei documenti tecnici questo documento utilizza le parole chiave "DEVE", "DEVONO", "NON DEVE", "NON DEVONO", "DOVREBBE", "NON DOVREBBE", "PUÒ" e "OPZIONALE", la cui interpretazione è descritta di seguito.
-
-- DEVE o DEVONO, indicano un requisito obbligatorio per rispettare le Linee Guida;
-- NON DEVE o NON DEVONO, indicano un assoluto divieto delle specifiche;
-- DOVREBBE o NON DOVREBBE, indicano che le implicazioni devono essere comprese e attentamente pesate prima di scegliere approcci alternativi;
-- PUÒ o POSSONO o l’aggettivo OPZIONALE, indica che il lettore può scegliere di applicare o meno senza alcun tipo di implicazione o restrizione la specifica.
-
-I termini Erogatore, Fruitore, e-service, API sono da intendersi ai sensi
-del Modello di interoperabilità delle Pubbliche Amministrazioni composto
-dalle Linee Guida emanate da Agid.
-
 Il documento descrive l’interfaccia di processamento dei repository semantici
 pubblicati dai vari Erogatori.
+
+L'architettura del NDC è definita in [Architettura](architettura)
+
+## Terminologia
+
+Questa sezione utilizza le definizioni e gli acronimi
+indicati nel Capitolo 2, oltre ai termini definiti di seguito.
 
 Il termine "harvesting" identifica il processo di raccolta funzionale alla pubblicazione su NDC
 delle informazioni contenute nei repository semantici.

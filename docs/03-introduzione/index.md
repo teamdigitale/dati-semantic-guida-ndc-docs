@@ -30,13 +30,15 @@ Qual è il nome proprio? E ancora: il reddito in che valuta è espresso?
 
 Non possiamo fare mash-up di API con diversi formati e significati.
 
-Nel settore pubblico, è ancora più complesso perché il significato di
-un termine (ad es. "Famiglia") dipende dalle normative specifiche (ad es. Famiglia fiscale,
-Famiglia registrata, ...).
+Nel settore pubblico, questo lavoro è ancora più complesso perché il significato di
+un termine (ad es. "Famiglia") dipende dalle normative specifiche (ad es. fiscale, anagrafica, ...).
 
-I vocabolari controllati sono uno strumento di informatica che utilizza
+
+### Standardizzazione semantica
+
+I vocabolari controllati sono uno strumento usato in informatica che utilizza
 gli URI per disambiguare il significato dei termini:
-ogni termine è identificato da un URI, contestualizzato dal nome del vocabolario
+ogni termine è identificato da un URI, e contestualizzato dal nome del vocabolario
 che indica il dominio dei termini.
 
 Il prefisso identifica il nome del vocabolario
@@ -46,6 +48,26 @@ https://dbpedia.org/data/      Dog       'The dog is a four leg animal'
 --------------------------  ----------   ------------------------------
 vocabulary name (prefix)       term       definition (rdfs:comment)
 ```
+
+I vocabolari controllati contengono raccolta di termini e:
+
+- definiscono concetti e relazioni in un dominio specifico (ad esempio sanitario, finanza, ...)
+- sono pubblicati da un'autorità designata (non necessariamente un'autorità pubblica)
+- sono formalmente descritti usando il media type text/turtle o la sua controparte JSON:
+  JSON-LD che è una specifica W3C.
+  Questi formati sono equivalenti e si può passare da turtle in JSON-LD e viceversa
+  senza perdita di informazioni.
+
+Ci sono diversi tipi di vocabolari controllati:
+
+- liste (codelist)
+- con una struttura gerarchica (taxonomy)
+- glossari
+- tesauri (che aggiungono ulteriori vincoli alle tassonomie)
+
+I vocabolari complessi sono chiamati ontologie. Più in dettaglio una ontologia
+è un insieme di assiomi logici che concettualizzano un dominio di interesse definendo i concetti e la semantica delle relazioni tra loro.
+Quando le ontologie contengono ulteriori restrizioni (ad es. vincoli allo schema) non sono propriamente dei vocabolari.
 
 Esistono dei vocabolari standard a livello globale che contengono termini
 utili a definire ulteriori vocabolari:
@@ -79,10 +101,221 @@ esemplificato in un estratto:
 ...
 ```
 
+E' possibile quindi usare tecnologie semantiche ed il formato RDF anche per descrivere
+dei dati, e non solo dei termini.
+Queste tecnologie però sono computazionalmente complesse per due principali motivi:
+
+- sono state ideate per descrivere l’"essenza" degli oggetti,
+  e non per implementare il loro comportamento;
+- il modello dati è basato su grafi generici (e.g. anche ciclici, non diretti e senza una radice) ed è molto più complesso dei modelli dati
+  basati su alberi utilizzati per l'implementazione di servizi concreti.
+
+### Vocabolari in pratica
+
+Creiamo un semplice vocabolario per descrivere una persona
+e aggiungi 4 termini (ricordi l'esempio del cane?)
+
+Poiché ogni termine è un URI pienamente qualificato, posso dichiarare spazi dei nomi come in xmlschema
+essere più conciso.
+
+Ogni termine è definito da una o più frasi,
+e una frase è formata da una tripla, terminando con un punto.
+
+"RDFS:comment" indica "Il termine è descritto dalla frase in oggetto"
+
+```
+# Reuse the rdf-schema terms.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Declare the namespace for the Italian Core Person Vocabulary.
+@prefix IT: <https://w3id.org/italia/onto/CPV/> .
+
+# Define the meaning of three terms.
+IT:Person                      rdfs:comment   """A natural person
+                                                                              (e.g. not a company)."""
+.
+IT:givenName              rdfs:comment """The given name of a person.
+                                                                               E.g. 'Anna'..."""
+.
+IT:RegisteredFamily  rdfs:comment """[..] a group of people tied together
+                                                                              [..according to ..] (Italian Law DPR
+                                                                              233/1989 art.4)"""
+.
+# Two sentences on the same subject, which is a relation between persons
+IT:isChildOf                   rdfs:comment """The child-parent relation."""
+.
+IT:isChildOf                   rdfs:domain   IT:Person
+.
+```
+
+L'estratto qui sopra può essere convertito in JSON-LD o in XML RDF.
+JSON LD rappresenta i soggetti come JSON objects e i predicati come JSON keys.
+
+```
+{ "@context":  { "IT": "https://w3id.org/italia/onto/CPV/", ..}
+  "@graph": [
+    { "@id": "IT:isChildOf",
+      "rdfs:comment": "The child-parent relation",
+      "rdfs:domain":      {"@id": "IT:Person }
+    },
+    { ... other terms, ...}
+```
+
+Aggiungiamo ora un esempio relativo al vocabolario europeo dei paesi.
+La sintassi RDF supporta l’internazionalizzazione usando tag linguistici.
+Le frasi con lo stesso soggetto / predicato possono essere ridotte usando ";" e ","
+E’ possibile correlare i termini tra loro, come paesi più vecchi e più recenti.
+
+```
+
+@prefix country: <https://publications.europa.eu/resource/authority/country/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+country:ITA  dc:identifier ITA  .
+country:ITA  skos:prefLabel "Italie"@fr .
+country:ITA  skos:prefLabel "Italia"@it .
+
+# A shorter syntax for the above 3 sentences
+country:FRA dc:identifier          FRA;
+                         skos:prefLabel    "France"@fr, "Francia"@it ; ...
+.
+
+# Correlating terms directly (dct:replaces)  and inversely (dct:isReplacedBy)
+country:CZE dct:replaces          country:CSK ; ..
+.
+country:SVK dct:replaces          country:CSK ; ..
+.
+country:CSK dct:isReplacedBy country:CZE ;
+ 	          dct:isReplacedBy country:SVK ; ..
+.
+
+
+```
+
+La struttura dati a grafo emerge chiaramente in questo dataset.
+
+```{mermaid}
+graph LR
+
+    classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
+    classDef cluster font-weight: bold,fill:none,color:darkgray,stroke:#3344d0,stroke-width:2px
+    classDef subgraph_padding fill:none, stroke:none, opacity:0
+    classDef bounded_context stroke-dasharray:5 5
+
+  subgraph Legend [" Legend &nbsp;"]
+  direction TB
+  string([string]) ---
+  resource
+  linkStyle 0 stroke:none
+  end
+  subgraph graph [ ]
+  ITA --> |dc:identifier| ITA_l([ITA])
+  ITA --> |skos:prefLabel| Italie_l(["Italie@fr"])
+  FRA --> |dc:identifier| FRA_l([FRA])
+  CZE --> |dc:identifier| CZE_l([CZE])
+  CZE --> |dct:replaces| CSK
+  SVK --> |dc:identifier| SVK_l([SVK])
+  SVK --> |dct:replaces| CSK
+  CSK --> |dc:identifier| CSK_l([CSK])
+  CSK --> |dct:isReplacedBy| CZE & SVK
+
+  end
+
+```
+
+### Specificare la semantica tramite JSON LD
+
+JSON LD, oltre che indicare una serializzazione basata su JSON di RDF, permette di interpretare un JSON object
+come RDF specificando una mappatura tra le chiavi dell'oggetto ed i predicati dell'RDF.
+
+Ad esempio, usando la mappatura definita in https://schema.org/docs/jsonldcontext.jsonld
+è possibile interpretare questo oggetto JSON
+
+```json
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "jobTitle": "Professor",
+  "telephone": "(425) 123-4567"
+}
+```
+
+È anche possibile ridefinire o localizzare i campi come di seguito, eventualmente usando diversi namespace.
+
+```
+"@context":
+  "sdo": "http://schema.org/"
+  "nome":"sdo:name"
+  "nome_proprio": "sdo:givenName"
+"@type": "Person"
+"nome": "Jane Doe"
+"nome_proprio": "Jane"
+"sdo:jobTitle": "Professor"
+"sdo:telephone": "(425) 123-4567"
+```
+
+Poiché un oggetto definito esclusivamente tramite json-ld porta con sé la propria definizione,
+per validarlo occorre innanzitutto risolvere le referenze, quindi verificarle.
+Questo si presta bene ad un processamento batch,
+ma è complesso da usare in un contesto sincrono:
+anche perché fino al momento del processamento del `@context`
+non c'è nessuna garanzia della correttezza dei campi da processare.
+
+Nella creazione di un'API di solito gli schemi utilizzati sono consolidati in fase di specifica, quindi i dati indicati in @context e @type sono desunti dall'operazione. Può essere utile in alcuni casi ritornare il contesto semantico di un oggetto solo quando il client lo richiede (eg. `Accept: application/ld+json` o tramite un HTTP header `Link`): anche in questo caso è utile definirlo chiaramente a priori e stabilire un modello che minimizzi:
+
+- la dimensione del payload;
+- le operazioni di verifica, considerando sempre che in ogni processo in cui il mittente può guidare il meccanismo di verifica (ad esempio indicando il parser per deserializzare una stringa) si possono configurare dei problemi di sicurezza come nei seguenti casi:
+
+```python
+yaml.load("!!python/object/new:os.system [echo BOOM!]")
+```
+
+- https://www.ws-attacks.org/Soap_Array_Attack
+- "@context" duplicato in json-ld, dove la specifica indica che l'ultimo valore è sovrascrive il primo, vedi https://w3c.github.io/json-ld-bp/#example-12-overriding-name-term;
+- "@context" mangling, dove cambiando il "@context" di una risposta eventualmente firmata si riesce a modificare la semantica di un oggetto senza modificarne la forma (eg, https://github.com/json-ld/json-ld.org/issues/213);
+
+Nel caso di informazioni localizzate, JSON-LD permette di trasmettere l'informazione in diversi modi semanticamente equivalenti, eg.
+
+```
+-- come lista
+occupation:
+-  @value: "Student"
+   @language: en
+-  @value: "Etudiant"
+   @language: fr
+```
+
+o
+
+```
+-- come oggetto
+@context:
+  occupation:
+    @container: @language
+occupation:
+  en: Student
+  fr: Etudiant
+```
+
+Quello più simile al modello di content-negotiation usato comunemente con `Accept-Language` (dove basta rimuovere il "@context" è questo
+
+```
+--- tramite elementi multipli, utile anche per la serializzazione di API semplici
+@context:
+  occupation: {@language: en}
+  occupation_fr: {@language: fr}
+occupation: Student
+occupation_fr: Etudiant
+```
+
 ## Rendere la semantica accessibile
 
 Chi sviluppa servizi web di solito non conosce i meccanismi e gli standard del web semantico
-(e.g. RDF, JSON-LD, ...). D'altro canto chi si occupa di semantica non conosce le problematiche
+(e.g. RDF, JSON-LD, ...).
+D'altro canto chi si occupa di semantica non conosce le problematiche
 legate alla creazione e all'operatività dei servizi digitali (e.g. scalabilità, performance, ...).
 Questo fa sì che:
 
@@ -104,7 +337,7 @@ da poter mappare alla bisogna sul vocabolario controllato.
   "euro_since": "1999-01-01" }
 ```
 
-Pubblicare vocabolari in formati che sono ben noti
+Pubblicare vocabolari in formati ben noti
 agli sviluppatori web come JSON e CSV facilita il loro utilizzo
 e migliora la qualità complessiva dei dati.
 
@@ -156,6 +389,13 @@ SchemaVocabulary:
       title: Stato della Città del Vaticano
       type: string
 ```
+
+## Standardizzazione sintattica
+
+Per standardizzare sintatticamente i servizi serve pubblicare degli schemi dati a cui tutte le organizzazioni devono conformarsi. Storicamente la standardizzazione degli schemi dati si basa sul concetto di namespace eventualmente distribuiti - vedi il formato di specifica XSD.
+Se in ecosistemi ben definiti questo approccio funziona, al crescere della loro dimensione si pongono una serie di problematiche legate sia alla compattezza dei dati trasportati che del contesto di sicurezza legato ad esempio alla eventuale necessità di dereferenziare gli URI (eg. https://owasp.org/www-pdf-archive/XML_Based_Attacks_-_OWASP.pdf ) .
+Mentre poi la metadatazione delle pagine (eg.  tramite microformati o json-ld) ha come platea principale i sistemi di processamento batch dei motori di ricerca, i dati convogliati tramite API vengono per lo più processati da applicazioni mobile che hanno dei vincoli sia in termini di banda che di consumo di risorse (eg. batteria dei cellulari, riscaldamento) più stringenti.
+Inoltre la creazione di servizi sempre più integrati porta ad un aumento del numero di richieste, e della conseguente necessità di supportare in maniera sostenibile i carichi sui sistemi IT.
 
 ## Semantica e sintassi
 
