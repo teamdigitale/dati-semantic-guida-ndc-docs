@@ -125,3 +125,36 @@
    che variano limitatamente nel tempo, dovrebbero essere pubblicati su NDC attraverso il processo descritto nella guida allo sviluppo.
    Delle code-list che sono specifiche di un dominio, ad esempio le enumeration di una specifica API del dominio fiscale che vengono
    aggiornate trimestralmente, dovrebbero invece essere pubblicate tramite un'API specifica dall’Erogatore.
+
+1. Le ontologie servono veramente?
+
+   Quando un servizio digitale richiede la cooperazione di più enti, è necessario accordarsi sul significato
+   e la forma dei dati scambiati. Questi accordi possono avvenire bilateralmente o multilateralmente.
+   Le ontologie sono una forma di accordo multilaterale, in cui gli enti si accordano preventivamente
+   e dove i problemi semantici sono aggravano lo strato tecnico, rendendolo più efficiente e sicuro da mantenere.
+
+```{mermaid}
+   flowchart
+    classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
+    classDef cluster font-weight: bold,fill:none,color:darkgray,stroke:#3344d0,stroke-width:2px
+    classDef subgraph_padding fill:none, stroke:none, opacity:0
+    classDef bounded_context stroke-dasharray:5 5
+subgraph No Ontologies[No ontologies: n*n interaction]
+A((A))
+B((B))
+C((C))
+D((D))
+E((E))
+end
+A <--> B & C & D & E
+B <--> C & D & E
+C <--> D & E
+D <--> E
+
+subgraph O[Ontologies: n+1 interactions]
+direction TB
+A1
+B1
+Ontologies <--> A1((A1)) & B1((B1)) & C1((C1)) & D1((D1)) & E1((E1))
+end
+```
