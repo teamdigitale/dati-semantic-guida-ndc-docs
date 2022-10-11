@@ -5,7 +5,7 @@ L'architettura di schema.gov.it è descritta dal seguente diagramma:
 
 1. gli enti popolano i loro repository semantici
    conformemente alle indicazioni tecniche contenute in questo documento e registrano i loro repository
-   nel Catalogo del Riuso disponibile su https://developers.gov.it/it/software;
+   nel Catalogo del Riuso disponibile su <https://developers.gov.it/it/software>;
 1. NDC recupera l'elenco dei repository dal Catalogo Software e li processa, popolando i datastore interni della piattaforma;
 1. gli utenti possono ricercare ed accedere ai dati sia con interfacce utente (sito web e visualizzatori semantici) che tramite diverse tipologie di API (REST, SparQL, ...)
 
