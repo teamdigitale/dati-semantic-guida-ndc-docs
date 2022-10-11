@@ -111,15 +111,16 @@ Ad esempio, analizziamo un repository strutturato come segue
 │  ├─ Onto1/
 │  │  ├─ onto1.ttl
 │  │  └─ onto1.rdf
-│  ├─ Sottoargomento/
-│  │  ├─ Onto2/
-│  │  │  └─ onto2.xml
-│  │  ├─ Onto3/
-│  │  │  └─ onto3.ttl
-│  ├─ Onto4/
+│  ├─ Onto2/
+│  │  └─ README.md
+│  ├─ Onto3/
 │  │  ├─ Other/
 │  │  │  └─ temp.md
-│  │  └─ onto4.ttl
+│  │  └─ onto3.ttl
+│  ├─ Onto4/
+│  │  └─ latest/
+│  │     ├─ onto1.ttl
+│  │     └─ onto1.rdf
 │  └─ notes.md
 |
 └─ assets/controlled-vocabularies/
@@ -133,34 +134,23 @@ Questo non rappresenta un problema e non è considerato un errore.
 I file informativi (e.g. README.md, notes.md) presenti sia nella radice che
 nelle sottodirectory vengono semplicemente ignorati durante l’harversting.
 
-Per quanto riguarda la directory Onto1/:
+Per quanto riguarda la directory `Onto1/`:
 
 - essa non contiene sotto-directory né altre directory al suo interno
   ed è quindi una cartella foglia.
   Quindi viene processata come potenzialmente contenente un’ontologia;
 - contiene un file RDF/Turtle che verrà processato;
 - contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
-  Poiché NDC processa solo i file di tipo text/turtle con estensione .ttl, questo file viene ignorato.
-
-L’Erogatore ha organizzato logicamente le directory `Onto2/` e `Onto3/`
-come subdirectory di `Sottoargomento/`.
-Questo non rappresenta un problema e le directory vengono harvestate.
-Essendo, a loro volta, directory foglia sono considerate come potenziali contenitori di ontologie.
+  Poiché NDC processa solo i file di tipo text/turtle con estensione `.ttl`, questo file viene ignorato.
 
 La directory `Onto2/` non contiene file `.ttl`: questo viene segnalato solamente come WARNING.
 
-La directory `Onto4/` ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
+La directory `Onto3/` ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
 ma come directory intermedia nel cammino per altre directory foglia:
-il file `onto4.tll` è ignorato e non processato.
+il file `onto3.tll` è ignorato e non processato.
 
-## Nessuna rappresentazione RDF alternativa
+La directory `Onto4/` contiene una sottodirectory `latest/` che contiene un file `.ttl`, quindi viene processata come potenzialmente contenente un’ontologia.
 
-Le directory degli asset NON DOVREBBERO contenere risorse RDF in altre serializzazioni
-(ad es. RDF/XML, JSON-LD, ..).
-Se presenti, queste non saranno comunque elaborate da NDC.
-
-Questi file POSSONO essere inseriti nello stesso repository al di fuori della directory `asset/`;
-In questo caso, essi DOVREBBERO essere generati automaticamente dai file originali in `asset/`.
 
 ## Versionamento
 
