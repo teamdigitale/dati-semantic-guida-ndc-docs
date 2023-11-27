@@ -74,8 +74,8 @@ utili a definire ulteriori vocabolari:
 
 - [RDF](https://www.w3.org/TR/rdf-concepts/)
 - [RDFS](https://www.w3.org/TR/rdf-schema/)
-- [OWL](https://www.w3.org/TR/owl/)
-- [SKOS](https://www.w3.org/TR/skos/)
+- [OWL](https://www.w3.org/TR/owl-features/)
+- [SKOS](https://www.w3.org/TR/skos-reference/)
 
 L'Italia e l'Europa pubblicano inoltre ulteriori vocabolari ufficiali utili a creare servizi digitali.
 Questi vocabolari possono anche descrivere in modo molto dettagliato dei dataset,

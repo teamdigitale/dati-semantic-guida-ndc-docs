@@ -2,8 +2,10 @@
 
 Gli schemi pubblicati devono essere conformi alle relative Linee guida nazionali.
 
-Gli schemi per le API devono essere pubblicati in formato OpenAPI3 (corrispondenti ad una estensione di [JSON Schema Draft 4](https://spec.openapis.org/oas/v3.0.3#data-types)), incorporato nella sezione `#/components/schema` del file OAS
-compatibilmente con le Linee Guida per l'interoperabilità tecnica.
+Gli schemi DEVONO utilizzare delle directory versionate come descritto in [versionamento](schemi-versionamento).
+
+Gli schemi per le API devono essere pubblicati in formato OpenAPI3 (corrispondenti ad una estensione di [JSON Schema Draft 4](https://spec.openapis.org/oas/v3.0.3#data-types)), incorporato nella sezione `#/components/schema` del file OAS compatibilmente con le Linee Guida per l'interoperabilità tecnica.
+
 L’estensione del file DEVE essere `.oas3.yaml`.
 
 In futuro potranno essere supportati altri formati di schemi (e.g. versioni più recenti di JSON Schema).
@@ -135,7 +137,7 @@ qui una codelist (estensione ".gc") http://publications.europa.eu/resource/distr
 Gli stessi dati possono essere recuperati  a partire da https://data.europa.eu/data/datasets/country.
 
 
-
+(schemi-versionamento)=
 ### Versionamento
 
 TBD

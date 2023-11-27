@@ -1,13 +1,15 @@
 # Contribuire al National Data Catalog
 
-Il documento descrive l’interfaccia di processamento dei repository semantici
-pubblicati dai vari Erogatori.
+Il documento descrive le modalità di contribuzione a disposizione delle
+Organizzazioni, con un focus particolare sulle caratteristiche che i 
+repository gestiti dalle stesse devono avere per poter essere processati
+dal NDC.
 
-L'architettura del NDC è definita in [Architettura](architettura)
+L'architettura del Catalogo è definita in [Architettura](architettura)
 
 ## Terminologia
 
-Questa sezione utilizza le definizioni e gli acronimi
+Questa sezione utilizza le note di lettura, definizioni e acronimi
 indicati nel Capitolo 2, oltre ai termini definiti di seguito.
 
 Il termine "harvesting" identifica il processo di raccolta funzionale alla pubblicazione su NDC
@@ -29,6 +31,14 @@ Come e a chi si registra l’URL del repository?
 Quali altri dati descrittivi dell’istituzione sono necessari? Email?
 Repository
 
+I seguenti paragrafi descrivono le linee guida che l'Organizzazione DEVE seguire 
+nel caso in cui voglia pubblicare le risorse semantiche in un repository
+da sé gestito.
+È disponibile pubblicamente un 
+[repository di esempio](https://github.com/teamdigitale/dati-semantic-cookiecutter) 
+creato a partire da tali linee guida.
+
+
 ## Contenuto del repository
 
 Ogni repository può contenere una o più risorse semantiche
@@ -40,14 +50,74 @@ Quelle supportate sono:
 * Schemi dati in formato [OAS3] (OpenAPI Specifications versione 3).
   Future versioni del catalogo possono supportare altre risorse semantiche ed altri formati.
 
+## File richiesti e layout del repository
+
+Il repository DEVE contenere i seguenti file:
+
+- ndc-config.yaml: referenziando la posizione delle risorse semantiche
+  ed ulteriori informazioni necessarie
+  alla pubblicazione su NDC;
+- publiccode.yaml: contenente tutte le informazioni richieste dal
+  [Catalogo del Riuso](https://developers.italia.it/it/software).
+
+Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso,
+e DEVE contenere un file [publiccode.yml conforme alle relative Linee Guida](https://docs.italia.it/italia/developers-italia/publiccodeyml)
+col riferimento al [codice IPA](https://www.indicepa.gov.it/) dell'ente che gestisce il repository.
+
+Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
+
+```yaml
+...
+maintenance:
+  contacts:
+email: info@teamdigitale.governo.it
+name: Dipartimento per la Trasformazione Digitale
+it:
+  riuso:
+    codiceIPA: pcm
+```
+
+Tutte le risorse fornite DEVONO risiedere all'interno della cartella `assets/`
+referenziato in ndc-config.yaml.
+Le risorse al di fuori di `assets/` non saranno elaborate.
+
+Ogni tipo di asset (ontologie, vocabolari controllati, schemi)
+DEVE risiedere nella sua cartella specifica con un nome predefinito,
+referenziato in ndc-config.yaml.
+
+I nomi di file e directory DEVONO corrispondere
+al pattern `[A-ZA-Z0-9 _-.]{, 64}`.
+Gli spazi NON DEVONO essere utilizzati nei file o nei nomi delle directory.
+Le directory DEVONO essere in minuscolo.
+
+Il nome di ciascun file DEVE corrispondere al nome della relativa risorsa 
+nell'URI utilizzato per referenziarla. 
+I nomi dei file di una directory DEVONO corrispondere al nome della directory
+che li contiene, a meno dell'estensione degli stessi.
+
+I contenuti degli asset DEVONO essere codificati in UTF-8 o ASCII.
+
+Ogni risorsa DEVE risiedere sotto la sua cartella specifica:
+
+- ontologies: in `assets/ontologies/`;
+- Vocabolari controllati: in `assets/controlled-vocabularies/`;
+- Schemi: in `assets/schemas/`.
+
+Ad esempio, il percorso di `MyOntology` sarà `assets/ontologies/MyOntology/`.
+
+Inoltre, DEVONO essere creati e pubblicati sul repository del [w3id](https://www.w3id.org)
+ i file `htaccess` che definiscono le regole di redirect delle URI, così come descritto
+ nel [paragrafo dedicato](redirect.md); lo scopo è di rendere resilienti e stabili le URI 
+ con le quali si referenziano le risorse semantiche.
+
 ## Formati supportati
 
 I file DEVONO essere codificati in UTF-8.
 
-Tutti i file RDF DEVONO essere pubblicati in formato Turtle (media type `text/turtle`).
-L’estensione del file DEVE essere `.ttl`.
-Ulteriori serializzazioni (e.g. RDF/XML, JSON-LD, ..):
+Le estensioni accettate per ciascuna tipologia di risorsa semantica
+sono descritte nei paragrafi dedicati.
 
+Ulteriori serializzazioni (e.g. RDF/XML, JSON-LD, ..):
 * non verranno processate da NDC;
 * NON DOVREBBERO essere pubblicate, poiché verranno generate automaticamente
   dal NDC a partire dai file Turtle;
@@ -73,52 +143,9 @@ di continuous integration che verificano, tra l'altro:
 [OAS3]: https://spec.openapis.org/oas/v3.0.3
 [IPA]: https://indicepa.gov.it
 
-
-## Layout del repository
-
-Per essere correttamente processato, il repository deve rispettare una serie di regole
-che rendono il processamento semplice ed efficiente.
-
-Un repository è un oggetto pubblico indicizzato dal Catalogo del Riuso,
-e DEVE contenere il file `publiccode.yml` conforme alle relative Linee Guida [PUBLICCODE_YML]
-col riferimento al Codice [IPA] dell’Erogatore.
-Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.
-
-```yaml
-...
-maintenance:
-  contacts:
-email: info@teamdigitale.governo.it
-name: Dipartimento per la Trasformazione Digitale
-it:
-  riuso:
-    codiceIPA: pcm
-```
-
-Tutte le risorse fornite DEVONO risiedere nella directory `asset/`.
-Le risorse al di fuori di `asset/` non saranno elaborate.
-
-Ogni risorsa DEVE risiedere sotto una sua directory specifica dipendente dalla sua tipologia:
-
-* Ontologie: in `assets/ontologies/`;
-* Vocabolari controllati: in `assets/controlled-vocabularies/`;
-* Schemi: in `assets/schemas/`.
-
-I nomi di file e directory DEVONO rispettare il pattern `[A-Za-z0-9_.-]{,64}`;
-non possono quindi contenere spazi.
-Le directory associate ai vocabolari controllati DOVREBBERO essere in minuscolo,
-mentre quelle associate alle ontologie e ai schemi DOVREBBERO essere in CamelCase.
-
-I contenuti degli asset DEVONO essere codificati in UTF-8.
-
-Ad esempio:
-
-- il percorso dell’ontologia `MyOntology` sarà `assets/ontologies/MyOntology/`;
-- il percorso del vocabolario `my-vocabulary` sarà `assets/controlled-vocabularies/my-vocabulary/`.
-
 ## Versionamento
 
-**Nota: la versione attuale di NDC indicizza in maniera versionata solamente le ontologie.**
+TODO: definire il versionamento anche per gli schemi nel paragrafo dedicato
 
 Le directory degli asset POSSONO essere avere sub-directory
 per supportare il versionamento.
@@ -163,6 +190,12 @@ versioni prefissate da `v` che senza prefisso.
     │       ├── v.3
     │       └── 4.5.
 ```
+
+Il Catalogo elabora solo:
+
+- la cartella `latest` se presente;
+- La cartella con l'ultima versione,
+  secondo la sintassi indicata dal semantic versioning.
 
 ### File di Documentazione
 
@@ -229,4 +262,7 @@ La directory `Onto4/` contiene una sottodirectory `latest/` che contiene un file
 ```
 
 ```{include} schemi.md
+```
+
+```{include} redirect.md
 ```

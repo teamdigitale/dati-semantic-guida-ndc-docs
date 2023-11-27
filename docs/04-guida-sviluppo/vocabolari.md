@@ -6,6 +6,8 @@ alle relative Linee guida nazionali.
 I vocabolari controllati DEVONO essere pubblicati solo in formato RDF/Turtle (media type `text/turtle`)
 e l’estensione del file DEVE essere `.ttl`.
 
+I vocabolari DEVONO utilizzare delle directory versionate come descritto in [versionamento](vocabolari-versionamento).
+
 ### Proiezione in formato CSV
 
 Le directory del vocabolario controllato DOVREBBERO contenere una proiezione in formato CSV del vocabolario
@@ -26,7 +28,8 @@ La proiezione CSV deve rispettare i seguenti requisiti:
 
 Questa proiezione in formato CSV viene esposta dalla NDC tramite API REST.
 
-I metadati di cui sopra DEVONO essere espressi tramite un `@context` JSON-LD 1.1.
+I metadati di cui sopra DEVONO essere espressi
+tramite un `@context` [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/).
 
 (vocabolari-esempi)=
 ### Esempi
