@@ -2,7 +2,10 @@
 
 Le ontologie pubblicate DEVONO essere conformi alle relative Linee guida nazionali.
 
-Le ontologie DEVONO utilizzare delle directory versionate come descritto in [versionamento].
+Le ontologie DEVONO essere pubblicate solo in formato RDF/Turtle
+(media-type `text/turtle`) e l'estensione del file DEVE essere `.ttl`.
+
+Le ontologie DEVONO utilizzare delle directory versionate come descritto in [versionamento](ontologie-versionamento).
 
 ### Esempi
 

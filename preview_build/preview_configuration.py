@@ -18,7 +18,11 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.doctest",
     "docs_italia_theme",
+    "myst_parser",
 ]
+
+# The suffix of source filenames.
+source_suffix = [".md", ".rst"]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
