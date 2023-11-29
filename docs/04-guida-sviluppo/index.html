@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="it" class="no-js" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo Nazionale Dati per l'Interoperabilità Semantica Bozza documentazione | 4. Contribuire al National Data Catalog</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css">
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css">
+
+  <!-- Relations -->
+  <link rel="index" title="Indice" href="../../index.html">
+  <link rel="top" title="Catalogo Nazionale Dati per l&#39;Interoperabilità Semantica Bozza documentazione" href="../../index.html">
+  <link rel="next" title="5. Architettura di schema.gov.it" href="architettura.html">
+  <link rel="prev" title="3. Introduzione alla semantica" href="../03-introduzione/index.html">
+
+  
+  
+  <!-- No Index - keep if out of docs.italia.it -->
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+</head>
+
+<body class="docs-italia">
+  <script>
+	if (document.location.href.indexOf('?payload=') >= 0)
+		document.body.className += ' loading';
+</script>
+  <header class="container-fluid container-fluid--desktop px-0 header">
+  <nav class="navbar navbar-expand-lg primary-bg-a7 navbar-dark slim-header justify-content-start p-0 pl-lg-4 pr-lg-5">
+    <span class="navbar-brand ml-4"><a class="text-white" href="https://www.agid.gov.it">AGID</a> + <a class="text-white" href="https://teamdigitale.governo.it">Team Digitale</a></span>
+    <button class="navbar-toggler collapsed text-white px-2 py-0 mr-3"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+    <span class="navbar__icon it-expand my-auto ml-1"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="http://pianotriennale-ict.italia.it">Piano Triennale</a>
+        </li>
+        <li role="separator" class="nav-item divider ml-lg-0 ml-3"></li>
+        <li class="nav-item nav-text px-lg-2 pl-3 d-lg-none ">
+          <span class="nav-text text-uppercase text-white">Le community</span>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://developers.italia.it">Developers</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://designers.italia.it">Designers</a>
+        </li>
+        <li role="separator" class="nav-item divider ml-lg-0 ml-3"></li>
+        <li class="nav-item nav-text px-lg-2 pl-3 d-lg-none ">
+          <span class="nav-text text-uppercase text-white">Gli strumenti</span>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://forum.italia.it">Forum</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3 active">
+          <a class="nav-link" href="https://docs.italia.it">Docs</a>
+        </li>
+        <li class="nav-item px-lg-2 pl-3">
+          <a class="nav-link" href="https://github.com/italia">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="ml-auto">
+      
+    </div>
+  </nav>
+
+  <div class="row p-4 px-lg-5 m-0 bg-primary--dark align-items-center">
+    <div class="row w-100">
+      <div class="logo--header">
+        <a href="/" tabindex="-1" aria-hidden="true" class="d-block">
+          <svg class="svg--header align-bottom" xmlns="http://www.w3.org/2000/svg" height="78.187" width="97.387" viewBox="0 0 91.300002 73.300002"><g fill="#fff"><path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"/></g></svg>
+        </a>
+      </div>
+      <div class="col pl-3 pl-sm-4">
+        <h1 class="h1--header mb-1">
+          <a href="/" class="site-title text-white">
+            Docs Italia
+            
+              <span class="badge badge-pill bg-primary--mid-dark align-middle">beta</span>
+            
+          </a>
+        </h1>
+        <h2 class="text-white mb-0 h2--header">Documenti pubblici, digitali.</h2>
+      </div>
+    </div>
+    <div class="row mt-4 w-100 docs__document-info">
+      <div class="col-md-6">
+        <i class="docs-icon-document docs__document-info__icon"></i>
+        <a href="../../index.html" class="text-white font-weight-normal">
+          Catalogo Nazionale Dati per l'Interoperabilità Semantica Bozza documentazione
+        </a>
+      </div>
+      <div class="docs__document-info__ownership col-md-5 offset-md-1 mt-3 mt-md-0">
+        
+        <div class="w-100">
+          <i class="docs-icon-project docs__document-info__icon"></i>
+          <span class="docs__document-info__label ml-1">Progetto:</span>
+          <a href="/organizzazione-demo/progetto-demo" class="text-white font-weight-normal">
+            <u>Progetto demo</u>
+          </a>
+        </div>
+        
+        
+        <div class="w-100 mt-1">
+          <i class="docs-icon-publisher docs__document-info__icon"></i>
+          <span class="docs__document-info__label ml-1">Amministrazione:</span>
+          <a href="/organizzazione-demo/" class="text-white font-weight-normal">
+            <u>Organizzazione demo</u>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</header>
+<div class="doc-header container-fluid container-fluid--desktop bg-white">
+  <div class="row py-3 px-4 px-lg-5 align-items-center flex-nowrap justify-content-between">
+    <div class="col-auto d-md-none d-flex align-items-center order-1">
+      <a href="#" class="btn p-2" role="button" id="searchbox-toggle" data-toggle="collapse" data-target="#searchbox" aria-controls="searchbox" aria-expanded="false" aria-label="Toggle searchbox">
+        <span class="docs-icon-search d-inline-block">
+          <span class="sr-only">Cerca nel documento</span>
+        </span>
+      </a>
+    </div>
+    <div class="col-3 d-none d-md-flex pl-0">
+      
+  <div class="w-100" role="search">
+    <form class="mr-md-3" id="rtd-search-form" action="../../search.html" method="get">
+      <div class="input-group" role="search">
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+        <input type="text" class="p-2 text-grey form-control" style="" required="" id="cerca" name="q" placeholder="Cerca nel documento...">
+				<span class="input-group-append">
+					<button type="submit" class="btn btn-default text-primary px-3 py-2" role="search">
+            <span class="docs-icon-search d-block my-auto">
+							<span class="sr-only">Cerca nel documento</span>
+						</span>
+					</button>
+				</span>
+			</div>
+    </form>
+  </div>
+    </div>
+    <div class="col-auto d-flex align-items-center justify-content-center flex-md-grow-1 order-0 order-md-1 pl-0">
+      
+      <a href="#" role="button" class="btn p-2" data-toggle="modal" data-target="#document-info">
+        <span class="docs-icon-info"></span>
+        <span class="d-none d-md-inline align-middle">Informazioni</span>
+      </a>
+      
+    </div>
+    <div class="col-4 col-sm-auto d-flex flex-md-grow-1 align-items-center justify-content-center order-1">
+      <div id="rst-menu" class="px-2">
+        <div class="dropdown" id="version-list">
+            <button class="btn btn-primary dropdown-toggle badge badge-pill bg-primary text-nowrap px-3 py-2" type="button" id="dropdownVersionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="current-version">bozza</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownVersionButton">
+              <div class="version-list-wrapper"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-auto d-none d-md-flex flex-grow-1 align-items-center order-1">
+      <div class="document-actions d-flex flex-column flex-md-row justify-content-around w-100 p-2 p-md-0 text-blue">
+  <div class="dropdown p-3 px-md-2 py-md-0 d-flex flex-wrap">
+    <a class="btn dropdown-toggle p-2 flex-grow-1 text-left" href="#" id="downloads-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="docs-icon-download align-middle"></span>
+      <span class="align-middle">Scarica</span>
+    </a>
+    <div class="dropdown-menu w-100" aria-labelledby="downloads-dropdown" aria-disabled="false">
+      <div class="link-list-wrapper">
+        <ul class="link-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="p-3 px-md-2 py-md-0">
+    <a href="#" role="button" class="btn p-2 disabled" aria-disabled="true">
+        <span class="docs-icon-github"></span>
+        <span class="align-middle">Sorgente</span>
+    </a>
+  </div>
+</div>
+    </div>
+    
+    <div class="col-auto pr-0 d-md-none d-flex align-items-center justify-content-end order-1">
+      <a href="#" role="button" class="btn py-2 px-0" data-toggle="modal" data-target="#document-actions">
+        <span class="docs-icon-more"></span>
+        <span class="sr-only">Azioni</span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="progress-container">
+      <div class="progress-bar" id="scrollprogressBar"></div>
+    </div>
+  </div>
+</div>
+
+	<!--
+  Forum Italia comments templates
+-->
+
+<script id="forum-italia-comments" type="text/template">
+  <div class="block-comments" id="accordion-comments-{{ topicId }}" data-topic="{{ topicId }}">
+    <!-- Top header -->
+    <div class="block-comments__header d-flex border-top border-bottom border-width-2 pt-3 pb-3 align-items-center justify-content-between">
+      <h6 class="col-auto text-uppercase mb-0">{{ commentsCount }} Commenti</h6>
+      <button class="col-auto block-comments__toggle-btn rounded-circle border border-medium-blue border-width-2 collapsed" data-toggle="collapse" data-target="#comments-{{ topicId }}" aria-expanded="false">
+        <span class="docs-icon-plus"></span>
+        <span class="docs-icon-minus"></span>
+      </button>
+    </div>
+  </div>
+  <div class="block-comments__body collapse" data-parent="#accordion-comments-{{ topicId }}" id="comments-{{ topicId }}">
+    <!-- Input row -->
+    <div class="d-flex align-items-center mb-4 block-comments__input">
+      <div class="box-comment {{ canPost }}" data-topic="{{ topicId }}"></div>
+    </div>
+    <div class="row">
+      <div class="block-comments__container col">
+        <div class="row mt-4">
+          <ul class="block-comments__list col items mb-0" id="accordion-comment-item" data-topic="{{ topicId }}"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="block-comments__header d-flex border-bottom border-width-2 pt-3 pb-3 mb-4 align-items-center justify-content-end">
+      <button class="col-auto block-comments__toggle-btn rounded-circle border border-medium-blue border-width-2 collapsed" data-toggle="collapse" data-target="#comments-{{ topicId }}" aria-expanded="false">
+        <span class="docs-icon-plus"></span>
+        <span class="docs-icon-minus"></span>
+      </button>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__comment" type="text/template">
+  <li id="comment-{{ post.id }}" class="row mb-4 block-comments__item {{ hidden }} {{ isNew }}"
+      data-topic="{{ post.topic_id }}" data-comment="{{ post.id }}">
+    <div id="reply-to-{{ post.id }}" class="block-comments__reply-anchor"></div>
+    <figure class="col-auto mb-0">
+      <img class="block-comments__img rounded-circle" src="{{ avatarUrl }}">
+    </figure>
+    <div class="col block-comments__content">
+      <div class="row align-items-center justify-content-between" id="comment-heading-1">
+        <div class="col-auto">
+          <span class="block-comments__name text-capitalize mb-0">{{ displayName }}</span>
+        </div>
+        <div class="col-auto">
+          <p class="d-inline-block mr-2 block-comments__date mb-0">{{ date }}</p>
+          <button class="block-comments__item-btn" data-toggle="collapse"
+                  data-target="#collapse-{{ post.id }}">
+            <i class="it-collapse"></i>
+            <i class="it-expand"></i>
+          </button>
+        </div>
+      </div>
+      <p class="text-uppercase block-comments__role">{{ publicUserField }}</p>
+      <div class="my-3">{{ replyLink }}</div>
+      <div id="collapse-{{ post.id }}" class="block-comments__paragraph pl-3 border-left collapse show"
+           aria-labelledby="comment-heading-1">
+        {{ post.cooked }}
+      </div>
+      <div class="block-comments__actions mb-2 mt-3">
+        {{ postActions }}
+      </div>
+    </div>
+  </li>
+</script>
+
+<script id="forum-italia__like-button" type="text/template">
+  <small>
+      <button id="{{ buttonAction }}-like-{{ post.id }}" type="button" class="btn btn-primary btn-sm mr-2 px-2 py-1">
+        {{ likeCount }}
+        <i class="it-favorite ml-1 mr-0"></i>
+      </button>
+      {{ likeDone }}
+    </small>
+</script>
+
+<script id="forum-italia__like-info" type="text/template">
+  <small>
+      <span id="like-{{ post.id }}" class="border rounded btn-sm mr-2 px-2 py-1">
+        {{ likeCount }}
+        <i class="it-favorite ml-1 mr-0"></i>
+      </span>
+      {{ likeDone }}
+    </small>
+</script>
+
+<script id="forum-italia__reply-link" type="text/template">
+  <div>
+    <small>In risposta al 
+      <a class="reply-to-post" href="#reply-to-{{ replyDest.id }}">
+        commento di {{ replyDest.name }}
+      </a>
+    </small>
+  </div>
+</script>
+
+<script id="forum__login" type="text/template">
+  <div class="box-comment__user-image box-comment__user-image--anon">
+    <i class="docs-icon-user"></i>
+  </div>
+  <div class="box-comment__login">
+    <div><button class="login-button btn-link p-0 border-0 align-baseline">Accedi al Forum</button> per commentare</div>
+  </div>
+</script>
+
+<script id="forum__comment" type="text/template">
+  <div class="form group">
+    <div class="box-comment__errors-box"></div>
+    <!-- Write -->
+    <div class="d-flex align-items-center mt-4 mb-4 block-comments__input box-comment__write">
+      <figure class="col-auto mb-0">
+        <img class="block-comments__img box-comment__figure rounded-circle" src="">
+          <figcaption>
+            <a href="#logout" class="block-comments__logout-link block-comments__logout-link--visible" data-toggle="modal" data-target="#logout-modal" title="Logout" alt="Logout">Logout</a>
+          </figcaption>
+      </figure>
+      <textarea class="form-control box-comment__body col ml-2 p-2" id="comments-input" placeholder="Scrivi qui un commento. Per formattare il testo puoi usare Markdown. Clicca sul bottone 'suggerimenti' per vedere alcuni esempi." rows="4"></textarea>
+    </div>
+    <!-- Buttons -->
+    <div class="box-comment__buttons">
+      <button type="button" class="btn btn-primary btn-sm box-comment__submit mr-2" disabled="true"><div>invia</div></button>
+      <button type="button" class="btn btn-sm btn-secondary new-comment__suggestions" data-container="body" data-toggle="popover" data-content="html">suggerimenti</button><span class="loading no-bg">&nbsp;</span>
+    </div>
+    <div class="box-comment__required">
+      <span>Scrivi almeno altri <span class="required-chars">20</span> caratteri</span>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__missing_permission" type="text/template">
+	<div class="pl-2 block-comments__input missing_permission error error--{{ errorCode }} row">
+		<figure class="col-auto mb-0 mr-2">
+			<img class="block-comments__img new-comment__figure rounded-circle" src="">
+			<figcaption>
+				<a href="#logout" class="block-comments__logout-link block-comments__logout-link--visible" data-toggle="modal" data-target="#logout-modal" title="Logout" alt="Logout">Logout</a>
+			</figcaption>
+		</figure>
+
+		<div class="missing_permission__text col pt-2">{{ errorText }}</div>
+	</div>
+</script>
+
+<script id="forum__logout--modal" type="text/template">
+  <div class="modal logout-modal" id="logout-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Logout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Dopo il logout non sarà possibile scrivere nuovi commenti. Sicuro di voler procedere?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="logout-modal__submit">Conferma</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="logout-modal__cancel">Annulla</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__markup__tooltip" type="text/template">
+  <div class="tooltip tooltip--active doc-tooltip box-comment__suggestions__tooltip" role="tooltip">
+    <div class="tooltip__wrap">
+      Markdown per la formattazione del testo:
+      <ul class="tooltip__content">
+        <li><b>Grassetto:</b> __testo__ (o **testo**)</li>
+        <li><i>Corsivo</i>: _testo_</li>
+        <li>Link: [Testo](http://example.com)</li>
+        <li>Citazione: &gt; Testo citazione</li>
+      </ul>
+    </div>
+  </div>
+</script>
+
+<script id="forum-italia__silenced" type="text/template">
+  <div class="error error__silenced">
+    Il tuo account è stato temporaneamente sospeso, scopri di più leggendo
+    <a href="{{ notificationsUrl }}" target="_blank">le tue notifiche</a> su Forum Italia.
+    <br>
+  </div>
+</script>
+
+<script id="forum-italia__closedTopic" type="text/template">
+  <div class="error error__closed">
+    Questa discussione è in sola lettura.
+    <br>
+  </div>
+</script>
+
+<script id="section_navigation__comments" type="text/template">
+  <li class="chapter-nav__item">
+      <span class="it-comment mr-2 align-middle"></span>
+      <a href="#forum-italia-comments-{{ topicId }}" class="chapter-link chapter-link--expand">
+          {{ postsCount }} commenti
+      </a>
+  </li>
+</script>
+
+
+<!--
+  markup_modifier templates
+-->
+
+<script id="markup_modifier__chapter-header" type="text/template"> <div class="chapter-header clearfix"><div class="title-wrap"> </script>
+
+<script id="markup_modifier__icon" type="text/template">
+	<span class="docs-icon-{{ i }}"></span>
+</script>
+
+<script id="markup_modifier__note-action" type="text/template">
+	<div class='note-action'>
+		<button type='button' class='note-close-btn'>×</button>
+		<button type='button' class='note-back-btn'><i class='it-arrow-up'></i> {{ text }} </button>
+	</div>
+</script>
+
+<script id="markup_modifier__admonition" type="text/template">
+	<div class='admonition__toggle-wrap'>
+		<button type='button' class='admonition__toggle-btn'>
+			<span class='admonition__toggle-show-more'>
+				{{ more }} <span class='docs-icon-plus'></span>
+			</span>
+			<span class='admonition__toggle-show-less'>
+				{{ less }} <span class='docs-icon-minus'></span>
+			</span>
+		</button>
+	</div>
+</script>
+
+
+<!--
+  glossary_page templates
+-->
+
+<script id="glossary__btn" type="text/template">
+	<button class='glossary-page__btn collapsed border-top border-grey-light border-width-2 pt-3 pb-3' data-toggle='collapse' data-target='#glossary-{{ id }}' aria-expanded='true' aria-controls='glossary-{{ id }}'>
+		<span class='docs-icon-plus mr-3'> </span>
+		<span class='docs-icon-minus mr-3'> </span>
+		{{ text }}
+	</button>
+</script>
+
+<script id="glossary__copy-link" type="text/template">
+	<div class='glossary-page__copy-link-wrap mt-3'>
+		<i class='it-link mr-2 align-middle'></i>
+		<button type='button' class='glossary-page__copy-link'> {{ copyLink }} </button>
+	</div>
+</script>
+
+
+<!--
+  searchbox_collapse templates
+-->
+
+<script id="searchbox-collapse" type="text/template">
+	<div class="row p-2"><div class="col"></div></div>
+</script>
+
+
+<!--
+  section_navigation templates
+-->
+
+<script id="section_navigation__nav" type="text/template">
+    <div class="chapter-nav">
+        <div class="chapter-nav__wrap">
+            <ul class="chapter-nav__list chapter-nav__list--visible">
+                <li class="chapter-nav__item">
+                    <span class="it-more-items mr-2 align-middle"></span>
+                    <button type="button" data-toggle="modal"
+                        class="chapter-link chapter-link--expand">{{ seeActions }}</button>
+                </li>
+            </ul>
+            <div class="{{ modalClass }} chapter-nav__list--hidden" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="{{ modalContainerClass }}">
+                    <div class="{{ modalContentClass }} chapter-nav__list-wrap">
+                        <div class="chapter-nav__title"> {{ title }} </div>
+                        <ul class="chapter-nav__list">
+                            <li class="chapter-nav__item">
+                                <i class="it-link mr-2 align-middle"></i>
+                                <button type="button" class="chapter-link">{{ copyLink }}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<!--
+  tooltip templates
+-->
+
+<script id="tooltip__main" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'>{{ item.body }}</p>
+		</div>
+	</div>
+</script>
+
+<script id="tooltip__glossary" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'>{{ trimmedSummary }}</p> {{ btnToGlossary }}
+		</div>
+	</div>
+</script>
+
+<script id="tooltip__note" type="text/template">
+	<div class='tooltip tooltip--active doc-tooltip doc-tooltip--note' role='tooltip'>
+		<div class='tooltip__wrap'>
+			<button type='button' role='button' class='tooltip__close-btn' data-ref="{{ item.ref }}"></button>
+			<h2 class='tooltip__title'>{{ item.title }}</h2>
+			<p class='tooltip__content'> {{ item.body }}</p>
+		</div>
+	</div>
+</script>
+
+
+  <div id="main" role="document">
+    <div class="container-fluid container-fluid--desktop main-container">
+      <div class="row">
+        <nav class="col--nav">
+          <section class="docs-menu">
+  <div id="desktop-menu" class="sidebar-nav">
+    <a class=""
+      aria-controls="desktop-menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+      <span class="" aria-hidden="true"></span>
+    </a>
+
+    <button data-toggle="collapse" data-target="#content-index" aria-expanded="true" class="sidebar-btn p-3 sidebar-btn--desktop" type="button" aria-controls="content-index">
+      indice dei contenuti
+      <span class="it-collapse float-right"></span>
+      <span class="it-expand float-right"></span>
+    </button>
+    <div id="content-index" class="content-index--menu sidebar-list--wrapper sidebar-accordion-content collapse show">
+      <ul class="">
+        <li class="toctree-l1 ">
+          <a href='../../index.html'>Sommario</a>
+        </li>
+      </ul>
+      
+      <p class="caption" role="heading"><span class="caption-text">Indice dei contenuti</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../01-progetto.html">1. Il Progetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-glossario.html">2. Riferimenti e sigle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#note-di-lettura-del-documento">2.1. Note di lettura del documento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#riferimenti-normativi">2.2. Riferimenti normativi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#termini-e-definizioni">2.3. Termini e definizioni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../03-introduzione/index.html">3. Introduzione alla semantica</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#cose-la-semantica">3.1. Cos’è la semantica?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03-introduzione/index.html#standardizzazione-semantica">3.1.1. Standardizzazione semantica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-introduzione/index.html#vocabolari-in-pratica">3.1.2. Vocabolari in pratica</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#rendere-la-semantica-accessibile">3.2. Rendere la semantica accessibile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#standardizzazione-sintattica">3.3. Standardizzazione sintattica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#semantica-e-sintassi">3.4. Semantica e sintassi</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Contribuire al National Data Catalog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terminologia">4.1. Terminologia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registrazione-dellistituzione">4.2. Registrazione dell’istituzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contenuto-del-repository">4.3. Contenuto del repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-richiesti-e-layout-del-repository">4.4. File richiesti e layout del repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formati-supportati">4.5. Formati supportati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controlli-automatici">4.6. Controlli automatici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#versionamento">4.7. Versionamento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-di-documentazione">4.7.1. File di Documentazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#esempi">4.7.2. Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ontologie">4.8. Ontologie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.8.1. Esempi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ontologie-versionamento">4.8.2. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vocabolari-controllati">4.9. Vocabolari controllati</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proiezione-in-formato-csv">4.9.1. Proiezione in formato CSV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vocabolari-esempi">4.9.2. Esempi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vocabolari-versionamento">4.9.3. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schemi-openapi">4.10. Schemi OpenAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-bundling">4.10.1. Schema bundling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">4.10.2. Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schemi-xsd">4.11. Schemi XSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#esempio-countries-authority-table">4.11.1. Esempio: Countries Authority Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemi-versionamento">4.11.2. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#redirect-delle-uri">4.12. Redirect delle URI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduzione-al-redirect">4.12.1. Introduzione al redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processo-di-pubblicazione-degli-htaccess-sul-w3id">4.12.2. Processo di pubblicazione degli htaccess sul w3id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contenuto-dei-file-htaccess-e-del-readme-md">4.12.3. Contenuto dei file .htaccess e del README.md</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architettura.html">5. Architettura di schema.gov.it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05-faq.html">6. FAQ</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+
+    
+  </div>
+</section>
+          <!-- Toggle -->
+<div class="navbar-toggler--wrap navbar-toggler--wrap--bottom p-3">
+  <div class="navbar-toggler navbar-toggler--open p-0 border-0 ml-auto">
+    <div class="navbar-toggler-bottom__chapter align-middle text-truncate">
+      <span class="it-list mr-2"></span><span class="section-number">4. </span>Contribuire al National Data Catalog
+    </div>
+  </div>
+</div>
+
+<div class="sidebar-tabs">
+
+  <!-- Back button. -->
+  <div class="row">
+    <div class="col">
+      <button class="navbar-toggler navbar-toggler--back border-0 ml-auto" type="button" data-toggle="offcanvas">
+        <span class="it-arrow-left align-middle"></span>
+        <span class="navbar-toggler__chapter align-middle ml-2">
+          indici e glossario
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab -->
+  <ul class="row ml-3 mr-3 nav nav-tabs" role="tablist">
+    <li class="col text-center active">
+      <a id="content-index-mobile-tab" data-toggle="tab" href="#content-index-mobile" aria-controls="content-index-mobile" role="tab" aria-selected="true" class="sidebar-btn p-2 sidebar-btn--mobile active show">
+        contenuti
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="figures-index-mobile-tab" data-toggle="tab" href="#figures-index-mobile" aria-controls="figures-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        figure
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="table-index-mobile-tab" data-toggle="tab" href="#table-index-mobile" aria-controls="table-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        tabelle
+      </a>
+    </li>
+    <li class="col text-center">
+      <a id="glossary-index-mobile-tab" data-toggle="tab" href="#glossary-index-mobile" aria-controls="glossary-index-mobile" role="tab" aria-selected="false" class="col sidebar-btn p-2 sidebar-btn--mobile">
+        glossario
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Off canvas -->
+<section class="docs-offcanvas-menu" id="sidebar-nav">
+  <div class="tab-content sidebar-nav">
+
+      <div id="content-index-mobile" class="content-index--menu tab-pane sidebar-list--wrapper fade show active" role="tabpanel" aria-labelledby="content-index-mobile-tab">
+        <ul class="">
+          <li class="toctree-l1 ">
+            <a href='../../index.html'>Sommario</a>
+          </li>
+        </ul>
+        
+        <p class="caption" role="heading"><span class="caption-text">Indice dei contenuti</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../01-progetto.html">1. Il Progetto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-glossario.html">2. Riferimenti e sigle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#note-di-lettura-del-documento">2.1. Note di lettura del documento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#riferimenti-normativi">2.2. Riferimenti normativi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02-glossario.html#termini-e-definizioni">2.3. Termini e definizioni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../03-introduzione/index.html">3. Introduzione alla semantica</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#cose-la-semantica">3.1. Cos’è la semantica?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03-introduzione/index.html#standardizzazione-semantica">3.1.1. Standardizzazione semantica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-introduzione/index.html#vocabolari-in-pratica">3.1.2. Vocabolari in pratica</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#rendere-la-semantica-accessibile">3.2. Rendere la semantica accessibile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#standardizzazione-sintattica">3.3. Standardizzazione sintattica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-introduzione/index.html#semantica-e-sintassi">3.4. Semantica e sintassi</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Contribuire al National Data Catalog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terminologia">4.1. Terminologia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registrazione-dellistituzione">4.2. Registrazione dell’istituzione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contenuto-del-repository">4.3. Contenuto del repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-richiesti-e-layout-del-repository">4.4. File richiesti e layout del repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formati-supportati">4.5. Formati supportati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controlli-automatici">4.6. Controlli automatici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#versionamento">4.7. Versionamento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-di-documentazione">4.7.1. File di Documentazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#esempi">4.7.2. Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ontologie">4.8. Ontologie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.8.1. Esempi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ontologie-versionamento">4.8.2. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vocabolari-controllati">4.9. Vocabolari controllati</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proiezione-in-formato-csv">4.9.1. Proiezione in formato CSV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vocabolari-esempi">4.9.2. Esempi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vocabolari-versionamento">4.9.3. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schemi-openapi">4.10. Schemi OpenAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-bundling">4.10.1. Schema bundling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">4.10.2. Esempi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schemi-xsd">4.11. Schemi XSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#esempio-countries-authority-table">4.11.1. Esempio: Countries Authority Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schemi-versionamento">4.11.2. Versionamento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#redirect-delle-uri">4.12. Redirect delle URI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduzione-al-redirect">4.12.1. Introduzione al redirect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processo-di-pubblicazione-degli-htaccess-sul-w3id">4.12.2. Processo di pubblicazione degli htaccess sul w3id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contenuto-dei-file-htaccess-e-del-readme-md">4.12.3. Contenuto dei file .htaccess e del README.md</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architettura.html">5. Architettura di schema.gov.it</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05-faq.html">6. FAQ</a></li>
+</ul>
+
+        
+      </div>
+
+      <div id="figures-index-mobile" class="figures-index--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="figures-index-mobile-tab">
+        None
+      </div>
+
+      <div id="table-index-mobile" class="table-index--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="table-index-mobile-tab">
+        None
+      </div>
+
+      <div id="glossary-index-mobile" class="glossary-mobile--menu tab-pane sidebar-list--wrapper fade" role="tabpanel" aria-labelledby="glossary-index-mobile-tab">
+        None
+      </div>
+
+  </div>
+</section>
+        </nav>
+        <div id="doc-content" class="col-content">
+          <!--<div class="doc-content__consultation">
+            <span class="it-icon-edit"></span>
+            in consultazione
+          </div>-->
+          
+            <div class="footer-buttons footer-buttons--prev" role="navigation" aria-label="footer navigation">
+                <a href="../03-introduzione/index.html" class="" title="3. Introduzione alla semantica" accesskey="p" rel="prev"> Torna a <span class="section-number">3. </span>Introduzione alla semantica</a>
+            </div>
+          
+          
+  <section id="contribuire-al-national-data-catalog">
+<h1><span class="section-number">4. </span>Contribuire al National Data Catalog<a class="headerlink" href="#contribuire-al-national-data-catalog" title="Permalink to this heading">¶</a></h1>
+<p>Il documento descrive le modalità di contribuzione a disposizione delle
+Organizzazioni, con un focus particolare sulle caratteristiche che i
+repository gestiti dalle stesse devono avere per poter essere processati
+dal NDC.</p>
+<p>L’architettura del Catalogo è definita in <a class="reference internal" href="architettura.html#architettura"><span class="std std-ref">Architettura</span></a></p>
+<section id="terminologia">
+<h2><span class="section-number">4.1. </span>Terminologia<a class="headerlink" href="#terminologia" title="Permalink to this heading">¶</a></h2>
+<p>Questa sezione utilizza le note di lettura, definizioni e acronimi
+indicati nel Capitolo 2, oltre ai termini definiti di seguito.</p>
+<p>Il termine «harvesting» identifica il processo di raccolta funzionale alla pubblicazione su NDC
+delle informazioni contenute nei repository semantici.
+Nel quadro dell’harvesting, si adottano i seguenti termini:</p>
+<ul class="simple">
+<li><p>«ERRORE» indica che l’harvesting è terminato in maniera anomala;</p></li>
+<li><p>«WARNING» indica che l’harvesting ha notificato un messaggio di allerta
+ma il processamento non è terminato;</p></li>
+<li><p>«IGNORATA» indica che l’harvesting non ha processato una specifica
+risorsa (e.g. un file, una directory) ma che ciò non costituisce
+né un ERRORE né un WARNING.</p></li>
+</ul>
+</section>
+<section id="registrazione-dellistituzione">
+<h2><span class="section-number">4.2. </span>Registrazione dell’istituzione<a class="headerlink" href="#registrazione-dellistituzione" title="Permalink to this heading">¶</a></h2>
+<p>TODO:</p>
+<p>Come e a chi si registra l’URL del repository?
+Quali altri dati descrittivi dell’istituzione sono necessari? Email?
+Repository</p>
+<p>I seguenti paragrafi descrivono le linee guida che l’Organizzazione DEVE seguire
+nel caso in cui voglia pubblicare le risorse semantiche in un repository
+da sé gestito.
+È disponibile pubblicamente un
+<a class="reference external" href="https://github.com/teamdigitale/dati-semantic-cookiecutter">repository di esempio</a>
+creato a partire da tali linee guida.</p>
+</section>
+<section id="contenuto-del-repository">
+<h2><span class="section-number">4.3. </span>Contenuto del repository<a class="headerlink" href="#contenuto-del-repository" title="Permalink to this heading">¶</a></h2>
+<p>Ogni repository può contenere una o più risorse semantiche
+che verranno elaborate dal NDC.
+Quelle supportate sono:</p>
+<ul class="simple">
+<li><p>Ontologie;</p></li>
+<li><p>Vocabolari controllati (e.g., tassonomie, code list, tesauri);</p></li>
+<li><p>Schemi dati in formato <a class="reference external" href="https://spec.openapis.org/oas/v3.0.3">OAS3</a> (OpenAPI Specifications versione 3).
+Future versioni del catalogo possono supportare altre risorse semantiche ed altri formati.</p></li>
+</ul>
+</section>
+<section id="file-richiesti-e-layout-del-repository">
+<h2><span class="section-number">4.4. </span>File richiesti e layout del repository<a class="headerlink" href="#file-richiesti-e-layout-del-repository" title="Permalink to this heading">¶</a></h2>
+<p>Il repository DEVE contenere i seguenti file:</p>
+<ul class="simple">
+<li><p>ndc-config.yaml: referenziando la posizione delle risorse semantiche
+ed ulteriori informazioni necessarie
+alla pubblicazione su NDC;</p></li>
+<li><p>publiccode.yaml: contenente tutte le informazioni richieste dal
+<a class="reference external" href="https://developers.italia.it/it/software">Catalogo del Riuso</a>.</p></li>
+</ul>
+<p>Un repository è a tutti gli effetti un oggetto pubblico indicizzato dal Catalogo del Riuso,
+e DEVE contenere un file <a class="reference external" href="https://docs.italia.it/italia/developers-italia/publiccodeyml">publiccode.yml conforme alle relative Linee Guida</a>
+col riferimento al <a class="reference external" href="https://www.indicepa.gov.it/">codice IPA</a> dell’ente che gestisce il repository.</p>
+<p>Queste informazioni verranno utilizzate anche per la continuità operativa del NDC.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">...</span>
+<span class="nt">maintenance</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contacts</span><span class="p">:</span>
+<span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info@teamdigitale.governo.it</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dipartimento per la Trasformazione Digitale</span>
+<span class="nt">it</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">riuso</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">codiceIPA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pcm</span>
+</pre></div>
+</div>
+<p>Tutte le risorse fornite DEVONO risiedere all’interno della cartella <code class="docutils literal notranslate"><span class="pre">assets/</span></code>
+referenziato in ndc-config.yaml.
+Le risorse al di fuori di <code class="docutils literal notranslate"><span class="pre">assets/</span></code> non saranno elaborate.</p>
+<p>Ogni tipo di asset (ontologie, vocabolari controllati, schemi)
+DEVE risiedere nella sua cartella specifica con un nome predefinito,
+referenziato in ndc-config.yaml.</p>
+<p>I nomi di file e directory DEVONO corrispondere
+al pattern <code class="docutils literal notranslate"><span class="pre">[A-ZA-Z0-9</span> <span class="pre">_-.]{,</span> <span class="pre">64}</span></code>.
+Gli spazi NON DEVONO essere utilizzati nei file o nei nomi delle directory.
+Le directory DEVONO essere in minuscolo.</p>
+<p>Il nome di ciascun file DEVE corrispondere al nome della relativa risorsa
+nell’URI utilizzato per referenziarla.
+I nomi dei file di una directory DEVONO corrispondere al nome della directory
+che li contiene, a meno dell’estensione degli stessi.</p>
+<p>I contenuti degli asset DEVONO essere codificati in UTF-8 o ASCII.</p>
+<p>Ogni risorsa DEVE risiedere sotto la sua cartella specifica:</p>
+<ul class="simple">
+<li><p>ontologies: in <code class="docutils literal notranslate"><span class="pre">assets/ontologies/</span></code>;</p></li>
+<li><p>Vocabolari controllati: in <code class="docutils literal notranslate"><span class="pre">assets/controlled-vocabularies/</span></code>;</p></li>
+<li><p>Schemi: in <code class="docutils literal notranslate"><span class="pre">assets/schemas/</span></code>.</p></li>
+</ul>
+<p>Ad esempio, il percorso di <code class="docutils literal notranslate"><span class="pre">MyOntology</span></code> sarà <code class="docutils literal notranslate"><span class="pre">assets/ontologies/MyOntology/</span></code>.</p>
+<p>Inoltre, DEVONO essere creati e pubblicati sul repository del <a class="reference external" href="https://www.w3id.org">w3id</a>
+i file <code class="docutils literal notranslate"><span class="pre">htaccess</span></code> che definiscono le regole di redirect delle URI, così come descritto
+nel <a class="reference internal" href="redirect.html"><span class="doc std std-doc">paragrafo dedicato</span></a>; lo scopo è di rendere resilienti e stabili le URI
+con le quali si referenziano le risorse semantiche.</p>
+</section>
+<section id="formati-supportati">
+<h2><span class="section-number">4.5. </span>Formati supportati<a class="headerlink" href="#formati-supportati" title="Permalink to this heading">¶</a></h2>
+<p>I file DEVONO essere codificati in UTF-8.</p>
+<p>Le estensioni accettate per ciascuna tipologia di risorsa semantica
+sono descritte nei paragrafi dedicati.</p>
+<p>Ulteriori serializzazioni (e.g. RDF/XML, JSON-LD, ..):</p>
+<ul class="simple">
+<li><p>non verranno processate da NDC;</p></li>
+<li><p>NON DOVREBBERO essere pubblicate, poiché verranno generate automaticamente
+dal NDC a partire dai file Turtle;</p></li>
+<li><p>se presenti, DOVREBBERO essere generate automaticamente a partire dalla serializzazione in formato Turtle.</p></li>
+</ul>
+<p>I file OAS3, JSON e JSON-LD DEVONO essere pubblicati in formato YAML,
+usando l’estensione <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> o <code class="docutils literal notranslate"><span class="pre">.yamlld</span></code> a seconda del formato.</p>
+</section>
+<section id="controlli-automatici">
+<h2><span class="section-number">4.6. </span>Controlli automatici<a class="headerlink" href="#controlli-automatici" title="Permalink to this heading">¶</a></h2>
+<p>Il repository DOVREBBE utilizzare strumenti di continuous integration
+come github-actions o gitlab-ci per verificare la consistenza dei contenuti
+e la sintassi dei file.</p>
+<p>Il modello di repository per gli asset semantici <a class="reference external" href="https://github.com/teamdigitale/dati-semantic-cookiecutter">https://github.com/teamdigitale/dati-semantic-cookiecutter</a>
+contiene degli esempi di controlli eseguibili sia in locale che nelle pipeline
+di continuous integration che verificano, tra l’altro:</p>
+<ul class="simple">
+<li><p>la validità sintattica degli asset semantici;</p></li>
+<li><p>la consistenza dello stile adottato per la pubblicazione.</p></li>
+</ul>
+</section>
+<section id="versionamento">
+<h2><span class="section-number">4.7. </span>Versionamento<a class="headerlink" href="#versionamento" title="Permalink to this heading">¶</a></h2>
+<p>TODO: definire il versionamento anche per gli schemi nel paragrafo dedicato</p>
+<p>Le directory degli asset POSSONO essere avere sub-directory
+per supportare il versionamento.
+Il nome delle sub-directory DEVE rispettare il pattern:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(latest|v?[0-9]+(\.[0-9]+){0,2})</span></code>.</p>
+<p>Una directory contenente asset NON DEVE contenere contemporaneamente
+sub-directory versionate con e senza il prefisso <code class="docutils literal notranslate"><span class="pre">v</span></code>
+perché questo rende impossibile ordinare le versioni.</p>
+<p>Sei esempi di path validi per le sub-directory.
+Notare che le versioni dell’ontologia <code class="docutils literal notranslate"><span class="pre">Car</span></code> non sono prefissate da <code class="docutils literal notranslate"><span class="pre">v</span></code>
+mentre quelle di <code class="docutils literal notranslate"><span class="pre">Person</span></code> sono tutte prefissate da <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>└──<span class="w"> </span>assets
+<span class="w">    </span>├──<span class="w"> </span>ontologies
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>Car
+<span class="w">    </span>│<span class="w">   </span><span class="p">|</span><span class="w">   </span>├──<span class="w"> </span><span class="m">1</span>.3
+<span class="w">    </span>│<span class="w">   </span><span class="p">|</span><span class="w">   </span>├──<span class="w"> </span><span class="m">202101</span>
+<span class="w">    </span>│<span class="w">   </span><span class="p">|</span><span class="w">   </span>└──<span class="w"> </span><span class="m">4</span>.5.6
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>Person
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>v1.3
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>v4.5.6
+<span class="w">    </span>└──<span class="w"> </span>schemas
+<span class="w">        </span>└──<span class="w"> </span>Person
+<span class="w">            </span>└──<span class="w"> </span>latest
+</pre></div>
+</div>
+<p>Sei esempi di path non validi, anche perché
+le directory contengono contemporaneamente
+versioni prefissate da <code class="docutils literal notranslate"><span class="pre">v</span></code> che senza prefisso.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>└──<span class="w"> </span>assets
+<span class="w">    </span>├──<span class="w"> </span>ontologies
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>MyOntology
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>v1.4-beta
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>versione<span class="w"> </span><span class="m">2</span>.9
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>v4..6
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>v.3
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span><span class="m">4</span>.5.
+</pre></div>
+</div>
+<p>Il Catalogo elabora solo:</p>
+<ul class="simple">
+<li><p>la cartella <code class="docutils literal notranslate"><span class="pre">latest</span></code> se presente;</p></li>
+<li><p>La cartella con l’ultima versione,
+secondo la sintassi indicata dal semantic versioning.</p></li>
+</ul>
+<section id="file-di-documentazione">
+<h3><span class="section-number">4.7.1. </span>File di Documentazione<a class="headerlink" href="#file-di-documentazione" title="Permalink to this heading">¶</a></h3>
+<p>Le directory degli asset POSSONO contenere file di documentazione in formato Markdown.
+L’estensione del file DEVE essere <code class="docutils literal notranslate"><span class="pre">.md</span></code> (ad esempio <code class="docutils literal notranslate"><span class="pre">README.md</span></code>).
+Questi file vengono ignorati durante il processamento da parte di NDC.</p>
+</section>
+<section id="esempi">
+<h3><span class="section-number">4.7.2. </span>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">¶</a></h3>
+<p>Ad esempio, analizziamo un repository strutturato come segue</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>┌─<span class="w"> </span>README.md
+├─<span class="w"> </span>publiccode.yaml
+<span class="p">|</span>
+├─<span class="w"> </span>assets/ontologies/
+│<span class="w">  </span>├─<span class="w"> </span>Onto1/
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>onto1.ttl
+│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto1.rdf
+│<span class="w">  </span>├─<span class="w"> </span>Onto2/
+│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>README.md
+│<span class="w">  </span>├─<span class="w"> </span>Onto3/
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>Other/
+│<span class="w">  </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>temp.md
+│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto3.ttl
+│<span class="w">  </span>├─<span class="w"> </span>Onto4/
+│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>latest/
+│<span class="w">  </span>│<span class="w">     </span>├─<span class="w"> </span>onto1.ttl
+│<span class="w">  </span>│<span class="w">     </span>└─<span class="w"> </span>onto1.rdf
+│<span class="w">  </span>└─<span class="w"> </span>notes.md
+<span class="p">|</span>
+└─<span class="w"> </span>assets/controlled-vocabularies/
+<span class="w">   </span>└─<span class="w"> </span>...
+</pre></div>
+</div>
+<p>Il repository non contiene schemi, quindi NDC non aggiungerà schemi al catalogo durante l’harvesting.
+Questo non rappresenta un problema e non è considerato un errore.</p>
+<p>I file informativi (e.g. README.md, notes.md) presenti sia nella radice che
+nelle sottodirectory vengono ignorati durante l’harversting.</p>
+<p>Per quanto riguarda la directory <code class="docutils literal notranslate"><span class="pre">Onto1/</span></code>:</p>
+<ul class="simple">
+<li><p>essa non contiene sotto-directory né altre directory al suo interno
+ed è quindi una cartella foglia.
+Quindi viene processata come potenzialmente contenente un’ontologia;</p></li>
+<li><p>contiene un file RDF/Turtle che verrà processato;</p></li>
+<li><p>contiene un altro file RDF, plausibilmente una serializzazione diversa degli stessi contenuti del file .ttl in RDF/XML.
+Poiché NDC processa solo i file di tipo text/turtle con estensione <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>, questo file viene ignorato.</p></li>
+</ul>
+<p>La directory <code class="docutils literal notranslate"><span class="pre">Onto2/</span></code> non contiene file <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>: questo viene segnalato solamente come WARNING.</p>
+<p>La directory <code class="docutils literal notranslate"><span class="pre">Onto3/</span></code> ha una sottodirectory, quindi non è considerata come contenitore di ontologia,
+ma come directory intermedia nel cammino per altre directory foglia:
+il file <code class="docutils literal notranslate"><span class="pre">onto3.tll</span></code> è ignorato e non processato.</p>
+<p>La directory <code class="docutils literal notranslate"><span class="pre">Onto4/</span></code> contiene una sottodirectory <code class="docutils literal notranslate"><span class="pre">latest/</span></code> che contiene un file <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>, quindi viene processata come potenzialmente contenente un’ontologia.</p>
+</section>
+</section>
+<section id="ontologie">
+<h2><span class="section-number">4.8. </span>Ontologie<a class="headerlink" href="#ontologie" title="Permalink to this heading">¶</a></h2>
+<p>Le ontologie pubblicate DEVONO essere conformi alle relative Linee guida nazionali.</p>
+<p>Le ontologie DEVONO essere pubblicate solo in formato RDF/Turtle
+(media-type <code class="docutils literal notranslate"><span class="pre">text/turtle</span></code>) e l’estensione del file DEVE essere <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>.</p>
+<p>Le ontologie DEVONO utilizzare delle directory versionate come descritto in <a class="reference internal" href="ontologie.html#ontologie-versionamento"><span class="std std-ref">versionamento</span></a>.</p>
+<section id="id1">
+<h3><span class="section-number">4.8.1. </span>Esempi<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<p>Esempio di alberatura contenente i file che definiscono un’ontologia.
+In questo caso viene processata solo la directory <code class="docutils literal notranslate"><span class="pre">latest/</span></code>.
+Nell’esempio, l’alberatura contiene una serie di file di documentazione opzionali che non vengono processati.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>assets/
+<span class="w">  </span>ontologies/
+<span class="w">    </span>MyOntology/
+<span class="w">      </span>CHANGELOG.md
+<span class="w">      </span>README.md
+<span class="w">      </span>v1.2/
+<span class="w">        </span>MyOntology.ttl
+<span class="w">      </span>v1.1/
+<span class="w">        </span>MyOntology.ttl
+<span class="w">      </span>latest/
+<span class="w">        </span>MyOntology.ttl
+<span class="w">        </span>LATEST.md
+</pre></div>
+</div>
+</section>
+<section id="ontologie-versionamento">
+<span id="id2"></span><h3><span class="section-number">4.8.2. </span>Versionamento<a class="headerlink" href="#ontologie-versionamento" title="Permalink to this heading">¶</a></h3>
+<p>All’interno delle sotto-directory di <code class="docutils literal notranslate"><span class="pre">ontologies/</span></code>,
+NDC processa solo la directory con la versione più recente, ossia:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">latest/</span></code> se presente;</p></li>
+<li><p>quella maggiore secondo il seguente ordinamento:</p>
+<ul>
+<li><p>tra due versioni espresse come forme numeriche (con punti), si segue l’ordinamento comunemente condiviso
+per cui i numeri a sinistra sono i più significativi</p></li>
+<li><p>qualora due versioni abbiano lunghezza diversa ma una sia prefisso dell’altra,
+la più lunga viene considerata più recente;
+ad esempio v4.5 è considerata obsoleta in presenza di v4.5.2.</p></li>
+</ul>
+</li>
+</ul>
+<p>Un repository PUO’ contenere versioni precedenti delle ontologie
+per fini storici, al di là del versionamento supportato da git.</p>
+<p>L’harvesting delle ontologie considera che le directory che contengono ontologie possano essere versionate,
+non i singoli file.
+Questo vale anche per le sotto-directory.</p>
+<section id="id3">
+<h4><span class="section-number">4.8.2.1. </span>Esempi<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
+<p>Le directory versionate possono trovarsi in ogni punto dell’alberatura
+delle ontologie, discendendo verso le foglie della struttura gerarchica.</p>
+<p>Sono esempi validi:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>┌─<span class="w"> </span>ontologies/
+│<span class="w">  </span>├─<span class="w"> </span>Onto1/
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>latest/
+│<span class="w">  </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto1.ttl
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>v0.5/
+│<span class="w">  </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto1.ttl
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span>v0.6/
+│<span class="w">  </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto1.ttl
+│<span class="w">  </span>├─<span class="w"> </span>Onto2/
+│<span class="w">  </span>│<span class="w">  </span>├─<span class="w"> </span><span class="m">0</span>.5/
+│<span class="w">  </span>│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span>onto2.ttl
+│<span class="w">  </span>│<span class="w">  </span>└─<span class="w"> </span><span class="m">0</span>.6/
+│<span class="w">  </span>│<span class="w">     </span>└─<span class="w"> </span>onto2.ttl
+│<span class="w">  </span>└─<span class="w"> </span>...
+└─<span class="w"> </span>...
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="vocabolari-controllati">
+<h2><span class="section-number">4.9. </span>Vocabolari controllati<a class="headerlink" href="#vocabolari-controllati" title="Permalink to this heading">¶</a></h2>
+<p>I vocabolari controllati pubblicati DEVONO essere conformi
+alle relative Linee guida nazionali.</p>
+<p>I vocabolari controllati DEVONO essere pubblicati solo in formato RDF/Turtle (media type <code class="docutils literal notranslate"><span class="pre">text/turtle</span></code>)
+e l’estensione del file DEVE essere <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>.</p>
+<p>I vocabolari DEVONO utilizzare delle directory versionate come descritto in <a class="reference internal" href="vocabolari.html#vocabolari-versionamento"><span class="std std-ref">versionamento</span></a>.</p>
+<section id="proiezione-in-formato-csv">
+<h3><span class="section-number">4.9.1. </span>Proiezione in formato CSV<a class="headerlink" href="#proiezione-in-formato-csv" title="Permalink to this heading">¶</a></h3>
+<p>Le directory del vocabolario controllato DOVREBBERO contenere una proiezione in formato CSV del vocabolario
+insieme ai metadati necessari per mappare i campi del CSV alle risorse presenti nell’RDF.
+L’estensione del file DEVE essere .csv.</p>
+<p>I metadati del CSV DOVREBBERO essere pubblicati in un frictionless data package,
+posizionato nella stessa directory ed
+annotato con tramite le specifiche indicate in REST API Linked Data Keywords.</p>
+<p>La proiezione CSV deve rispettare i seguenti requisiti:</p>
+<ol class="arabic simple">
+<li><p>è possibile inserire dei commenti, che iniziano con il carattere <code class="docutils literal notranslate"><span class="pre">#</span></code>;</p></li>
+<li><p>la prima riga utile DEVE contenere i nomi delle colonne;</p></li>
+<li><p>le righe seguenti DEVONO contenere i valori delle risorse separati da <code class="docutils literal notranslate"><span class="pre">,</span></code> (virgola)
+e racchiusi in <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (doppie virgolette);</p></li>
+<li><p>la proiezione DOVREBBE essere generata utilizzando strumenti quali JSON-LD framing.</p></li>
+</ol>
+<p>Questa proiezione in formato CSV viene esposta dalla NDC tramite API REST.</p>
+<p>I metadati di cui sopra DEVONO essere espressi
+tramite un <code class="docutils literal notranslate"><span class="pre">&#64;context</span></code> <a class="reference external" href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>.</p>
+</section>
+<section id="vocabolari-esempi">
+<span id="id4"></span><h3><span class="section-number">4.9.2. </span>Esempi<a class="headerlink" href="#vocabolari-esempi" title="Permalink to this heading">¶</a></h3>
+<p>Di seguito l’esempio di un’alberatura contenente
+un vocabolario controllato e la sua proiezione in formato CSV
+generata utilizzando le informazioni di framing indicate in
+<code class="docutils literal notranslate"><span class="pre">framing.yamlld</span></code>.
+Il file <code class="docutils literal notranslate"><span class="pre">datapackage.yaml</span></code> contiene i metadati del CSV.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>assets/
+<span class="w">  </span>controlled-vocabulary/
+<span class="w">    </span>my-codelist/
+<span class="w">      </span>CHANGELOG.md
+<span class="w">      </span>README.md
+<span class="w">      </span>my-codelist.ttl
+<span class="w">      </span>my-codelist.csv
+<span class="w">      </span>datapackage.yaml
+<span class="w">      </span>framing.yamlld
+</pre></div>
+</div>
+<p>Il file my-codelist.ttl contiene il vocabolario controllato in formato RDF/Turtle.</p>
+<div class="highlight-turtle notranslate"><div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">at:</span><span class="w"> </span><span class="nv">&lt;http://publications.europa.eu/ontology/authority/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">atold:</span><span class="w"> </span><span class="nv">&lt;http://publications.europa.eu/resource/authority/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">dc:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/elements/1.1/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">c:</span><span class="w"> </span><span class="nv">&lt;http://publications.europa.eu/resource/authority/country/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">c</span><span class="p">:</span><span class="nt">ITA</span> <span class="kt">a</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
+  <span class="nn">dc</span><span class="p">:</span><span class="nt">identifier</span> <span class="s">&quot;ITA&quot;</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="s">&quot;Italy&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">,</span> <span class="s">&quot;Italia&quot;</span><span class="o">@</span><span class="ge">it</span><span class="p">,</span> <span class="s">&quot;Italie&quot;</span><span class="o">@</span><span class="ge">fr</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">inScheme</span> <span class="nn">atold</span><span class="p">:</span><span class="nt">country</span>
+<span class="p">.</span>
+<span class="nn">c</span><span class="p">:</span><span class="nt">DEU</span> <span class="kt">a</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
+  <span class="nn">dc</span><span class="p">:</span><span class="nt">identifier</span> <span class="s">&quot;DEU&quot;</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="s">&quot;Germany&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">,</span> <span class="s">&quot;Germania&quot;</span><span class="o">@</span><span class="ge">it</span><span class="p">,</span> <span class="s">&quot;Allemagne&quot;</span><span class="o">@</span><span class="ge">fr</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">inScheme</span> <span class="nn">atold</span><span class="p">:</span><span class="nt">country</span>
+<span class="p">.</span>
+<span class="nn">c</span><span class="p">:</span><span class="nt">ESP</span> <span class="kt">a</span> <span class="nn">skos</span><span class="p">:</span><span class="nt">Concept</span><span class="p">;</span>
+  <span class="nn">dc</span><span class="p">:</span><span class="nt">identifier</span> <span class="s">&quot;ESP&quot;</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">prefLabel</span> <span class="s">&quot;Spain&quot;</span><span class="o">@</span><span class="ge">en</span><span class="p">,</span> <span class="s">&quot;Spagna&quot;</span><span class="o">@</span><span class="ge">it</span><span class="p">,</span> <span class="s">&quot;Espagne&quot;</span><span class="o">@</span><span class="ge">fr</span><span class="p">;</span>
+  <span class="nn">skos</span><span class="p">:</span><span class="nt">inScheme</span> <span class="nn">atold</span><span class="p">:</span><span class="nt">country</span>
+<span class="p">.</span>
+</pre></div>
+</div>
+<p>The file my-codelist.csv contains the projection of the controlled vocabulary in CSV format.</p>
+<div class="highlight-csv notranslate"><div class="highlight"><pre><span></span># It is possible to add comments
+#   metadata is into datapackage.yaml
+&quot;id&quot;,&quot;label_en&quot;,&quot;label_it&quot;,&quot;label_fr&quot;
+&quot;ITA&quot;,&quot;Italy&quot;,&quot;Italia&quot;,&quot;Italie&quot;
+&quot;DEU&quot;,&quot;Germany&quot;,&quot;Germania&quot;,&quot;Allemagne&quot;
+&quot;ESP&quot;,&quot;Spain&quot;,&quot;Spagna&quot;,&quot;Espagne&quot;
+</pre></div>
+</div>
+<p>Datapackage contains all metadata information about the CSV file.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datapackage.yaml</span>
+<span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data-package</span>
+
+<span class="nt">resources</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-codelist</span>
+<span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-codelist.csv</span>
+<span class="w">    </span><span class="nt">profile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tabular-data-resource</span>
+<span class="w">    </span><span class="nt">dialect</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
+<span class="w">      </span><span class="nt">doubleQuote</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">lineTerminator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="nt">schema</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">x-jsonld-type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skos:Concept</span>
+<span class="w">      </span><span class="nt">x-jsonld-context</span><span class="p">:</span>
+<span class="w">        </span><span class="s">&quot;@context&quot;</span><span class="p p-Indicator">:</span>
+<span class="w">          </span><span class="nt">skos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://www.w3.org/2004/02/skos/core#</span>
+<span class="w">          </span><span class="nt">dc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://purl.org/dc/elements/1.1/</span>
+<span class="w">          </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://publications.europa.eu/ontology/authority/</span>
+<span class="w">          </span><span class="nt">atold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://publications.europa.eu/resource/authority/</span>
+<span class="w">          </span><span class="nt">c</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://publications.europa.eu/resource/authority/country/</span>
+<span class="w">          </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc:identifier</span>
+<span class="w">          </span><span class="nt">label_it</span><span class="p">:</span>
+<span class="w">            </span><span class="s">&quot;@id&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skos:prefLabel</span>
+<span class="w">            </span><span class="s">&quot;@language&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">it</span>
+<span class="w">          </span><span class="nt">label_en</span><span class="p">:</span>
+<span class="w">            </span><span class="s">&quot;@id&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skos:prefLabel</span>
+<span class="w">            </span><span class="s">&quot;@language&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en</span>
+<span class="w">          </span><span class="nt">label_fr</span><span class="p">:</span>
+<span class="w">            </span><span class="s">&quot;@id&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">skos:prefLabel</span>
+<span class="w">            </span><span class="s">&quot;@language&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fr</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">label_en</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">label_it</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">label_fr</span>
+<span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</section>
+<section id="vocabolari-versionamento">
+<span id="id5"></span><h3><span class="section-number">4.9.3. </span>Versionamento<a class="headerlink" href="#vocabolari-versionamento" title="Permalink to this heading">¶</a></h3>
+<p>La versione attuale di NDC pubblica solamente l’ultima versione dei vocabolari controllati.
+L’Erogatore è responsabile della pubblicazione delle versioni precedenti dei vocabolari
+tramite il repository git.</p>
+<p>I vocabolari che pubblicano informazioni soggette a variazioni nel tempo,
+DOVREBBERO versionare i singoli record.
+Si veda a questo proposito il vocabolario controllato dei Paesi pubblicato
+dall’Unione Europea: https://publication.europa.eu/resource/authority/country/
+dove i singoli record contengono l’intervallo di validità dei dati.</p>
+</section>
+</section>
+<section id="schemi-openapi">
+<h2><span class="section-number">4.10. </span>Schemi OpenAPI<a class="headerlink" href="#schemi-openapi" title="Permalink to this heading">¶</a></h2>
+<p>Gli schemi pubblicati devono essere conformi alle relative Linee guida nazionali.</p>
+<p>Gli schemi DEVONO utilizzare delle directory versionate come descritto in <a class="reference internal" href="schemi.html#schemi-versionamento"><span class="std std-ref">versionamento</span></a>.</p>
+<p>Gli schemi per le API devono essere pubblicati in formato OpenAPI3 (corrispondenti ad una estensione di <a class="reference external" href="https://spec.openapis.org/oas/v3.0.3#data-types">JSON Schema Draft 4</a>), incorporato nella sezione <code class="docutils literal notranslate"><span class="pre">#/components/schema</span></code> del file OAS compatibilmente con le Linee Guida per l’interoperabilità tecnica.</p>
+<p>L’estensione del file DEVE essere <code class="docutils literal notranslate"><span class="pre">.oas3.yaml</span></code>.</p>
+<p>In futuro potranno essere supportati altri formati di schemi (e.g. versioni più recenti di JSON Schema).</p>
+<p>Il file YAML DOVREBBE contenere i riferimenti semantici descritti nel documento <a class="reference external" href="https://datatracker.ietf.org/doc/draft-polli-restapi-ld-keywords/">I-D-polli-restapi-ld-keywords</a>
+attraverso:</p>
+<ul class="simple">
+<li><p>il campo custom <code class="docutils literal notranslate"><span class="pre">x-jsonld-context</span></code> contenente un <code class="docutils literal notranslate"><span class="pre">&#64;context</span></code> JSON-LD conforme alle indicazioni contenute in JSON-LD 1.1;</p></li>
+<li><p>il campo custom <code class="docutils literal notranslate"><span class="pre">x-jsonld-type</span></code> contenente il riferimento ad un <code class="docutils literal notranslate"><span class="pre">rdf:type</span></code>.</p></li>
+</ul>
+<p>I metadati associati DEVONO essere pubblicati solo in formato RDF/Turtle (media type <code class="docutils literal notranslate"><span class="pre">text/turtle</span></code>)
+e l’estensione del file DEVE essere <code class="docutils literal notranslate"><span class="pre">.ttl</span></code>.
+Questo file DOVREBBE essere generato automaticamente dal documento OpenAPI.</p>
+<p>Gli schemi forniti POSSONO essere verificati sintatticamente utilizzando l’<a class="reference external" href="https://github.com/italia/api-oas-checker">OpenAPI Checker</a>.</p>
+<section id="schema-bundling">
+<h3><span class="section-number">4.10.1. </span>Schema bundling<a class="headerlink" href="#schema-bundling" title="Permalink to this heading">¶</a></h3>
+<p>Quando si pubblica un documento OAS contenente la specifica di un’API,
+è utile dereferenziare ed accorpare in un unico file tutti i riferimenti
+a schemi ed operazioni.
+Questo processo viene detto <a class="reference external" href="https://json-schema.org/understanding-json-schema/structuring.html#bundling">bundling</a>.
+Il prodotto sarà un singolo OAS document (e.g. un file YAML) utile alla validazione sintattica e semantica
+dell’API.
+Questo meccanismo permette di inserire nell’IDL tutte le informazioni semantiche necessarie
+a descrivere l’API in base sia ai riferimenti ontologici che agli schemi utilizzati.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">4.10.2. </span>Esempi<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p>Un esempio di file OAS3 metadatato con i campi <code class="docutils literal notranslate"><span class="pre">x-jsonld-context</span></code> e <code class="docutils literal notranslate"><span class="pre">x-jsonld-type</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">openapi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.0.1</span>
+<span class="nn">...</span>
+<span class="nt">components</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">schemas</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">Person</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span>
+<span class="w">      </span><span class="nt">x-jsonld-type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://w3id.org/italia/onto/CPV/Person&quot;</span>
+<span class="w">      </span><span class="nt">x-jsonld-context</span><span class="p">:</span>
+<span class="w">        </span><span class="s">&quot;@vocab&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;https://w3id.org/italia/onto/CPV/&quot;</span>
+<span class="w">        </span><span class="nt">nome_proprio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">givenName</span>
+<span class="w">        </span><span class="nt">cognome</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">familyName</span>
+<span class="w">      </span><span class="nt">properties</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">nome_proprio</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="nv">string</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">..</span><span class="p p-Indicator">}</span>
+<span class="w">        </span><span class="nt">cognome</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="nv">string</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">..</span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+<p>Di seguito l’esempio di un’alberatura contenente uno schema</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>assets/
+<span class="w">  </span>schemas/
+<span class="w">    </span>Person/
+<span class="w">      </span>CHANGELOG.md
+<span class="w">      </span>README.md
+<span class="w">      </span>person.oas3.yaml
+<span class="w">      </span>person.index.ttl
+</pre></div>
+</div>
+</section>
+</section>
+<section id="schemi-xsd">
+<h2><span class="section-number">4.11. </span>Schemi XSD<a class="headerlink" href="#schemi-xsd" title="Permalink to this heading">¶</a></h2>
+<p>Attualmente il materiale semantico pubblicato dalla UE si basa sui formati RDF ed XSD.
+NDC non supporta il processamento di file XSD.
+Questi potranno essere supportati in un secondo momento.</p>
+<section id="esempio-countries-authority-table">
+<h3><span class="section-number">4.11.1. </span>Esempio: Countries Authority Table<a class="headerlink" href="#esempio-countries-authority-table" title="Permalink to this heading">¶</a></h3>
+<p>L’authority table dei paesi «Countries» viene pubblicata a partire dall’URL su http://publications.europa.eu/resource/dataset/country contenente i link a tutti i dataset associati e corrispondente al suo URI.
+All’indirizzo https://publications.europa.eu/resource/authority/country si trova l’elenco dei paesi in formato RDF; sotto quell’URL ci sono i riferimenti ai singoli paesi, eg. https://publications.europa.eu/resource/authority/country/ITA.
+Il versionamento è contenuto all’interno degli RDF e l’URL viene dereferenziato all’ultima versione.
+Gli URI sono versionati, eg. http://publications.europa.eu/resource/expression/country/20170920-0
+Da lì è possibile individuare una lista di dataset associati ed eventualmente localizzati:
+qui https://publications.europa.eu/resource/cellar/07ed8d46-2b56-11e7-9412-01aa75ed71a1.0001.12/DOC_14 la lista delle coppie codice/paese in italiano in formato XML (ATTO table, usate per le traduzioni)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;TABLE</span><span class="w"> </span><span class="na">VL=</span><span class="s">&quot;IT&quot;</span><span class="w"> </span><span class="na">NAME=</span><span class="s">&quot;countries&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LIBELLE</span><span class="w"> </span><span class="na">CODE=</span><span class="s">&quot;1A0&quot;</span><span class="nt">&gt;</span>Kosovo<span class="nt">&lt;/LIBELLE&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LIBELLE</span><span class="w"> </span><span class="na">CODE=</span><span class="s">&quot;ABW&quot;</span><span class="nt">&gt;</span>Aruba<span class="nt">&lt;/LIBELLE&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LIBELLE</span><span class="w"> </span><span class="na">CODE=</span><span class="s">&quot;AFG&quot;</span><span class="nt">&gt;</span>Afghanistan<span class="nt">&lt;/LIBELLE&gt;</span>
+...
+<span class="nt">&lt;/TABLE&gt;</span>
+</pre></div>
+</div>
+<p>qui una codelist (estensione «.gc») http://publications.europa.eu/resource/distribution/country/20210616-0/xml/gc/Country.gc contenente tutti i dati in un formato xml analogo a quello tabellare</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;gc:CodeList</span><span class="w"> </span><span class="na">xmlns:gc=</span><span class="s">&quot;http://docs.oasis-open.org/codelist/ns/genericode/1.0/&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Identification&gt;</span>
+<span class="w">      </span><span class="nt">&lt;CanonicalUri&gt;</span>http://publications.europa.eu/resource/dataset/country<span class="nt">&lt;/CanonicalUri&gt;</span>
+<span class="nt">&lt;CanonicalVersionUri&gt;</span>http://publications.europa.eu/resource/dataset/country/20210616-0<span class="nt">&lt;/CanonicalVersionUri&gt;</span>
+<span class="nt">&lt;LocationUri&gt;</span>http://publications.europa.eu/resource/distribution/country/20210616-0/xml/gc/Country.gc<span class="nt">&lt;/LocationUri&gt;</span>
+
+<span class="w">   </span><span class="nt">&lt;/Identification&gt;</span>
+<span class="w">   </span><span class="nt">&lt;ColumnSet&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Column</span><span class="w"> </span><span class="na">Id=</span><span class="s">&quot;code&quot;</span><span class="w"> </span><span class="na">Use=</span><span class="s">&quot;required&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;ShortName&gt;</span>Code<span class="nt">&lt;/ShortName&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Data</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;normalizedString&quot;</span><span class="w"> </span><span class="na">Lang=</span><span class="s">&quot;eng&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Column&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Column</span><span class="w"> </span><span class="na">Id=</span><span class="s">&quot;Name&quot;</span><span class="w"> </span><span class="na">Use=</span><span class="s">&quot;optional&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;ShortName&gt;</span>Name<span class="nt">&lt;/ShortName&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Data</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">Lang=</span><span class="s">&quot;eng&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Column&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Column</span><span class="w"> </span><span class="na">Use=</span><span class="s">&quot;optional&quot;</span><span class="w"> </span><span class="na">Id=</span><span class="s">&quot;ita_label&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;ShortName&gt;</span>engLabel<span class="nt">&lt;/ShortName&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Data</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">Lang=</span><span class="s">&quot;ita&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/Column&gt;</span>
+<span class="w">   </span>...
+<span class="w">   </span><span class="nt">&lt;/ColumnSet&gt;</span>
+<span class="w">   </span><span class="nt">&lt;SimpleCodeList&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Row&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Value</span><span class="w"> </span><span class="na">ColumnRef=</span><span class="s">&quot;code&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;SimpleValue&gt;</span>ITA<span class="nt">&lt;/SimpleValue&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/Value&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Value</span><span class="w"> </span><span class="na">ColumnRef=</span><span class="s">&quot;Name&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;SimpleValue&gt;</span>Italy<span class="nt">&lt;/SimpleValue&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/Value&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Value</span><span class="w"> </span><span class="na">ColumnRef=</span><span class="s">&quot;ita_label&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;SimpleValue&gt;</span>Italy<span class="nt">&lt;/SimpleValue&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/Value&gt;</span>
+<span class="w">    </span>...
+<span class="w">   </span><span class="nt">&lt;SimpleCodeList&gt;</span>
+</pre></div>
+</div>
+<p>Gli stessi dati possono essere recuperati  a partire da https://data.europa.eu/data/datasets/country.</p>
+</section>
+<section id="schemi-versionamento">
+<span id="id7"></span><h3><span class="section-number">4.11.2. </span>Versionamento<a class="headerlink" href="#schemi-versionamento" title="Permalink to this heading">¶</a></h3>
+<p>TBD</p>
+</section>
+</section>
+<section id="redirect-delle-uri">
+<h2><span class="section-number">4.12. </span>Redirect delle URI<a class="headerlink" href="#redirect-delle-uri" title="Permalink to this heading">¶</a></h2>
+<p>Il presente paragrafo fornisce una guida per la creazione e la pubblicazione
+dei file <code class="docutils literal notranslate"><span class="pre">htaccess</span></code> che permettono il redirect delle URI delle risorse
+semantiche utilizzando il w3id.</p>
+<p>Una volta configurati gli <code class="docutils literal notranslate"><span class="pre">htaccess</span></code> sulla base dell’organizzazione del proprio
+repository contenente le risorse semantiche, sarà possibile sfruttare le URL
+permanenti del w3id per referenziare le ontologie e i vocabolari.</p>
+<p>L’efficacia delle regole di seguito descritte è subordinata all’applicazione
+delle indicazioni offerte dalla presente guida per la creazione ed organizzazione
+del repository contenente le risorse semantiche, con particolare riferimento
+all’uguaglianza che deve persistere tra il nome di ciascuna cartella e il nome
+dei relativi file (a meno dell’estensione) e il nome con il quale viene referenziata
+la risorsa semantica (es. ontologia) all’interno della propria URI.</p>
+<section id="introduzione-al-redirect">
+<h3><span class="section-number">4.12.1. </span>Introduzione al redirect<a class="headerlink" href="#introduzione-al-redirect" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://w3id.org/">w3id.org</a> è una soluzione del W3C Permanent Identifier Community Group che permette l’aggiunta o modifica di identificativi permanenti a partire dai quali reindirizzare verso URL specifici; il processo si basa  sull’aggiunta di una o più cartelle nel <a class="reference external" href="https://github.com/perma-id/w3id.org">repository git del w3id</a>, le quali DEVONO contenere i file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> e file <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, eventualmente organizzati in sottocartelle.</p>
+<p>Nel caso del Catalogo, occorre fare riferimento alla <a class="reference external" href="https://github.com/perma-id/w3id.org/tree/master/italia">cartella <code class="docutils literal notranslate"><span class="pre">italia</span></code> del repository git del w3id</a>, nella quale DEVONO essere aggiunte le sottocartelle, ciascuna per una particolare area tematica, che conterranno i file di reindirizzamento, eventualmente organizzati in ulteriori sottocartelle, ed il file <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+L’aggiunta delle sottocartelle di <code class="docutils literal notranslate"><span class="pre">'/italia'</span></code> sarà sottoposta ad approvazione del Comitato Italia; successivamente, le stesse saranno gestite autonomamente e con interfacciamento diretto verso w3id.org dai referenti indicati nei file <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.
+La cartella e le relative sottocartelle, i  file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> e i file <code class="docutils literal notranslate"><span class="pre">README.md</span></code> DEVONO essere creati sul <a class="reference external" href="https://github.com/perma-id/w3id.org">repository git del w3id</a> dall’Organizzazione contributrice.</p>
+</section>
+<section id="processo-di-pubblicazione-degli-htaccess-sul-w3id">
+<h3><span class="section-number">4.12.2. </span>Processo di pubblicazione degli htaccess sul w3id<a class="headerlink" href="#processo-di-pubblicazione-degli-htaccess-sul-w3id" title="Permalink to this heading">¶</a></h3>
+<section id="fork-del-repository-git-del-w3id-org">
+<h4><span class="section-number">4.12.2.1. </span>fork del repository GIT del w3id.org<a class="headerlink" href="#fork-del-repository-git-del-w3id-org" title="Permalink to this heading">¶</a></h4>
+<p>Il primo passo per la registrazione dei vari redirect è il fork in locale della
+<a class="reference external" href="https://github.com/perma-id/w3id.org/tree/master/italia">cartella Italia del GIT del w3id</a>. Gli
+identificativi permanenti (URI) verranno definiti sulla base del percorso nel quale saranno inseriti i vari file <code class="docutils literal notranslate"><span class="pre">htaccess</span></code>. Nel caso del Catalogo, il percorso della cartella “root” per nome-cartella dovrà essere
+<code class="docutils literal notranslate"><span class="pre">italia/&lt;nome-cartella&gt;/</span></code>, dunque il namespace degli URI definiti nella stessa sarà
+<code class="docutils literal notranslate"><span class="pre">w3id.org/italia/&lt;nome-cartella&gt;/</span></code>.</p>
+</section>
+<section id="aggiunta-della-cartella">
+<h4><span class="section-number">4.12.2.2. </span>aggiunta della cartella<a class="headerlink" href="#aggiunta-della-cartella" title="Permalink to this heading">¶</a></h4>
+<p>Nel repository in locale creato a partire dalla fork occorrerà creare la cartella <code class="docutils literal notranslate"><span class="pre">“nome-cartella”</span></code> che conterrà l’alberatura di sottocartelle e dei relativi file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code>, oltre al file <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p>
+<p>Di seguito è fornito un esempio di alberatura della cartella sotto <code class="docutils literal notranslate"><span class="pre">&quot;/italia&quot;</span></code>:</p>
+<pre>
+italia
+|--nome-cartella
+|   |--controlled-vocabulary
+|   |   |-.htaccess
+|   |--data
+|   |   |-.htaccess
+|   |--onto
+|   |   |-.htaccess
+|   |README.md
+</pre>
+<p>In tal modo, verranno definiti i seguenti URI:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">w3id.org/italia/&lt;nome-cartella&gt;/controlled-vocabulary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w3id.org/italia/&lt;nome-cartella&gt;/data</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w3id.org/italia/&lt;nome-cartella&gt;/onto</span></code></p></li>
+</ul>
+<p>Il <code class="docutils literal notranslate"><span class="pre">&lt;nome-cartella&gt;</span></code> è molto importante dato che DEVE essere inserito in specifici parametri descritti di seguito nel presente documento,
+e sarà sempre utilizzato per riferirsi all’insieme delle risorse semantiche del Contributore nell’ambito della configurazione dei file di redirect.</p>
+<p>Le regole di redirect associate a ciascun uri DEVONO essere definite nei relativi file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> descritti di seguito. Il file <code class="docutils literal notranslate"><span class="pre">README.md</span></code> DEVE contenere i nominativi dei referenti unitamente ai loro riferimenti e-mail e di github. Questi riferimenti DEVONO curare la gestione della cartella e dei relativi file a seguito dell’approvazione di “Italia”. Si DOVREBBE prendere come esempio il file <code class="docutils literal notranslate"><span class="pre">README.md</span></code> sotto la cartella <code class="docutils literal notranslate"><span class="pre">&quot;/italia&quot;</span></code>.</p>
+</section>
+<section id="creazione-della-pull-request">
+<h4><span class="section-number">4.12.2.3. </span>creazione della pull request<a class="headerlink" href="#creazione-della-pull-request" title="Permalink to this heading">¶</a></h4>
+<p>Una volta modificato il repository GIT in locale, si DEVE creare una pull request, la quale sarà analizzata ed eventualmente validata da «Italia”; nella pull request DEVONO essere indicati come reviewer i contatti presenti nel <a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/italia/readme.md">file README.md sotto “/italia”</a>.
+Il merge sul branch master verrà effettuato direttamente da w3id.org e determinerà la pubblicazione definitiva dei nuovi URI e relative regole di redirect.</p>
+</section>
+</section>
+<section id="contenuto-dei-file-htaccess-e-del-readme-md">
+<h3><span class="section-number">4.12.3. </span>Contenuto dei file .htaccess e del README.md<a class="headerlink" href="#contenuto-dei-file-htaccess-e-del-readme-md" title="Permalink to this heading">¶</a></h3>
+<p>Di seguito è data una descrizione di file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> per ciascuna tipologia di risorsa, da cui l’Organizzazione contributrice DOVREBBE prendere spunto al fine creare i propri file di redirect. Gli snippet di codice di esempio sono basati sull’assunzione che per ciascuna risorsa semantica (es. ontologia) il nome della stessa nell’URI di referenziazione sia uguale al nome della cartella che contiene i relativi file sul git sorgente, e anche uguale ai nomi dei file a meno dell’estensione. In caso contrario, si renderebbe necessario sviluppare apposite regole di redirect più complesse.</p>
+<section id="controlled-vocabulary">
+<h4><span class="section-number">4.12.3.1. </span>controlled-vocabulary<a class="headerlink" href="#controlled-vocabulary" title="Permalink to this heading">¶</a></h4>
+<p>Il file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> da inserire nella sottocartella <code class="docutils literal notranslate"><span class="pre">“italia/nome-cartella/controlled-vocabulary”</span></code> DOVREBBE essere creato a prendendo come esempio <a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/italia/controlled-vocabulary/.htaccess">quello contenuto nella cartella del GIT “italia/controlled-vocabulary”</a>.</p>
+<p>Esso contiene codice scritto sulla base delle Direttive Apache, e permette di gestire le richieste HTTP in base al valore dell’header Accept e di SYNTAX. A seconda del valore, le URL vengono riscritte in modo diverso o reindirizzate a URL esterni. La specifica azione di riscrittura o reindirizzamento dipende dalla combinazione di Accept e SYNTAX.</p>
+<p>Di seguito viene data una descrizione delle direttive di esempio, alle quali DEVONO essere modificati i riferimenti degli URL di atterraggio, oltre all’eventuale modifica/integrazione delle regole al fine di meglio adattarsi al git del Contributore:</p>
+<pre>
+Header set Access-Control-Allow-Origin *
+</pre>
+<p>Questa riga imposta l’header Access-Control-Allow-Origin su *, consentendo a qualsiasi dominio di accedere alle risorse sul server tramite richieste Ajax o da altri domini diversi.</p>
+<pre>
+Options +FollowSymLinks
+</pre>
+<p>Questa riga abilita l’opzione FollowSymLinks, che permette al server di seguire i collegamenti simbolici (symlink) all’interno del file system.</p>
+<pre>
+RewriteEngine on
+</pre>
+<p>Questa riga attiva il motore di riscrittura delle URL di Apache (mod_rewrite), che permette di manipolare le URL delle richieste HTTP.</p>
+<pre>
+SetEnvIf Accept ^.*text/turtle.* SYNTAX=ttl
+SetEnvIf Accept ^.*application/json.* SYNTAX=json
+SetEnvIf Accept ^.*application/csv.* SYNTAX=csv
+SetEnvIf Accept ^.*text/csv.* SYNTAX=csv
+SetEnvIf Accept ^.*text/html.* SYNTAX=html
+</pre>
+<p>Queste righe impostano una variabile di ambiente chiamata SYNTAX in base all’header Accept della richiesta HTTP. Questo viene utilizzato per determinare il tipo di sintassi richiesto nella risposta. Queste righe DEVONO essere modificate a seconda dei formati dei file presenti nelle proprie cartelle github.</p>
+<pre>
+SetEnvIf Request_URI ^.*$ ROOT_URL="url-git"
+</pre>
+<p>Imposta la variabile di ambiente ROOT_URL con un URL fisso. L’URL inserito DEVE essere quello del proprio Github che punta alla cartella dei vocabolari controllati (in formato <code class="docutils literal notranslate"><span class="pre">&quot;https://raw.githubusercontent.com/...&quot;</span></code>)</p>
+<pre>
+RewriteCond %{ENV:SYNTAX} ^(ttl|json|csv)$
+RewriteRule ^([a-zA-Z-_0-9]+)(/?)$ %{ENV:ROOT_URL}$1/latest/$1.%{ENV:SYNTAX} [R=303,L]
+</pre>
+<p>Definisce la regola di riscrittura dell’URL nel caso in cui il tipo file richiesto sia ttl, json o csv (questi ultimi DEVONO essere configurati sulla base dei tipi file presenti nel repository sorgente).</p>
+<pre>
+RewriteCond %{ENV:SYNTAX} ^html$
+RewriteRule ^(.+)$ https://schema.gov.it/lodview/"nome-cartella"/controlled-vocabulary/$1 [R=303,L]
+RewriteRule ^(.+)/(.+)/(.+)$ https://schema.gov.it/lodview/"nome-cartella"/controlled-vocabulary/$1/$2/$3 [R=303,L]
+</pre>
+<p>Le precedenti condizioni si applicano solo quando SYNTAX è html, oppure in tutti gli altri casi non gestiti dalle precedenti condizioni. Riscrivono le URL in modo diverso, reindirizzando a URL esterni basati su modelli specifici. DEVONO essere configurati sulla base del nome della cartella tematica con la quale ci si riferisce al particolare insieme di risorse semantiche nel git del w3id.</p>
+</section>
+<section id="onto">
+<h4><span class="section-number">4.12.3.2. </span>onto<a class="headerlink" href="#onto" title="Permalink to this heading">¶</a></h4>
+<p>Il file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> da inserire nella sottocartella “italia/nome-cartella/onto” DOVREBBE essere creato a partire da <a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/italia/onto/.htaccess">quello contenuto nella cartella del GIT “italia/onto”</a>.</p>
+<p>Esso contiene codice scritto sulla base delle Direttive Apache, e permette di gestire le richieste HTTP in base al valore dell’header Accept e di SYNTAX. A seconda del valore, le URL vengono riscritte in modo diverso o reindirizzate a URL esterni. La specifica azione di riscrittura o reindirizzamento dipende dalla combinazione di Accept e SYNTAX.</p>
+<p>Di seguito viene data una descrizione delle direttive di esempio, alle quali DEVONO essere modificati i riferimenti degli URL di atterraggio, oltre all’eventuale modifica/integrazione delle regole al fine di meglio adattarsi al git del Contributore:</p>
+<pre>
+Header set Access-Control-Allow-Origin *
+</pre>
+<p>Questa riga imposta l’header Access-Control-Allow-Origin su *, consentendo a qualsiasi dominio di accedere alle risorse sul server tramite richieste Ajax o da altri domini diversi.</p>
+<pre>
+Options +FollowSymLinks
+</pre>
+<p>Questa riga abilita l’opzione FollowSymLinks, che permette al server di seguire i collegamenti simbolici (symlink) all’interno del file system.</p>
+<pre>
+RewriteEngine on
+</pre>
+<p>Questa riga attiva il motore di riscrittura delle URL di Apache (mod_rewrite), che permette di manipolare le URL delle richieste HTTP.</p>
+<pre>
+SetEnvIf Accept ^.*application/rdf\+xml.* SYNTAX=rdf
+SetEnvIf Accept ^.*application/rdf\+xml.* SYNTAX=owl
+SetEnvIf Accept ^.*application/n-triples.* SYNTAX=n3
+SetEnvIf Accept ^.*text/turtle.* SYNTAX=ttl
+SetEnvIf Accept ^.*text/html.* SYNTAX=html
+</pre>
+<p>Queste righe impostano una variabile di ambiente chiamata SYNTAX in base all’header Accept della richiesta HTTP. Questo viene utilizzato per determinare il tipo di sintassi richiesto nella risposta. Queste righe DEVONO essere modificate a seconda dei formati dei file presenti nelle proprie cartelle nel repository delle risorse semantiche.</p>
+<pre>
+SetEnvIf Request_URI ^.*$ ROOT_URL="url-git"
+</pre>
+<p>Imposta la variabile di ambiente ROOT_URL con un URL fisso. L’URL inserito DEVE essere quello del proprio repository che punta alla cartella delle ontologie (in formato <code class="docutils literal notranslate"><span class="pre">&quot;https://raw.githubusercontent.com/...&quot;</span></code>)</p>
+<pre>
+RewriteCond %{ENV:SYNTAX} ^(rdf|ttl|owl|n3)$
+RewriteRule ^([a-zA-Z-_0-9]+)(/?)$ %{ENV:ROOT_URL}$1/latest/$1.%{ENV:SYNTAX} [R=303,L]
+</pre>
+<p>Definisce la regola di riscrittura dell’URL nel caso in cui il tipo file richiesto sia rdf, ttl, own o n3 (questi ultimi DEVONO essere configurati sulla base dei tipi file presenti nel repository sorgente).</p>
+<pre>
+RewriteCond %{ENV:SYNTAX} ^html$
+RewriteRule ^(.+)(/.+)$ https://schema.gov.it/lodview/"nome-cartella"/onto/$1$2 [R=303,L]
+RewriteCond %{ENV:SYNTAX} ^html$
+RewriteRule ^(.+)/$ https://schema.gov.it/lode/extract?url=https://w3id.org/italia/"nome-cartella"/onto/$1 [R=303,L]
+RewriteCond %{ENV:SYNTAX} ^html$
+RewriteRule ^(.+)$ https://schema.gov.it/lode/extract?url=https://w3id.org/italia/"nome-cartella"/onto/$1 [R=303,L]
+</pre>
+<p>Le precedenti condizioni si applicano solo quando SYNTAX è html. Riscrivono le URL in modo diverso, reindirizzando a URL esterni basati su modelli specifici. DEVONO essere configurati sulla base del nome della cartella tematica con la quale ci si riferisce al particolare insieme di risorse semantiche nel git del w3id.</p>
+</section>
+<section id="data">
+<h4><span class="section-number">4.12.3.3. </span>data<a class="headerlink" href="#data" title="Permalink to this heading">¶</a></h4>
+<p>Il file <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> da inserire nella sottocartella “italia/nome-cartella/data” DOVREBBE essere creato a partire da <a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/italia/data/.htaccess">quello contenuto nella cartella del GIT “italia/data”</a>.</p>
+<p>Esso contiene codice scritto sulla base delle Direttive Apache, e permette di configurare il server Apache per consentire l’accesso da qualsiasi dominio alle risorse del server, impostare una variabile di ambiente ROOT_URL con un valore fisso, e quindi riscrivere tutte le richieste in modo che includano ROOT_URL prima dell’URI richiesto.</p>
+<p>Di seguito viene data una descrizione delle direttive di esempio, alle quali DEVONO essere modificati i riferimenti degli URL di atterraggio, oltre all’eventuale modifica/integrazione delle regole al fine di meglio adattarsi al git del Contributore:</p>
+<pre>
+Header set Access-Control-Allow-Origin *
+</pre>
+<p>Questa riga imposta l’header Access-Control-Allow-Origin su *, consentendo a qualsiasi dominio di accedere alle risorse sul server tramite richieste Ajax o da altri domini diversi.</p>
+<pre>
+Options +FollowSymLinks
+</pre>
+<p>Questa riga abilita l’opzione FollowSymLinks, che permette al server di seguire i collegamenti simbolici (symlink) all’interno del file system.</p>
+<pre>
+RewriteEngine on
+</pre>
+<p>Questa riga attiva il motore di riscrittura delle URL di Apache (mod_rewrite), che permette di manipolare le URL delle richieste HTTP.</p>
+<pre>
+SetEnvIf Request_URI ^.*$ ROOT_URL=https://schema.gov.it/lodview/"nome-cartella"/data/
+</pre>
+<p>Questa riga imposta una variabile di ambiente chiamata ROOT_URL, che DEVE essere modificata sulla base del nome della cartella tematica
+con la quale ci si riferisce al proprio repository di risorse semantiche su w3id.</p>
+<pre>
+RewriteRule ^(.*)$ %{ENV:ROOT_URL}$1 [R=303,L]
+</pre>
+<p>Questa riga è una regola di riscrittura delle URL. Ogni richiesta che arriva al server verrà riscritta in modo da includere il valore di ROOT_URL prima dell’URI richiesto. Il flag [R=303,L] indica che la risposta HTTP sarà un redirect temporaneo (codice di stato 303) e che questa è l’ultima regola da applicare.</p>
+<pre>
+RewriteRule ^(.*)/$ %{ENV:ROOT_URL}$1 [R=303,L]
+</pre>
+<p>Questa è una regola di riscrittura simile alla precedente, ma si applica solo alle richieste che terminano con una barra. Anche in questo caso, la risposta sarà un redirect temporaneo con codice di stato 303.</p>
+</section>
+<section id="readme-md">
+<h4><span class="section-number">4.12.3.4. </span>README.md<a class="headerlink" href="#readme-md" title="Permalink to this heading">¶</a></h4>
+<p>Per la creazione del file <code class="docutils literal notranslate"><span class="pre">README.md</span></code> si PUÒ far riferimento all’<a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/dggs/README.md">esempio fornito da w3id.org stessa</a>, oppure al <a class="reference external" href="https://github.com/perma-id/w3id.org/blob/master/italia/readme.md">file creato sotto la cartella “/italia”</a>.</p>
+<p>In ogni caso, si DEVONO descrivere le finalità di utilizzo delle URI e indicare i nominativi dei referenti nella sezione “contatti”.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+          
+            <div class="footer-buttons footer-buttons--next" role="navigation" aria-label="footer navigation">
+                  <a href="architettura.html" class="" title="5. Architettura di schema.gov.it" accesskey="n" rel="next"><span class="section-number">5. </span>Architettura di schema.gov.it</a>
+              </div>
+            
+          </div>
+
+        </div>
+      </div>
+  </div>
+  <footer class="footer container-fluid container-fluid--desktop">
+  <div class="px-3 pt-md-3 pb-md-2 mx-md-5 mb-4 mb-md-0">
+    <div class="row align-items-center d-flex">
+      <div class="col-xs-12 col-sm-6 col-lg-4 pt-4 pt-sm-5">
+        <a href="http://teamdigitale.governo.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="team-logo--icon" src="../../_static/images/team-digitale-logo.svg" alt="Team per la Trasformazione Digitale">
+            </div>
+            <div class="px-2 border-white border-left team-logo--text text-white">
+              Team per la Trasformazione Digitale
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <span class="d-block m-2 in-collaboration">in collaborazione con</span>
+        <a href="https://www.agid.gov.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="agid-logo--icon" src="../../_static/images/agid-logo.svg" alt="Agenzia per l'Italia Digitale">
+            </div>
+            <span class="agid-logo--separator border-white border-left"></span>
+            <div class="px-2 agid-logo--text text-white">
+              Agenzia per l'Italia Digitale
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-lg-4 pt-4 pt-sm-5">
+        <div class="text-center text-lg-right social d-flex align-items-center justify-content-center justify-content-lg-end flex-column flex-lg-row">
+          <div class="mr-lg-1 mb-2 mb-lg-0">Seguici su</div>
+          <div>
+            <a href="https://github.com/italia/" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-github"></i></a>
+            <a href="https://twitter.com/teamdigitaleIT" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/teamdigitale/" class="d-finline-lex small-prints mx-1 social__link"><i class="d-inline-block it-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+
+    <div class="row pb-4 colophon mt-md-5 mt-sm-3 pt-3 pt-sm-2">
+      <ul class="col list-inline small">
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/privacy-policy/">Privacy policy</a></strong>
+        </li>
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/cookies-policy">Cookie policy</a></strong>
+        </li>
+        
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="/note-legali">Note legali</a></strong>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript">
+var t = {
+  this : "it",
+  locale : "it_IT",
+  about_these_documents : "Informazioni su questi documenti",
+  active_lang : "lingua attiva",
+  cookiebar_accept : "Accetto",
+  cookiebar_msg : "Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo nella navigazione accetti l’utilizzo dei cookie.",
+  cookiebar_privacy_policy : "Cookie policy",
+  copyright : "Copyright",
+  documents : "Documentazione",
+  download : "Scarica",
+  footer_link_privacy_policy : "Privacy policy",
+  footer_link_cookies : "Cookie policy",
+  footer_link_legal_notes : "Note legali",
+  go_to : "Vai a",
+  index : "Indice",
+  last_updated : "Più recenti",
+  most_viewed_this_month : "Più visti questo mese",
+  navigation_menu_label : "Menu di navigazione",
+  navigation_menu_esc : "esci dalla navigazione",
+  search : "Cerca",
+  search_form_label : "Cerca nel documento",
+  search_form_off : "disattiva il form di ricerca",
+  search_form_on : "attiva il form di ricerca",
+  search_form_start : "avvia la ricerca",
+  search_results : "Risultati della ricerca",
+  search_no_results : "La tua ricerca non ha prodotto documenti. Assicurati di non aver commesso errori di digitazione.",
+  site_subtitle : "Documenti pubblici, digitali.",
+  site_title : "Docs Italia",
+  share_msg : "condividi",
+  skiplink_goto_content : "vai ai contenuti",
+  skiplink_goto_navigation : "vai alla navigazione del sito",
+  toggle_menu_label : "accedi al menu",
+  version : "versione",
+  compare : "Confronta",
+  copy_link : "copia link",
+  copied_link : "link copiato",
+  see_actions : "vedi azioni",
+  other_actions : "altre azioni",
+  comments : "commenti",
+  back_to_text : "torna al testo",
+  glossary_empty : "informazione non trovata",
+  glossary : "glossario",
+  go_to_glossary : "vai al glossario",
+  deepening : "approfondimento",
+  example : "esempio",
+  must : "si deve",
+  must_not : "non si deve",
+  should : "si dovrebbe",
+  should_not : "non si dovrebbe",
+  may : "si può",
+  use : "usa",
+  use_not : "non usare",
+  consultation : "consultazione",
+  show_more : "mostra tutto",
+  show_less : "mostra meno",
+  content_index : "indice dei contenuti",
+  table_index : "indice delle tabelle",
+  figures_index : "indice delle figure",
+  figures : "figure",
+  tables : "tabelle",
+  contents : "contenuti",
+  in_consultation : "in consultazione",
+  indices_and_glossary : "indici e glossario",
+  note : "nota",
+  no_description : "nessuna descrizione",
+  no_content : "nessuna sezione",
+  no_glossary : "nessun glossario",
+  no_figures : "nessuna figura",
+  no_tables : "nessuna tabella",
+  summary : "sommario",
+  project : "Progetto",
+  administration : "Amministrazione",
+  info : "Informazioni",
+  related : "Documenti correlati",
+  actions : "Azioni",
+  tags : "Tag",
+  view_source : "Sorgente",
+  previous : "precedente",
+  next : "successivo",
+  in_collaboration_with : "in collaborazione con",
+  follow_us : "seguici su",
+  header_link_trasformazione : "Piano Triennale",
+  header_link_piattaforme : "Piattaforme",
+  header_link_software : "Software",
+  header_link_api : "API",
+  header_link_community : "Le community",
+  header_link_developers : "Developers",
+  header_link_design : "Designers",
+  header_link_tools : "Gli strumenti",
+  header_link_forum : "Forum",
+  header_link_docs : "Docs",
+  header_link_github : "GitHub",
+  header_link_secondary_who_we_are : "Chi siamo",
+  header_link_projects : "Progetti",
+  header_link_documents : "Documenti",
+  header_link_administrations : "Amministrazioni",
+  header_link_whatis : "Che cos'è",
+}
+</script>
+  <a href="#" aria-hidden="true" data-attribute="return-to-top" class="return-to-top">
+  <i class="it-collapse"></i>
+</a>
+  
+  <script type="text/javascript">
+var PRODUCTION_DOMAIN = 'localhost';
+var DOCSITALIA_DATA = {
+  publisher_slug: 'organizzazione-demo',
+  publisher_project_slug: 'progetto-demo'
+}
+
+LOCAL = true;
+READTHEDOCS_DATA = {
+  project: 'demo-document',
+  version: 'bozza',
+  language: 'it',
+  api_host: '//' + PRODUCTION_DOMAIN
+}
+
+var DOCUMENTATION_OPTIONS = {
+    URL_ROOT: '../../',
+    VERSION: 'Bozza',
+    LANGUAGE: 'it',
+    COLLAPSE_INDEX: false,
+    FILE_SUFFIX: '.html',
+    HAS_SOURCE: true,
+    SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script src="../../_static/js/theme.js"></script>
+<script type="text/javascript" src="../../_static/documentation_options.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
+<script type="text/javascript" src="../../_static/translations.js"></script>
+<script type="text/javascript" src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script type="text/javascript" src="../../None"></script>
+  
+  <script type="text/javascript">
+  <!-- Matomo -->
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ingestion.webanalytics.italia.it/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  <!-- End Matomo -->
+</script>
+  
+  <div class="modal fade modal-sm-full" id="document-info" tabindex="-1" role="dialog" aria-labelledby="document-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="document-title">Catalogo Nazionale Dati per l'Interoperabilità Semantica</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Catalogo Nazionale Dati per l'Interoperabilità Semantica</p>
+        <p class="text-sans-serif">
+          <i class="docs-icon-project font-weight-bold"></i>
+          <span class="font-weight-bold ml-1 align-middle">Progetto:</span>
+          <a href="/organizzazione-demo/progetto-demo" class="align-middle">
+            Progetto demo
+          </a>
+        </p>
+        <p class="text-sans-serif">
+          <i class="docs-icon-publisher font-weight-bold"></i>
+          <span class="font-weight-bold ml-1 align-middle">Amministrazione:</span>
+          <a href="/organizzazione-demo/" class="align-middle">
+            Organizzazione demo
+          </a>
+        </p>
+        <div class="d-flex text-sans-serif my-4">
+          <div class="d-flex font-weight-bold align-items-center"><span class="mr-2">Tag:</span></div>
+          <div class="d-flex flex-wrap">
+            
+            <span class="border border-primary rounded m-1 py-1 px-2 tag"><a href="#">demo</a></span>
+            
+            <span class="border border-primary rounded m-1 py-1 px-2 tag"><a href="#">docs italia</a></span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="document-actions" aria-hidden="true">
+  <div class="modal-dialog mt-5" role="document">
+     <div class="modal-content rounded">
+        <div class="modal-body p-1">
+          <div class="document-actions d-flex flex-column flex-md-row justify-content-around w-100 p-2 p-md-0 text-blue">
+  <div class="dropdown p-3 px-md-2 py-md-0 d-flex flex-wrap">
+    <a class="btn dropdown-toggle p-2 flex-grow-1 text-left" href="#" id="downloads-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="docs-icon-download align-middle"></span>
+      <span class="align-middle">Scarica</span>
+    </a>
+    <div class="dropdown-menu w-100" aria-labelledby="downloads-dropdown" aria-disabled="false">
+      <div class="link-list-wrapper">
+        <ul class="link-list">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="p-3 px-md-2 py-md-0">
+    <a href="#" role="button" class="btn p-2 disabled" aria-disabled="true">
+        <span class="docs-icon-github"></span>
+        <span class="align-middle">Sorgente</span>
+    </a>
+  </div>
+</div>
+        </div>
+     </div>
+  </div>
+</div>
+
+  
+</body>
+</html>
