@@ -7,4 +7,4 @@ services:
       - /app/preview_build/
       - ./preview_build/preview_configuration.py:/app/conf.py
     ports:
-      - "8090:8000"
+      - "8000:8000"
