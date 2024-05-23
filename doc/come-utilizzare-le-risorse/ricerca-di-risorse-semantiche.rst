@@ -3,7 +3,7 @@ Ricerca di risorse semantiche
 
 La ricerca degli asset semantici può essere effettuata direttamente
 sull’homepage del Catalogo utilizzando l’apposito textbox, oppure
-selezionando sulle diverse categorie/tipologie degli asset semantici,
+selezionando sulle diverse categorie o tipologie degli asset semantici,
 come illustrato nella figura sottostante.
 
 .. figure:: ../../media/image3.png
