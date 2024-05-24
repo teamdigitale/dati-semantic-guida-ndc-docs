@@ -51,5 +51,4 @@ dall’altra, l’organizzazione (vocabolari controllati) e la
 rappresentazione (ontologie) della conoscenza così acquisita al fine di
 renderla *machine readable*.
 
-Per approfondire la semantica dei dati fare riferimento alla `sezione
-6 <../pillole-di-semantica-dei-dati.html>`__.
+Per approfondire la semantica dei dati fare riferimento alle `Pillole di semantica dei dati <../pillole-di-semantica-dei-dati.html>`__.

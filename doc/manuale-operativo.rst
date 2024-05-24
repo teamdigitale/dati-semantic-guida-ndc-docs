@@ -1,6 +1,9 @@
 Manuale operativo
 =================
 
+Il manuale operativo dettaglia le attività tecniche correlate 
+al processo di contribuzione al catalogo.
+
 .. toctree::
   :maxdepth: 3
   :caption: Indice dei contenuti

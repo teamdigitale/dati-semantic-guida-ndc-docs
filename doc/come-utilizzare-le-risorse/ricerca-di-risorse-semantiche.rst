@@ -44,11 +44,11 @@ catalogo'
 In particolare, è possibile filtrare le risorse per:
 
 - **parole chiave**: la funzionalità di ricerca è analoga a quella
-descritta per la homepage, ma in questo caso può essere coadiuvata dalle
-successive.
+  descritta per la homepage, ma in questo caso può essere coadiuvata dalle
+  successive.
 
 - **tipologia**: tutte (opzione di default), ontologia, vocabolario
-controllato, schema.
+  controllato, schema.
 
 - **categoria**: ad esempio Energia, Ambiente, Trasporti.
 

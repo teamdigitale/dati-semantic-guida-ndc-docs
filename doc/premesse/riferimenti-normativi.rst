@@ -30,8 +30,8 @@ e luoghi, modellando dati e metadati di domini applicativi specifici.
 
 Ulteriori riferimenti per il Catalogo sono:
 
-`Linee Guida sull’interoperabilità tecnica delle Pubbliche Amministrazioni <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf>`__
+- `Linee Guida sull’interoperabilità tecnica delle Pubbliche Amministrazioni <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf>`__
 
-`Linee Guida per l’Interoperabilità Semantica attraverso i Linked Open Data <https://www.agid.gov.it/sites/default/files/repository_files/documentazione_trasparenza/cdc-spc-gdl6-interoperabilitasemopendata_v2.0_0.pdf>`__
+- `Linee Guida per l’Interoperabilità Semantica attraverso i Linked Open Data <https://www.agid.gov.it/sites/default/files/repository_files/documentazione_trasparenza/cdc-spc-gdl6-interoperabilitasemopendata_v2.0_0.pdf>`__
 
-`Linee guida di design per i siti internet e i servizi digitali della PA <https://docs.italia.it/italia/design/lg-design-servizi-web/it/versione-corrente/index.html>`__
+- `Linee guida di design per i siti internet e i servizi digitali della PA <https://docs.italia.it/italia/design/lg-design-servizi-web/it/versione-corrente/index.html>`__

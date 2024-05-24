@@ -1,6 +1,10 @@
 Premesse
 ========
 
+La sezione contiene informazioni sulla struttura e sullo 
+sviluppo collaborativo della presente guida, e sul contesto, 
+lo scopo e il contenuto del Catalogo.
+
 .. toctree::
   :maxdepth: 3
   :caption: Indice dei contenuti

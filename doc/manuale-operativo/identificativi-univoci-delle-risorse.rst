@@ -15,7 +15,7 @@ Nel contesto del Web semantico, c’è necessità di definire i cosiddetti
   dove:
 
    * il \ **dominio**, il cui valore dipende dalla scelta effettuata
-     dai Contributori (rif. `sezione 1.8 <../premesse/scelta-degli-identificativi-univoci-nel-web.html>`__);
+     dai Contributori (rif. `Scelta degli identificativi univoci nel web <../premesse/scelta-degli-identificativi-univoci-nel-web.html>`__);
 
    * il **tipo di risorsa** può essere, ad esempio, uno dei seguenti
      valori:
@@ -167,8 +167,7 @@ in cui il Contributore voglia iscrivere le proprie URI sotto
 w3id.org/italia/dominio_specifico, voglia fruire delle soluzioni di *URI
 dereferentiation* implementate in Schema, e abbia rispettato le
 indicazioni sulla creazione del repository sorgente per le proprie
-risorse semantiche descritte in `sezione
-5.4 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__.
+risorse semantiche descritte in `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__.
 In casi diversi rispetto al precedente, il Contributore dovrà adeguare
 opportunamente le regole di redirect descritte di seguito.
 

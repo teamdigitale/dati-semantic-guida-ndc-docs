@@ -15,7 +15,7 @@ di controlli che possono essere integrati sul proprio repository,
 **disattivando eventualmente alcuni hook non applicabili**, a supporto
 dell’esecuzione dei controlli di qualità propedeutici alla richiesta di
 iscrizione al Catalogo. Per ulteriori approfondimenti, è possibile far
-riferimento al file readme del cookiecutter, in sezione 'Controlli
+riferimento al file readme del cookiecutter, nel paragrafo 'Controlli
 Automatici e Test'.
 
 I principali controlli implementati nel template sono descritti nelle
@@ -70,9 +70,9 @@ directory che li contiene, a meno dell'estensione degli stessi.
 
 Il controllo può essere disattivato nel caso in cui il Contributore
 abbia implementato una propria soluzione per le URI stabili, oppure se
-ha configurato una soluzione basata sul W3id (`sezione
-5.1 <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__) che tratti
-opportunamente eventuali discrepanze tra nomi dei file, nomi delle
+ha configurato una soluzione basata sul W3id 
+(`Identificativi univoci delle risorse <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__) 
+che tratti opportunamente eventuali discrepanze tra nomi dei file, nomi delle
 cartelle che li contengono e nomi delle risorse nelle relative URI.
 
 Proiezioni in CSV dei vocabolari controllati
@@ -160,8 +160,8 @@ Una directory contenente asset non contiene contemporaneamente
 sub-directory versionate con e senza il prefisso 'v' perché questo
 rende impossibile ordinare le versioni.
 
-In `sezione 5.4.7 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ sono contenuti alcuni esempi di
-versionamento delle risorse semantiche.
+In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ 
+sono contenuti alcuni esempi di versionamento delle risorse semantiche.
 
 Approfondimenti sugli schemi dati
 ---------------------------------
@@ -212,7 +212,7 @@ Questo meccanismo permette di inserire nell’IDL tutte le informazioni
 semantiche necessarie a descrivere l’API in base sia ai riferimenti
 ontologici che agli schemi utilizzati.
 
-In `sezione 5.4.7 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__
+In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__
 verrà fornito un caso specifico per illustrare in dettaglio il processo
 di bundling.
 
@@ -225,7 +225,7 @@ formati RDF ed XSD.
 NDC non supporta il processamento di file XSD. Questi potranno essere
 supportati in un secondo momento.
 
-In `sezione 5.4.7 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ verrà fornito un caso specifico per
+In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ verrà fornito un caso specifico per
 illustrare in dettaglio uno schema XSD.
 
 Esempi

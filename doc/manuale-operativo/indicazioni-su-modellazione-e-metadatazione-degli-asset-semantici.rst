@@ -118,8 +118,8 @@ seguenti indicazioni:
    l’harvesting dell’ontologia in schema.gov.it. Per verificare la
    correttezza della metadatazione, i Contributori avranno a
    disposizione un modulo di pre-harvesting raggiungibile da un’apposita
-   pagina web, così come espresso nel workflow in `sezione
-   3.1 <../come-contribuire/attività-propedeutiche-alla-contribuzione-al-catalogo.html>`__;
+   pagina web, così come espresso nel workflow in 
+   `Attività propedeutiche alla contribuzione al Catalogo <../come-contribuire/attività-propedeutiche-alla-contribuzione-al-catalogo.html>`__;
 
 -  si verifica con dei ragionatori automatici, presenti come plug-in nei
    principali editor di sviluppo di ontologie come ad esempio Protégé o

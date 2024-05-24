@@ -1,8 +1,8 @@
 Come contribuire
 ================
 
-La presente sezione descrive il processo di contribuzione a cui i
-soggetti individuati in `sezione 2.1 <funzionamento-generale/attori.html>`__ possono
+La sezione descrive il processo di contribuzione a cui i
+soggetti individuati in `Attori <funzionamento-generale/attori.html>`__ possono
 prendere parte.
 
 .. toctree::

@@ -19,7 +19,7 @@ di risorse semantiche supportate dal Catalogo sono:
    delle applicazioni, il cui elenco è fornito dalla PDND.
 
 Per ulteriori dettagli sulle classificazioni delle risorse semantiche,
-fare riferimento alla `sezione 6 <../pillole-di-semantica-dei-dati.html>`__.
+fare riferimento alle ` Pillole di semantica dei dati <../pillole-di-semantica-dei-dati.html>`__
 
 Il Catalogo può essere esteso con nuove risorse, così da aumentare le
 possibilità di riuso dei concetti semantici, ad esempio, nell’ambito di
@@ -39,19 +39,18 @@ di definire/aggiornare delle entità e/o proprietà a livello nazionale*"
 (cfr. `Linee Guida sull’interoperabilità tecnica delle Pubbliche
 Amministrazioni <https://www.agid.gov.it/sites/default/files/repository_files/linee_guida_interoperabilit_tecnica_pa.pdf>`__).
 Per ulteriori dettagli in merito, fare riferimento alla `sezione
-3.1 <../come-contribuire/attività-propedeutiche-alla-contribuzione-al-catalogo.html>`__.
+dedicata <../come-contribuire/attività-propedeutiche-alla-contribuzione-al-catalogo.html>`__.
 
 Creazione e gestione dei repository per le risorse semantiche
 -------------------------------------------------------------
 
 Considerato il funzionamento di harvesting di Schema, ovvero il processo
 di acquisizione dei contenuti semantici e conseguente caricamento sul
-Catalogo (rif. `sezione
-2.3 <../funzionamento-generale/raccolta-e-memorizzazione-dei-dati-semantici.html>`__) è necessario che
-ogni Contributore crei o abbia già a disposizione un repository da cui
-esporre le proprie risorse semantiche che saranno, quindi, raccolte in
-schema.gov.it come descritto in `sezione
-5.4 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__.
+Catalogo (rif. `Raccolta e memorizzazione dei dati semantici <../funzionamento-generale/raccolta-e-memorizzazione-dei-dati-semantici.html>`__)
+è necessario che ogni Contributore crei o abbia già a disposizione un 
+repository da cui esporre le proprie risorse semantiche che saranno, 
+quindi, raccolte in schema.gov.it come descritto nel 
+`manuale operativo <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__.
 
 Quando chiedere semantic stewardship ad Istat
 ---------------------------------------------
@@ -62,9 +61,8 @@ nel Catalogo, una semantic stewardship finalizzata alla creazione di
 risorse in linea con i propri standard. In questo caso, il Contributore
 sceglie di affidare all’Istat l’analisi concettuale del proprio dominio
 di interesse e la conseguente rappresentazione in modelli di dati oppure
-definire concettualmente, secondo quanto indicato in `sezione
-1.3 <../premesse/la-semantica-dei-dati-della-pa.html>`__
-e `1.5 <../premesse/scopo-del-catalogo.html>`__.
+definire concettualmente, secondo quanto indicato in `La semantica dei dati della PA <../premesse/la-semantica-dei-dati-della-pa.html>`__
+e `Scopo del Catalogo <../premesse/scopo-del-catalogo.html>`__.
 la semantica del proprio dominio e richiedere la modellazione ontologica
 e/o la definizione di vocabolari controllati e/o la definizione di
 schemi dati.
@@ -90,5 +88,5 @@ dello stesso.
 
 Riguardo all’individuazione del dominio degli URI e del repository, il
 Contributore sarà supportato dall’Istat nella scelta tra le alternative
-descritte in `sezione
-1.8 <../premesse/scelta-degli-identificativi-univoci-nel-web.html>`__.
+descritte in 
+`Scelta degli identificativi univoci nel web <../premesse/scelta-degli-identificativi-univoci-nel-web.html>`__.

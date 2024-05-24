@@ -9,11 +9,11 @@ Contributore sono:
    catalogo;
 
 -  Individuare la modalità di contribuzione più consona al caso
-   specifico sulla base delle informazioni contenute nelle sezioni
+   specifico sulla base delle informazioni contenute nelle sotto-sezioni
    seguenti eventualmente richiedendo supporto agli Amministratori del
    Catalogo;
 
--  Effettuare le ulteriori azioni di competenza descritte in figura 2.
+-  Effettuare le ulteriori azioni di competenza descritte nel seguente flowchart.
 
 .. mermaid::
    
@@ -77,7 +77,8 @@ per l’aggiunta di nuove risorse sul Catalogo:
      dereferentiation* e *Content Negotiation* già implementate. A tale
      scopo, fai riferimento alle istruzioni contenute nel `repository
      Italia <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
-     e alle indicazioni rese disponibili in `sezione 5.2 <../manuale-operativo/indicazioni-su-modellazione-e-metadatazione-degli-asset-semantici.html>`__
+     e alle indicazioni rese disponibili nel 
+     `manuale operativo <../manuale-operativo/indicazioni-su-modellazione-e-metadatazione-degli-asset-semantici.html>`__
      su come modellare e metadatare le risorse.
 
    * Nel caso in cui le risorse da pubblicare non siano caratterizzate
@@ -88,14 +89,14 @@ per l’aggiunta di nuove risorse sul Catalogo:
 
       + Per la **modellazione e metadatazione**, fai riferimento alle
         indicazioni differenziate per tipologia di risorsa (vocabolario
-        controllato, ontologia o schema dati) contenute in `sezione 5.2 <../manuale-operativo/indicazioni-su-modellazione-e-metadatazione-degli-asset-semantici.html>`__;
+        controllato, ontologia o schema dati) contenute nel `manuale operativo <../manuale-operativo/indicazioni-su-modellazione-e-metadatazione-degli-asset-semantici.html>`__;
       + Per la **predisposizione del repository**, fai riferimento alle
         indicazioni riguardo la struttura del repository da creare e
         che verrà registrato tra le sorgenti del Catalogo. I file
         richiesti, il versionamento e ulteriori dettagli sulle risorse
-        semantiche sono contenute in `sezione 5.4 <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__;
+        semantiche sono contenute nel `manuale operativo <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__;
       + Per **l’implementazione del redirect degli URI stabili,** fai
-        riferimento alla soluzione descritta in `sezione 5.1 <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__;
+        riferimento alla soluzione descritta nel `manuale operativo <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__;
       + Per il **test dei requisiti tecnici per l’harvesting delle
         risorse semantiche**, fermo restando che il Contributore è
         responsabile dei contenuti pubblicati nel proprio repository, è
@@ -125,8 +126,8 @@ per l’aggiunta di nuove risorse sul Catalogo:
         turtle e la validità dei prefissi rispetto alle relative
         ontologie. Infine, per un test di visualizzazione e di
         correttezza delle risorse semantiche rispetto ai requisiti
-        tecnici per l’harvesting espressi nel `Manuale
-        Operativo <../manuale-operativo.html>`__, è possibile richiedere,
+        tecnici per l’harvesting espressi nel `manuale
+        operativo <../manuale-operativo.html>`__, è possibile richiedere,
         utilizzando la mail servicedesk.schema@istat.it, un primo
         aggiornamento nell’ambiente di test del Catalogo e, al termine
         della fase di test, richiedere l’harvesting in produzione.
@@ -138,8 +139,8 @@ per l’aggiunta di nuove risorse sul Catalogo:
      far riferimento alla `guida ufficiale pubblicata dal
      w3id <https://w3id.org/>`__. Inoltre, per la creazione dei file di
      configurazione del redirect, puoi considerare **a titolo
-     esemplificativo** le istruzioni contenute in `sezione
-     5.1 <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__.
+     esemplificativo** le istruzioni contenute nel 
+     `manuale operativo <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__.
 
 - Se vuoi **registrare URI in domini proprietari**:
 
@@ -154,5 +155,5 @@ Richiesta di modifica di risorse già in Catalogo
 ------------------------------------------------
 
 Se vuoi **suggerire una modifica a un contenuto semantico già esistente
-nel Catalogo,** fai riferimento al Manuale Operativo (`sezione
-5.3 <../manuale-operativo/indicazioni-su-aggiornamento-di-asset-semantici-esistenti.html>`__).
+nel Catalogo,** fai riferimento al  
+`manuale operativo <../manuale-operativo/indicazioni-su-aggiornamento-di-asset-semantici-esistenti.html>`__.

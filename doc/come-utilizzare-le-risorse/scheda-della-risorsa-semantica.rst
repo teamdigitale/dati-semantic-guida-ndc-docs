@@ -118,5 +118,4 @@ semantici.
 
 Nel caso di richiesta di integrazioni, il Contributore o l’utente che
 apre la issue dovrà fare riferimento alle indicazioni tecniche fornite
-in `sezione
-5.3 <../manuale-operativo/indicazioni-su-aggiornamento-di-asset-semantici-esistenti.html>`__.
+nel `manuale operativo <../manuale-operativo/indicazioni-su-aggiornamento-di-asset-semantici-esistenti.html>`__.
