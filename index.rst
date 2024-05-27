@@ -18,9 +18,9 @@ fai riferimento alle `Pillole di semantica dei dati <doc/pillole-di-semantica-de
   :maxdepth: 3
   :numbered:
 
-  doc/premesse.rst
-  doc/funzionamento-generale.rst
-  doc/come-contribuire.rst
-  doc/come-utilizzare-le-risorse.rst
-  doc/manuale-operativo.rst
-  doc/pillole-di-semantica-dei-dati.rst
+  docs/premesse.rst
+  docs/funzionamento-generale.rst
+  docs/come-contribuire.rst
+  docs/come-utilizzare-le-risorse.rst
+  docs/manuale-operativo.rst
+  docs/pillole-di-semantica-dei-dati.rst
