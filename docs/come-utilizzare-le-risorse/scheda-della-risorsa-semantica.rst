@@ -9,11 +9,9 @@ titolo, la descrizione, e mostra due tasti che permettono di accedere
 alle due funzionalità 'SPARQL' e 'Vai al sorgente'.
 
 .. figure:: ../../media/image6.png
-   :alt: Figura 6 Esempio schermata della scheda di un'ontologia
-   :width: 5.46087in
-   :height: 2.74051in
+   :alt: Esempio schermata della scheda di un'ontologia
 
-Figura 6 Esempio schermata della scheda di un'ontologia
+   Esempio schermata della scheda di un'ontologia
 
 In particolare:
 
@@ -22,10 +20,9 @@ In particolare:
    del Catalogo.
 
 .. figure:: ../../media/image7.png
-   :alt: Figura 7 Interfaccia per l'esecuzione di interrogazioni mediante SPARQL Query Editor
+   :alt: Interfaccia per l'esecuzione di interrogazioni mediante SPARQL Query Editor
    
-   Figura 7 Interfaccia per l'esecuzione di interrogazioni mediante SPARQL
-   Query Editor
+   Interfaccia per l'esecuzione di interrogazioni mediante SPARQL Query Editor
 
 -  Il tasto 'Vai al sorgente' permette di accedere al repository
    sorgente della risorsa semantica, dove eventualmente l'utente può
@@ -41,11 +38,11 @@ quali la versione corrente, gli autori e altre modalità di
 visualizzazione.
 
 .. figure:: ../../media/image8.png
-   :alt: Figura 8 Esempio visualizzatore lode di un’ontologia
+   :alt: Esempio visualizzatore lode di un’ontologia
    :width: 5.12986in
    :height: 2.59097in
 
-Figura 8 Esempio visualizzatore lode di un’ontologia
+   Esempio visualizzatore lode di un’ontologia
 
 Vocabolario controllato
 -----------------------
@@ -54,22 +51,22 @@ La scheda di dettaglio dei vocabolari controllati contiene pressoché gli
 stessi elementi descritti per le ontologie.
 
 .. figure:: ../../media/image9.png
-   :alt: Figura 9 Esempio schermata della scheda di un vocabolario controllato
+   :alt: Esempio schermata della scheda di un vocabolario controllato
    :width: 5.54792in
    :height: 2.79792in
 
-Figura 9 Esempio schermata della scheda di un vocabolario controllato
+   Esempio schermata della scheda di un vocabolario controllato
 
 Per i vocabolari controllati è presente un tasto aggiuntivo, 'API', che
 permette di accedere alla Swagger UI e quindi fruire del vocabolario
 controllato tramite un’apposita API.
 
 .. figure:: ../../media/image10.png
-   :alt: Figura 10 Interfaccia Swagger UI per vocabolario controllato
+   :alt: Interfaccia Swagger UI per vocabolario controllato
    :width: 5.29792in
    :height: 2.67847in
 
-Figura 10 Interfaccia Swagger UI per vocabolario controllato
+   Interfaccia Swagger UI per vocabolario controllato
 
 Anche in questo caso, è presente una tabella che contiene i dettagli
 della risorsa semantica, con un importante differenza: il campo 'URI'
@@ -79,11 +76,11 @@ Web - dove l'utente ha la possibilità di esaminare varie caratteristiche
 del vocabolario controllato correlate al linguaggio RDF.
 
 .. figure:: ../../media/image11.png
-   :alt: Figura 11 Esempio visualizzatore lodview di un vocabolario controllato
+   :alt: Esempio visualizzatore lodview di un vocabolario controllato
    :width: 5.63478in
    :height: 2.85652in
 
-Figura 11 Esempio visualizzatore lodview di un vocabolario controllato
+   Esempio visualizzatore lodview di un vocabolario controllato
 
 Schema
 ------
@@ -99,11 +96,11 @@ mediante la visualizzazione estesa dei vari campi della sezione
 'schemas'.
 
 .. figure:: ../../media/image12.png
-   :alt: Figura 12 Esempio di tabella contenuta in una scheda per gli schemi dati
+   :alt: Esempio di tabella contenuta in una scheda per gli schemi dati
    :width: 4.85714in
    :height: 5.03576in
 
-Figura 12 Esempio di tabella contenuta in una scheda per gli schemi dati
+   Esempio di tabella contenuta in una scheda per gli schemi dati
 
 Richiesta di aggiornamento di asset semantici esistenti
 -------------------------------------------------------

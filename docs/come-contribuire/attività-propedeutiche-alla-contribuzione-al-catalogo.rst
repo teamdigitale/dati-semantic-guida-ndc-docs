@@ -60,7 +60,7 @@ Contributore sono:
    id44-->id45((END))
   end
 
-Figura 2 Diagramma delle attività propedeutiche alla contribuzione
+Diagramma delle attività propedeutiche alla contribuzione
 
 Aggiunta di nuove risorse
 -------------------------

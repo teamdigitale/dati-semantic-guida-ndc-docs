@@ -63,11 +63,11 @@ creando così i presupposti per collegare i dati a formare un grafo
 interconnesso di conoscenza (figura 14).
 
 .. figure:: ../../media/image14.png
-   :alt: Figura 14: Esempio di grafo interconnesso di conoscenza
+   :alt: Esempio di grafo interconnesso di conoscenza
    :width: 6.10417in
    :height: 2.27083in
 
-   Figura 14: Esempio di grafo interconnesso di conoscenza
+   Esempio di grafo interconnesso di conoscenza
 
 Lo standard RDF, pertanto, offre un modello di rappresentazione di dati
 semanticamente arricchiti e collegati nel Web e può essere serializzato
@@ -349,11 +349,11 @@ La figura 15 mostra il grado di profondità semantico offerto dai
 vocabolari controllati, di diverso tipo, rispetto alle ontologie.
 
 .. figure:: ../../media/image15.png
-   :alt: Figura 15: Livelli di espressività semantica
+   :alt: Livelli di espressività semantica
    :width: 3.42708in
    :height: 2.70833in
 
-   Figura 15: Livelli di espressività semantica
+   Livelli di espressività semantica
 
 Dare la possibilità di interrogare i dati
 -----------------------------------------

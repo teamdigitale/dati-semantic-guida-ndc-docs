@@ -7,11 +7,11 @@ più chiara, la sequenza di utilizzo del Catalogo è sintetizzata nella
 figura seguente:
 
 .. figure:: ../media/image1.png
-   :alt: Figura 1 Flusso di utilizzo del Catalogo
+   :alt: Flusso di utilizzo del Catalogo
    :width: 5.35086in
    :height: 2.96875in
 
-   Figura 1 Flusso di utilizzo del Catalogo
+   Flusso di utilizzo del Catalogo
 
 .. toctree::
   :maxdepth: 3
