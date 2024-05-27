@@ -19,6 +19,7 @@ extensions = [
     "sphinx.ext.doctest",
     "docs_italia_theme",
     "myst_parser",
+    "sphinxcontrib.mermaid",
 ]
 
 # The suffix of source filenames.

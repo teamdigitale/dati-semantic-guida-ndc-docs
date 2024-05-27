@@ -1,33 +1,26 @@
-========================================================================================
-Guida all’uso del Catalogo Nazionale Dati per l’interoperabilità semantica - Docs Italia
-========================================================================================
+Guida al Catalogo
++++++++++++++++++++++++++++
+Documento di guida
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+La presente guida è uno strumento dedicato alle Pubbliche Amministrazioni che
+vogliano fruire e/o contribuire all'alimentazione dei contenuti semantici del 
+Catalogo, e più in generale ai potenziali utenti del portale 
+`schema.gov.it <https://schema.gov.it>`__.
 
-Questo documento descrive come utilizzare e pubblicare informazioni
-sul Catalogo Nazionale Dati per l’interoperabilità semantica raggiungibile
-su https://schema.gov.it.
+Per le indicazioni su come esplorare la guida, fai riferimento alla 
+`sezione dedicata <doc/premesse/struttura-nella-presente-guida.html>`__.
 
-Il documento è destinato ad esperti di semantica,
-architetti e programmatori IT
-e a service designer di servizi digitali in ambito
-pubblico e privato.
-
-La lettura presuppone familiarità con:
-programmazione web,
-formati di serializzazione dei dati (JSON e XML),
-tecnologie semantiche (JSON-LD, RDF).
-Una introduzione alla semantica e alle tecnologie
-collegate è disponibile al capitolo 3.
-
+Per le definizioni dei concetti semantici affrontati nel corso della guida, 
+fai riferimento alle `Pillole di semantica dei dati <doc/pillole-di-semantica-dei-dati.html>`__.
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Indice dei contenuti
-   :numbered:
+  :maxdepth: 3
+  :numbered:
 
-   ./docs/01-progetto.md
-   ./docs/02-glossario.md
-   ./docs/03-introduzione/index.md
-   ./docs/04-guida-sviluppo/index.md
-   ./docs/04-guida-sviluppo/architettura.md
-   ./docs/05-faq.md
+  docs/premesse.rst
+  docs/funzionamento-generale.rst
+  docs/come-contribuire.rst
+  docs/come-utilizzare-le-risorse.rst
+  docs/manuale-operativo.rst
+  docs/pillole-di-semantica-dei-dati.rst
