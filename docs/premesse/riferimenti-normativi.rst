@@ -3,23 +3,18 @@ Riferimenti normativi
 
 L’interoperabilità semantica nella pubblica amministrazione è un
 obiettivo dell’UE e nazionale. A livello europeo, la Commissione ha
-raccolto alcune raccomandazioni nello `European Interoperability
-Framework <https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf>`__\ ,
-punto di riferimento per fonti normative UE come la \ `Direttiva (UE)
-2019/1024 sugli open
-data <https://eur-lex.europa.eu/eli/dir/2019/1024/oj/ita>`__\ ,
-il \ `Regolamento (UE) 2023/138 sui dati di elevato
-valore <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=uriserv%3AOJ.L_.2023.019.01.0043.01.ITA&toc=OJ%3AL%3A2023%3A019%3ATOC>`__\ ,
-il \ `Regolamento (UE) 2018/1724 sullo sportello digitale
-unico <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32018R1724>`__\ e
-il \ `Regolamento (UE) 2022/1463 sul sistema tecnico per l’applicazione
-del principio “\ una
-tantum” <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32022R1463>`__;
+raccolto alcune raccomandazioni nello 
+`European Interoperability Framework <https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf>`__,
+punto di riferimento per fonti normative UE come la 
+`Direttiva (UE) 2019/1024 sugli open data <https://eur-lex.europa.eu/eli/dir/2019/1024/oj/ita>`__,
+il `Regolamento (UE) 2023/138 sui dati di elevato valore <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=uriserv%3AOJ.L_.2023.019.01.0043.01.ITA&toc=OJ%3AL%3A2023%3A019%3ATOC>`__,
+il `Regolamento (UE) 2018/1724 sullo sportello digitale unico <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32018R1724>`__ e
+il `Regolamento (UE) 2022/1463 sul sistema tecnico per l’applicazione del principio “una tantum” <https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32022R1463>`__;
 nel quadro nazionale, è il
 `CAD <https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2005-05-16&atto.codiceRedazionale=005G0104&atto.articolo.numero=0&atto.articolo.sottoArticolo=1&atto.articolo.sottoArticolo1=0&qId=&tabID=0.5596495678426472&title=lbl.dettaglioAtto>`__
 a tracciare le direttrici normative sulle cui basi vengono adottati atti
-programmatici come il `Piano triennale per
-l’informatica <https://www.agid.gov.it/it/agenzia/piano-triennale>`__,
+programmatici come il 
+`Piano triennale per l’informatica <https://www.agid.gov.it/it/agenzia/piano-triennale>`__,
 nel quale si indica che, per favorire lo scambio di informazioni tra
 pubbliche amministrazioni, è necessario definire una data governance per
 armonizzare e standardizzare codici e nomenclature ricorrenti,
