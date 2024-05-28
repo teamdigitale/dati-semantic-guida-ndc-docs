@@ -31,3 +31,5 @@ html_theme = "docs_italia_theme"
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [docs_italia_theme.get_html_theme_path()]
+
+numfig = True

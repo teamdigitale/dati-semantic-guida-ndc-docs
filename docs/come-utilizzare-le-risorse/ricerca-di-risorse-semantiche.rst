@@ -7,11 +7,11 @@ selezionando sulle diverse categorie o tipologie degli asset semantici,
 come illustrato nella figura sottostante.
 
 .. figure:: ../../media/image3.png
-   :alt: Figura 3 Homepage di schema.gov.it – Ricerca asset semantici
+   :alt: Homepage di schema.gov.it – Ricerca asset semantici
    :width: 5.71198in
    :height: 2.89375in
 
-Figura 3 Homepage di schema.gov.it – Ricerca asset semantici
+   Homepage di schema.gov.it – Ricerca asset semantici
 
 La ricerca tramite textbox permette agli utenti del Catalogo una rapida
 individuazione delle risorse desiderate, fornendo in input le **parole
@@ -21,12 +21,11 @@ termini contenuti nella descrizione, titolare e concetti principali
 della risorsa.
 
 .. figure:: ../../media/image4.png
-   :alt: Figura 4 Homepage di schema.gov.it – Ricerca asset semantici (Esplora il catalogo)
+   :alt: Homepage di schema.gov.it – Ricerca asset semantici (Esplora il catalogo)
    :width: 6.13542in
    :height: 2.1057in
 
-Figura 4 Homepage di schema.gov.it – Ricerca asset semantici (Esplora
-il catalogo)
+   Homepage di schema.gov.it – Ricerca asset semantici (Esplora il catalogo)
 
 In aggiunta alla precedente modalità di ricerca, è possibile cliccare su
 'Esplora il catalogo' e di conseguenza accedere ad una pagina di
@@ -34,12 +33,11 @@ ricerca avanzata che ne estende le funzionalità di filtraggio delle
 risorse.
 
 .. figure:: ../../media/image5.png
-   :alt: Figura 5 Catalogo – Ricerca asset semantici a partire da 'Esplora il catalogo'
+   :alt: Catalogo – Ricerca asset semantici a partire da 'Esplora il catalogo'
    :width: 5.30208in
    :height: 3.90625in
 
-Figura 5 Catalogo – Ricerca asset semantici a partire da 'Esplora il
-catalogo'
+   Catalogo – Ricerca asset semantici a partire da 'Esplora il catalogo'
 
 In particolare, è possibile filtrare le risorse per:
 

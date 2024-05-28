@@ -488,11 +488,11 @@ Di seguito viene fornito un esempio di utilizzo di cURL per verificare
 la correttezza dei redirect nel caso di una ontologia.
 
 .. figure:: ../../media/image13.png
-   :alt: Figura 13 Prompt dei comandi- cURL per verifica redirect
+   :alt: Prompt dei comandi- cURL per verifica redirect
    :width: 6.5in
    :height: 1.22431in
 
-   Figura 13 Prompt dei comandi- cURL per verifica redirect
+   Prompt dei comandi- cURL per verifica redirect
 
 Nel caso d’esempio, l’URI fornito è il seguente:
 https://w3id.org/italia/work-accident/onto/core/, mentre il contenuto
