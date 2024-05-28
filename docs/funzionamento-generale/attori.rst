@@ -1,6 +1,13 @@
 Attori
 ======
 
+.. figure:: ../../media/image1.png
+   :alt: Schema di interazione da parte dei diversi attori
+   :width: 5.35086in
+   :height: 2.96875in
+
+   Schema di interazione da parte dei diversi attori
+
 Gli attori coinvolti sono i seguenti:
 
 -  **Contributori**: soggetti di cui all’art. 2, comma 2, CAD che
