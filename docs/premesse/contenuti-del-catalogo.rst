@@ -19,7 +19,7 @@ di risorse semantiche supportate dal Catalogo sono:
    delle applicazioni, il cui elenco è fornito dalla PDND.
 
 Per ulteriori dettagli sulle classificazioni delle risorse semantiche,
-fare riferimento alle `Pillole di semantica dei dati <../pillole-di-semantica-dei-dati.html>`__
+fare riferimento alle `Pillole di semantica dei dati <../pillole-di-semantica-dei-dati.html>`__.
 
 Il Catalogo può essere esteso con nuove risorse, così da aumentare le
 possibilità di riuso dei concetti semantici, ad esempio, nell’ambito di

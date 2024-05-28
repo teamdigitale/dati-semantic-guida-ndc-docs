@@ -10,7 +10,7 @@ dettaglia in un manuale operativo gli aspetti tecnici a supporto della
 contribuzione e comprensione del contenuto del Catalogo.
 
 Se sei un Contributore ti consigliamo di leggere approfonditamente 
-`Come contribuire <../come-contribuire.html>`__\ per comprendere il
+`Come contribuire <../come-contribuire.html>`__ per comprendere il
 processo di iscrizione al Catalogo, e il `Manuale operativo <../manuale-operativo.html>`__ 
 per reperire le indicazioni tecniche a supporto dello stesso.
 

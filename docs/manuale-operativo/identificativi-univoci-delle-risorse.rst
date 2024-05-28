@@ -439,7 +439,7 @@ README.md
 Per la creazione del file 'README.md' è possibile far riferimento
 
 -  `all’esempio fornito da w3id.org
-   stessa <https://github.com/perma-id/w3id.org/blob/master/dggs/README.md>`__;
+   stessa <https://github.com/perma-id/w3id.org/blob/master/examples/README.md>`__;
 
 -  `al file creato sotto la cartella
    '/italia' <https://github.com/perma-id/w3id.org/blob/master/italia/readme.md>`__.

@@ -2,9 +2,7 @@ Funzionamento generale
 ======================
 
 La presente sezione si focalizza sulla descrizione e comprensione del
-funzionamento generale del Catalogo. Al fine di offrire una panoramica
-più chiara, la sequenza di utilizzo del Catalogo è sintetizzata nella
-figura seguente:
+funzionamento generale del Catalogo.
 
 .. toctree::
   :maxdepth: 3

@@ -1,6 +1,9 @@
 Attori
 ======
 
+Al fine di offrire una panoramica più chiara, la sequenza di utilizzo 
+del Catalogo è sintetizzata nella figura seguente:
+
 .. figure:: ../../media/image1.png
    :alt: Schema di interazione da parte dei diversi attori
    :width: 5.35086in

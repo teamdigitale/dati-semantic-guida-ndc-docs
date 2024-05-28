@@ -60,7 +60,7 @@ essere una semplice stringa, un numero, una data, un booleano, oppure un
 nodo con un URI/IRI così da diventare potenzialmente il soggetto di
 un’altra tripla. Quest’ultimo meccanismo consente di concatenare triple,
 creando così i presupposti per collegare i dati a formare un grafo
-interconnesso di conoscenza (figura 14).
+interconnesso di conoscenza (seguente figura).
 
 .. figure:: ../../media/image14.png
    :alt: Esempio di grafo interconnesso di conoscenza
@@ -345,7 +345,7 @@ possano essere entrambi definiti per rappresentare la conoscenza di un
 certo dominio di interesse, il livello di profondità semantica offerta
 dai due strumenti è diverso.
 
-La figura 15 mostra il grado di profondità semantico offerto dai
+La figura che segue mostra il grado di profondità semantico offerto dai
 vocabolari controllati, di diverso tipo, rispetto alle ontologie.
 
 .. figure:: ../../media/image15.png

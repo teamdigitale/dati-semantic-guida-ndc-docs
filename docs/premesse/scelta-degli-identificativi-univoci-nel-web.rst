@@ -5,7 +5,7 @@ Per individuare univocamente tutti gli elementi (entità, attributi di
 entità, relazioni tra entità) che compongono le risorse semantiche che
 il Contributore intende creare e registrare nel catalogo, occorre
 definire degli URI/IRI persistenti nel tempo 
-(rif, `manuale operativo <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__).
+(rif. `manuale operativo <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__).
 
 A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
 
@@ -36,8 +36,7 @@ A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
       soluzioni di content negotiation e URI dereferentiation già
       incluse. La scelta del dominio w3id.org/italia comporta, inoltre,
       necessariamente l’archiviazione delle proprie risorse semantiche
-      nell'
-      `apposito repository <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__.
+      nell'`apposito repository <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
       gestito dal DTD; dunque, ogni operazione (inserimento,
       aggiornamento, modifica) da compiersi in tale repository github è
       subordinata all’approvazione dei suoi amministratori. Questa
