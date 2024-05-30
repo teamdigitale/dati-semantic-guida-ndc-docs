@@ -11,8 +11,9 @@ Catalogo, e più in generale ai potenziali utenti del portale
 Per le indicazioni su come esplorare la guida, fai riferimento alla 
 `sezione dedicata <docs/premesse/struttura-nella-presente-guida.html>`__.
 
-Per le definizioni dei concetti semantici affrontati nel corso della guida, 
-fai riferimento alle `Pillole di semantica dei dati <docs/pillole-di-semantica-dei-dati.html>`__.
+Se sei nuovo nel mondo della semantica dei dati, e hai bisogno di
+un'introduzione generale sul tema, fai riferimento alle 
+`Pillole di semantica dei dati <docs/pillole-di-semantica-dei-dati.html>`__.
 
 .. toctree::
   :maxdepth: 3
@@ -23,4 +24,8 @@ fai riferimento alle `Pillole di semantica dei dati <docs/pillole-di-semantica-d
   docs/come-contribuire.rst
   docs/come-utilizzare-le-risorse.rst
   docs/manuale-operativo.rst
+  
+.. toctree::
+  :name: content_toc
+  
   docs/pillole-di-semantica-dei-dati.rst
