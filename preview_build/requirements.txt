@@ -4,4 +4,4 @@ myst-parser==0.18.0
 sphinxcontrib-mermaid==0.7.1
 
 # docsitalia
-#docs-italia-theme @ git+https://github.com/AgostinoPurificato/docs-italia-theme.git@test_ndc
+#docs-italia-theme @ git+https://github.com/italia/docs-italia-theme.git@bootstrap-italia

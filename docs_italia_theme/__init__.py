@@ -93,38 +93,22 @@ def add_context_data(app, pagename, templatename, context, doctree):
         language = app.site_data['default_language']
     context['t'] = app.site_data['data']['l10n'][language]['t']
 
-    # Run only for local development
-    if os.environ.get('READTHEDOCS', None) != 'True':
-        context['LOCAL'] = False
-        context['PRODUCTION_DOMAIN'] = ''
-        context['slug'] = 'demo-document'
-        context['current_version'] = 'stabile'
-        context['rtd_language'] = 'it'
-        context['publisher_project'] = u'schema.gov.it'
-        context['publisher_project_slug'] = 'schema.gov.it'
-        context['publisher'] = u'Dipartimento per la trasformazione digitale'
-        context['publisher_slug'] = 'innovazione.gov.it/'
-        context['tags'] = [
-            ('NDC', '#'),
-            ('Catalogo', '#'),
-            ('Guida', '#')
-        ]
-
-    if 'docsitalia_data' in context:
-        context['docstitle'] = context['docsitalia_data']['document']['name']
-    else:
-        try:
-            with open(os.path.join(app.builder.srcdir,'document_settings.yml')) as document_settings:
-                data = document_settings.read()
-                data = yaml.safe_load(data)
-        except:
-            data = {
-                'document': {
-                    'name': 'Titolo del documento non impostato'
-                }
-            }
-
-        context['docsitalia_data'] = data
+    # NDC specific fields
+    context['LOCAL'] = False
+    context['PRODUCTION_DOMAIN'] = ''
+    context['slug'] = 'demo-document'
+    context['current_version'] = 'stabile'
+    context['rtd_language'] = 'it'
+    context['publisher_project'] = u'schema.gov.it'
+    context['publisher_project_url'] = 'https://schema.gov.it'
+    context['publisher'] = u'Dipartimento per la trasformazione digitale'
+    context['publisher_url'] = 'https://innovazione.gov.it/'
+    context['tags'] = [
+        ('NDC', '#'),
+        ('Catalogo', '#'),
+        ('Guida', '#')
+    ]
+    context['docstitle'] = 'Catalogo Nazionale Dati per l\'Interoperabilità Semantica'
 
 def generate_additonal_tocs(app, pagename, templatename, context, doctree):
     """Generate and add additional tocs to Sphinx context"""

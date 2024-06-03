@@ -77,7 +77,7 @@
         <div class="w-100">
           <i class="docs-icon-project docs__document-info__icon"></i>
           <span class="docs__document-info__label ml-1">{{ t.project }}:</span>
-          <a href="/{{ publisher_slug }}/{{ publisher_project_slug }}" class="text-white font-weight-normal">
+          <a href="{{ publisher_project_url }}" class="text-white font-weight-normal">
             <u>{{ publisher_project }}</u>
           </a>
         </div>
@@ -86,7 +86,7 @@
         <div class="w-100 mt-1">
           <i class="docs-icon-publisher docs__document-info__icon"></i>
           <span class="docs__document-info__label ml-1">{{ t.administration }}:</span>
-          <a href="/{{ publisher_slug }}/" class="text-white font-weight-normal">
+          <a href="{{ publisher_url }}" class="text-white font-weight-normal">
             <u>{{ publisher }}</u>
           </a>
         </div>
@@ -95,4 +95,4 @@
     </div>
   </div>
 </header>
-{% include 'layouts/doc_header.html' %}
+<!--{% include 'layouts/doc_header.html' %}-->

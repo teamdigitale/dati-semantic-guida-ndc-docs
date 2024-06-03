@@ -16,8 +16,9 @@ settings_discourse_url = "https://forum.italia.it/"
 import os
 import sys
 
-docs_italia_theme = __import__("docs-italia-theme")
-
+#docs_italia_theme = __import__("docs-italia-theme")
+sys.path.append('../')
+import docs_italia_theme
 
 # -- RTD configuration ------------------------------------------------
 
