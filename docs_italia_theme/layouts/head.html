@@ -1,0 +1,60 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ docstitle }} | {{ title|striptags|e }}</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css">
+  <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
+
+  <!-- Relations -->
+  <link rel="index" title="{{ t.index }}" href="{{ pathto(master_doc) }}">
+  <link rel="top" title="{{ docstitle|e }}" href="{{ pathto(master_doc) }}">
+  {%- if parents %}
+  <link rel="up" title="{{ parents[-1].title|striptags|e }}" href="{{ parents[-1].link|e }}">
+  {%- endif %}
+  {%- if next %}
+  <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">
+  {%- endif %}
+  {%- if prev %}
+  <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">
+  {%- endif %}
+
+  {% if docsitalia_data and not LOCAL %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@teamdigitaleIT">
+  <meta name="twitter:title" content="{{ docstitle }} | {{ title|striptags|e }}">
+  <meta name="twitter:description" content="{{ docsitalia_data['document']['description'] }}">
+  <meta name="twitter:image" content="{{ MEDIA_URL }}docsitalia/images/social-card.png">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="{{ t.locale }}" />
+  <meta property="og:url" content="{{ canonical_url }}{{ pagename }}.html">
+  <meta property="og:title" content="{{ docstitle }} | {{ title|striptags|e }}">
+  <meta property="og:description" content="{{ docsitalia_data['document']['description'] }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Docs Italia">
+  <meta property="og:image" content="{{ MEDIA_URL }}docsitalia/images/social-card.png">
+  <meta property="og:image:secure_url" content="{{ MEDIA_URL }}docsitalia/images/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="{{ MEDIA_URL }}docsitalia/icons/apple-touch-icon.png">
+  <link rel="icon" href="{{ MEDIA_URL }}docsitalia/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="{{ MEDIA_URL }}docsitalia/icons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="{{ MEDIA_URL }}docsitalia/icons/manifest.webmanifest">
+  <link rel="mask-icon" href="{{ MEDIA_URL }}docsitalia/icons/safari-pinned-tab.svg" color="#0066CC">
+  <link rel="icon" href="{{ MEDIA_URL }}docsitalia/icons/favicon.ico">
+  <meta name="msapplication-config" content="{{ site.baseurl }}/docs/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#0066CC">
+  {% endif %}
+  
+  <!-- No Index - keep if out of docs.italia.it -->
+  {% if PRODUCTION_DOMAIN != "docs.italia.it" %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+</head>

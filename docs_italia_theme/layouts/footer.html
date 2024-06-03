@@ -1,0 +1,53 @@
+<footer class="footer container-fluid container-fluid--desktop">
+  <div class="px-3 pt-md-3 pb-md-2 mx-md-5 mb-4 mb-md-0">
+    <div class="row align-items-center d-flex">
+      <div class="col-xs-12 col-sm-6 col-lg-4 pt-4 pt-sm-5">
+        <a href="http://teamdigitale.governo.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="team-logo--icon" src="{{ pathto('_static/images/team-digitale-logo.svg', 1) }}" alt="{{ site.team_full }}">
+            </div>
+            <div class="px-2 border-white border-left team-logo--text text-white">
+              {{ site.team_full }}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <span class="d-block m-2 in-collaboration">{{ t.in_collaboration_with }}</span>
+        <a href="https://www.agid.gov.it/" target="_blank" class="d-inline-block" rel="noopener">
+          <div class="d-flex align-items-center">
+            <div class="px-2">
+              <img class="agid-logo--icon" src="{{ pathto('_static/images/agid-logo.svg', 1) }}" alt="{{ site.agid_full }}">
+            </div>
+            <span class="agid-logo--separator border-white border-left"></span>
+            <div class="px-2 agid-logo--text text-white">
+              {{ site.agid_full }}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-12 col-lg-4 pt-4 pt-sm-5">
+        <div class="text-center text-lg-right social d-flex align-items-center justify-content-center justify-content-lg-end flex-column flex-lg-row">
+          <div class="mr-lg-1 mb-2 mb-lg-0">{{ t.follow_us | capitalize }}</div>
+          <div>
+            <a href="https://github.com/italia/" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-github"></i></a>
+            <a href="https://twitter.com/teamdigitaleIT" class="d-inline-flex small-prints mx-1 social__link"><i class="d-inline-block it-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/teamdigitale/" class="d-finline-lex small-prints mx-1 social__link"><i class="d-inline-block it-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+
+    <div class="row pb-4 colophon mt-md-5 mt-sm-3 pt-3 pt-sm-2">
+      <ul class="col list-inline small">
+        {% for link in site.data.footer_links %}
+        <li class="list-inline-item">
+          <strong><a class="footer-menu__link text-light-blue small-prints" href="{{ link.url }}">{{ t[link.title] }}</a></strong>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>
