@@ -43,7 +43,7 @@ Per realizzare quanto sopra, ci sono quattro regole di base da seguire:
 
 -  Quando si ricerca una cosa attraverso l’identificativo univoco è
    necessario fornire informazioni attraverso standard specifici quali
-   RDF e SPARQL (si veda sotto);
+   ``RDF`` e ``SPARQL`` (si veda sotto);
 
 -  È necessario includere collegamenti ad altri dati esistenti nel Web
    dei dati per creare valore dall’integrazione dei dati.
@@ -55,4 +55,4 @@ Per realizzare quanto sopra, ci sono quattro regole di base da seguire:
   pillole-di-semantica-dei-dati/i-pilastri-della-semantica-dei-dati.rst
 
 Le pillole di semantica dei dati sono state redatte grazie alla collaborazione
-tra il Dipartimento di trasformazione digitale e la Prof.ssa Giorgia Lodi del ISTC-CNR.
+tra il **Dipartimento di trasformazione digitale** e la **Prof.ssa Giorgia Lodi del ISTC-CNR**.

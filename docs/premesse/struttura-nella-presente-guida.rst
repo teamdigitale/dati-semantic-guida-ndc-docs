@@ -5,7 +5,7 @@ La presente guida, dopo una breve introduzione sul ruolo della semantica
 dei dati nell’ambito dell’interscambio informativo tra le pubbliche
 amministrazioni, fornisce indicazioni ai Contributori su come
 contribuire all’alimentazione del Catalogo, descrive le modalità di
-fruizione delle risorse semantiche tramite il portale (schema.gov.it) e
+fruizione delle risorse semantiche tramite il portale `schema.gov.it <https://www.schema.gov.it/>`__ e
 dettaglia in un manuale operativo gli aspetti tecnici a supporto della
 contribuzione e comprensione del contenuto del Catalogo.
 
