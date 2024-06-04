@@ -53,3 +53,6 @@ Per realizzare quanto sopra, ci sono quattro regole di base da seguire:
   :caption: Indice dei contenuti
 
   pillole-di-semantica-dei-dati/i-pilastri-della-semantica-dei-dati.rst
+
+Le pillole di semantica dei dati sono state redatte grazie alla collaborazione
+tra il Dipartimento di trasformazione digitale e la Prof.ssa Giorgia Lodi del ISTC-CNR.

@@ -11,7 +11,15 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+# -- PROJECT Variables ----------------------------------------------------
+
+#import docs_italia_theme
+
+import sys
+sys.path.append('../')
 import docs_italia_theme
+
+#########
 
 extensions = [
     "sphinx.ext.autodoc",
