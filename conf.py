@@ -51,7 +51,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
     "sphinx.ext.ifconfig",
-    "docs-italia-theme",
+    "docs_italia_theme",
     "sphinx.ext.autosectionlabel",
     "sphinxcontrib.discourse",
     "sphinxcontrib.httpspec",
@@ -133,7 +133,7 @@ def setup(app):
 
 
 # -- Options for HTML output ----------------------------------------------
-html_theme = "docs-italia-theme"
+html_theme = "docs_italia_theme"
 
 html_theme_path = [docs_italia_theme.get_html_theme_path()]
 
