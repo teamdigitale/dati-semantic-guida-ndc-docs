@@ -17,7 +17,7 @@ import os
 import sys
 
 #docs_italia_theme = __import__("docs-italia-theme")
-sys.path.append('../')
+sys.path.append('./')
 import docs_italia_theme
 
 # -- RTD configuration ------------------------------------------------
