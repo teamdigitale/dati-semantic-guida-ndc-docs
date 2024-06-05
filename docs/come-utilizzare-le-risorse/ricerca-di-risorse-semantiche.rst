@@ -2,7 +2,7 @@ Ricerca di risorse semantiche
 =============================
 
 La ricerca degli asset semantici può essere effettuata direttamente
-sull’homepage del Catalogo utilizzando l’apposito textbox, oppure
+sull’homepage del Catalogo utilizzando l’apposito *textbox*, oppure
 selezionando sulle diverse categorie o tipologie degli asset semantici,
 come illustrato nella figura sottostante.
 
@@ -15,29 +15,29 @@ come illustrato nella figura sottostante.
 
 La ricerca tramite textbox permette agli utenti del Catalogo una rapida
 individuazione delle risorse desiderate, fornendo in input le **parole
-chiave** di interesse; in particolare, la textbox è supportata da
-appositi indici che abilitano la ricerca testuale per titolo, keyword,
+chiave** di interesse; in particolare, la *textbox* è supportata da
+appositi indici che abilitano la ricerca testuale per titolo, *keyword*,
 termini contenuti nella descrizione, titolare e concetti principali
 della risorsa.
 
 .. figure:: ../../media/image4.png
-   :alt: Homepage di schema.gov.it – Ricerca asset semantici (Esplora il catalogo)
+   :alt: Homepage di schema.gov.it – Ricerca asset semantici (**Esplora il catalogo**)
    :width: 6.13542in
    :height: 2.1057in
 
-   Homepage di schema.gov.it – Ricerca asset semantici (Esplora il catalogo)
+   Homepage di schema.gov.it – Ricerca asset semantici (**Esplora il catalogo**)
 
 In aggiunta alla precedente modalità di ricerca, è possibile cliccare su
-'Esplora il catalogo' e di conseguenza accedere ad una pagina di
+**Esplora il catalogo** e di conseguenza accedere ad una pagina di
 ricerca avanzata che ne estende le funzionalità di filtraggio delle
 risorse.
 
 .. figure:: ../../media/image5.png
-   :alt: Catalogo – Ricerca asset semantici a partire da 'Esplora il catalogo'
+   :alt: Catalogo – Ricerca asset semantici a partire da **Esplora il catalogo**
    :width: 5.30208in
    :height: 3.90625in
 
-   Catalogo – Ricerca asset semantici a partire da 'Esplora il catalogo'
+   Catalogo – Ricerca asset semantici a partire da **Esplora il catalogo**
 
 In particolare, è possibile filtrare le risorse per:
 
@@ -53,12 +53,12 @@ In particolare, è possibile filtrare le risorse per:
 - **titolare**: ad esempio INPS, ISPRA, AIA.
 
 L’utente può configurare uno, più o tutti i filtri per poi cliccare il
-tasto 'OK' e ottenere i risultati della propria ricerca.
+tasto **OK** e ottenere i risultati della propria ricerca.
 
 Inoltre, l’utente può rimuovere filtri applicati nella ricerca
 precedente servendosi delle filter chip mostrate appena sotto gli
 elementi di configurazione della ricerca, e/o aggiungere nuovi valori ai
-filtri, per poi cliccare 'OK' e ottenere i nuovi risultati di ricerca.
+filtri, per poi cliccare **OK** e ottenere i nuovi risultati di ricerca.
 
 Per ciascun risultato di ricerca, l'utente visualizza le anteprime delle
 risorse individuate (nessuna se il filtraggio è troppo restrittivo); per

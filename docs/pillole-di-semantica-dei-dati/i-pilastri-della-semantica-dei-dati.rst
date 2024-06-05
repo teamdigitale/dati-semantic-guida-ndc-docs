@@ -5,16 +5,16 @@ Attribuire un’identità alle cose del mondo: URI(IRI)
 ----------------------------------------------------
 
 È sempre bene strutturare i dati privilegiando l’individuazione di
-entità e riducendo l’uso di descrizioni testuali (“*things, not
-strings”)*. Le entità possono poi essere identificate univocamente
+entità e riducendo l’uso di descrizioni testuali (*things, not
+strings*). Le entità possono poi essere identificate univocamente
 attraverso l’uso di identificativi univoci e persistenti a cui riferirsi
 in maniera condivisa, risolvendo così il problema dell’identità anche
 nell’interscambio dei dati.
 
-Si definisce Uniform Resource Identifier (URI) una sequenza di caratteri
+Si definisce *Uniform Resource Identifier* (URI) una sequenza di caratteri
 che identifica univocamente e in maniera persistente nel tempo una
-risorsa (nel web). Si usa il termine IRI - International Resource
-Identifier quando si parla di un identificativo che consente l'utilizzo
+risorsa (nel web). Si usa il termine IRI - *International Resource
+Identifier* quando si parla di un identificativo che consente l'utilizzo
 di caratteri adatti a lingue diverse dall'inglese.
 
 Un esempio di URI è il seguente:
@@ -28,7 +28,7 @@ a cui si rimanda.
 Nella gestione degli URI, come riportato nelle suddette linee guida, si
 ricorda in questo contesto che è necessario abilitare:
 
--  **meccanismi di “content negotiation”** nella richiesta di una
+-  **meccanismi di content negotiation** nella richiesta di una
    risorsa: questi consentono di rendere disponibile, allo stesso URI,
    diverse rappresentazioni di una risorsa in caso di molteplici
    rappresentazioni/formati della stessa;
@@ -69,7 +69,7 @@ interconnesso di conoscenza (seguente figura).
 
    Esempio di grafo interconnesso di conoscenza
 
-Lo standard RDF, pertanto, offre un modello di rappresentazione di dati
+Lo standard ``RDF``, pertanto, offre un modello di rappresentazione di dati
 semanticamente arricchiti e collegati nel Web e può essere serializzato
 (o reso disponibile) attraverso diversi formati.
 
@@ -79,12 +79,12 @@ Alcuni formati noti dello standard RDF
 **RDF/XML**
 
 `RDF/XML <https://www.w3.org/TR/rdf-syntax-grammar/>`__ è una sintassi
-XML usata per rappresentare dati espressi secondo il modello RDF. I file
-RDF/XML hanno estensione .rdf.
+``XML`` usata per rappresentare dati espressi secondo il modello ``RDF``. I file
+``RDF/XML`` hanno estensione ``.rdf``.
 
-Un esempio di serializzazione RDF/XML, per rappresentare
-un’organizzazione pubblica dal nome “Consiglio Nazionale delle Ricerche
-– CNR” e con il suo codice IPA associato, è quello di seguito:
+Un esempio di serializzazione ``RDF/XML``, per rappresentare
+un’organizzazione pubblica dal nome **Consiglio Nazionale delle Ricerche
+– CNR** e con il suo codice IPA associato, è quello di seguito:
 
 ::
 
@@ -113,10 +113,10 @@ consente di rappresentare un grafo RDF in una forma di testo compatta,
 ad oggetti (tutte le triple associate a un soggetto), più leggibile
 anche dalle persone.
 
-I file RDF/Turtle hanno estensione .ttl.
+I file ``RDF/Turtle`` hanno estensione ``.ttl``.
 
-Lo stesso esempio utilizzato per la serializzazione RDF/XML è
-rappresentato nel formato RDF/Turtle di seguito.
+Lo stesso esempio utilizzato per la serializzazione ``RDF/XML`` è
+rappresentato nel formato ``RDF/Turtle`` di seguito.
 
 ::
 
@@ -130,19 +130,19 @@ rappresentato nel formato RDF/Turtle di seguito.
 
 **JSON-LD**
 
-`JSON-LD <https://www.w3.org/TR/json-ld11/>`__ è una sintassi JSON usata
-per rappresentare dati espressi secondo il modello RDF. La sintassi è
+`JSON-LD <https://www.w3.org/TR/json-ld11/>`__ è una sintassi ``JSON`` usata
+per rappresentare dati espressi secondo il modello ``RDF``. La sintassi è
 definita per potersi integrare agevolmente nei sistemi che già
-utilizzano JSON e fornisce un percorso di transizione da JSON a JSON-LD.
+utilizzano ``JSON`` e fornisce un percorso di transizione da ``JSON`` a ``JSON-LD``.
 Nasce principalmente come un modo per utilizzare dati interconnessi in
 grafi della conoscenza in ambienti di programmazione basati sul Web, per
 costruire servizi Web interoperabili e per memorizzare i dati in motori
-di archiviazione basati su JSON.
+di archiviazione basati su ``JSON``.
 
-I file JSON-LD hanno estensione .jsonld.
+I file ``JSON-LD`` hanno estensione ``.jsonld``.
 
-Lo stesso esempio utilizzato per le serializzazioni RDF/XML e RDF/Turtle
-è illustrato di seguito nel formato JSON-LD.
+Lo stesso esempio utilizzato per le serializzazioni ``RDF/XML`` e ``RDF/Turtle``
+è illustrato di seguito nel formato ``JSON-LD``.
 
 ::
 
@@ -188,7 +188,7 @@ vocabolari controllati e/o le ontologie, descritti di seguito.
 Vocabolario controllato 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Con il termine *vocabolario controllato* si intende un elenco
+Con il termine **vocabolario controllato** si intende un elenco
 standardizzato di concetti denotati da termini di riferimento e da
 codici. L’elenco è utile per organizzare, descrivere, predefinire e
 indicizzare conoscenza di un dominio (e.g., il vocabolario controllato
@@ -218,9 +218,9 @@ vocabolari controllati di tutti i tipi. Questa ontologia è uno standard
 del Web e si chiama `SKOS - Simple Knowledge Organization
 System <https://www.w3.org/TR/skos-reference/>`__.
 
-Di seguito è riportato un estratto di uso di SKOS per definire la lista
+Di seguito è riportato un estratto di uso di *SKOS* per definire la lista
 di termini del sesso di una persona, rappresentati nel formato
-RDF/Turtle.
+``RDF/Turtle``.
 
 ::
 
@@ -235,10 +235,10 @@ RDF/Turtle.
     skos:prefLabel "Femmina"@it , "Female"@en .
 
 Nell’esempio, il concetto di femmina ha un URI associato ed è definito
-come un concetto secondo SKOS (Concept) che si trova in un vocabolario
-più ampio sul sesso (la proprietà SKOS inScheme), che ha un codice “F”
-(la proprietà SKOS notation) e che ha un termine principale o preferito
-(la proprietà SKOS prefLabel) espresso nelle due lingue dell’italiano e
+come un concetto secondo *SKOS* (``Concept``) che si trova in un vocabolario
+più ampio sul sesso (la proprietà *SKOS* ``inScheme``), che ha un codice ``F``
+(la proprietà *SKOS* ``notation``) e che ha un termine principale o preferito
+(la proprietà *SKOS* ``prefLabel``) espresso nelle due lingue dell’italiano e
 dell’inglese.
 
 .. _ontologia-1:
@@ -246,7 +246,7 @@ dell’inglese.
 Ontologia
 ~~~~~~~~~
 
-In ambito informatico, con il termine *ontologia* si intende una
+In ambito informatico, con il termine **ontologia** si intende una
 specifica formale, condivisa ed esplicita di una rappresentazione
 (concettualizzazione) di un dominio di conoscenza, definita sulla base
 di requisiti specifici. La rappresentazione consiste nella definizione
@@ -271,21 +271,21 @@ Esistono degli standard del Web che consentono di creare ontologie. Gli
 standard sono:
 
 -  `RDFS – RDF Schema <https://www.w3.org/TR/rdf-schema/>`__: è un
-   vocabolario leggero che estende il modello RDF per descrivere
-   semanticamente dati RDF. Esso fornisce elementi basilari per creare
+   vocabolario leggero che estende il modello ``RDF`` per descrivere
+   semanticamente dati ``RDF``. Esso fornisce elementi basilari per creare
    ontologie (e.g., definisce se una classe è sottoclasse di un’altra,
    il dominio e codominio delle proprietà tra classi, ecc.)
 
 -  `OWL – Web Ontology
    Language: <https://www.w3.org/TR/owl-features/>`__ è un linguaggio
-   per la rappresentazione della conoscenza che si basa su RDF e RDFS ma
+   per la rappresentazione della conoscenza che si basa su ``RDF`` e ``RDFS`` ma
    che offre capacità più espressive per definire la semantica dei dati
    (e.g., vincoli di cardinalità per specificare il numero di istanze
    che una proprietà può avere, operatori logici per definire relazioni
    complesse, ecc.).
 
 Di seguito si riporta un estratto, a titolo d’esempio, dell’ontologia
-OWL sulle persone, espressa nel formato RDF/Turtle.
+*OWL* sulle persone, espressa nel formato ``RDF/Turtle``.
 
 ::
 
@@ -330,9 +330,9 @@ OWL sulle persone, espressa nel formato RDF/Turtle.
                       "Persona fisica"@it .
 
 Nell’esempio esiste una proprietà tra classi haSex che collega la classe
-Person (rdfs:domain) alla classe Sex (rdfs:range) ed esiste la
-definizione della classe Person (owl:Class). Per la classe Person,
-l’esempio fornisce anche la definizione in OWL di vincoli di
+``Person`` (``rdfs:domain``) alla classe ``Sex`` (``rdfs:range``) ed esiste la
+definizione della classe ``Person`` (``owl:Class``). Per la classe ``Person``,
+l’esempio fornisce anche la definizione in *OWL* di vincoli di
 cardinalità. In particolare, si sta definendo che tutte le persone
 formano un sottoinsieme di tutte le cose che hanno un sesso.
 
@@ -370,14 +370,14 @@ di triple, esiste uno standard orientato ai dati che permette di
 navigarli e interrogarli, anche se provenienti da sorgenti diverse e
 distribuite sulla rete (interrogazioni federate). Lo standard è
 `SPARQL <https://www.w3.org/TR/sparql11-query/>`__ ed è sia un
-linguaggio per l’interrogazione di grafi RDF simile a SQL, sia un
-protocollo. Quest’ultimo aspetto rende SPARQL uno standard attraverso
-cui è possibile trasmettere interrogazioni e aggiornamenti SPARQL a un
-servizio di elaborazione SPARQL che restituisce i risultati via HTTP
+linguaggio per l’interrogazione di grafi ``RDF`` simile a ``SQL``, sia un
+protocollo. Quest’ultimo aspetto rende ``SPARQL`` uno standard attraverso
+cui è possibile trasmettere interrogazioni e aggiornamenti ``SPARQL`` a un
+servizio di elaborazione ``SPARQL`` che restituisce i risultati via HTTP
 all’applicazione cliente che li ha richiesti, abilitando così
 un’interazione macchina-macchina su protocollo HTTP.
 
-Un esempio di interrogazione SPARQL è quello di seguito: essa consente
+Un esempio di interrogazione ``SPARQL`` è quello di seguito: essa consente
 di ottenere tutti gli URI dei concetti, le etichette principali in tutte
 le lingue, se esistenti, e i codici del vocabolario controllato sul
 sesso.

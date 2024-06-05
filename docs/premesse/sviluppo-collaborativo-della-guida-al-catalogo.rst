@@ -5,7 +5,7 @@ La presente guida è un documento pubblico, e chiunque può partecipare
 al processo di revisione e aggiornamento aprendo issue (per le
 discussioni) e pull request (per le proposte) sul `repository
 sorgente <https://github.com/teamdigitale/dati-semantic-guida-ndc-docs>`__
-che ne ospita i contenuti in file rst.
+che ne ospita i contenuti in file ``.rst``.
 
 Le modifiche al contenuto possono essere applicate direttamente tramite gli 
 strumenti editor e preview integrati in Github; una volta completate, occorrerà 
@@ -13,9 +13,9 @@ fare commit delle modifiche, creare una pull request e attendere la revisione
 della stessa da parte degli amministratori del repository.
 
 `Qui <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`__ è
-disponibile una guida alla sintassi RST.
+disponibile una guida alla sintassi *reStructuredText*.
 
-Altre risorse per l’editing in formato .rst:
+Altre risorse per l’editing in formato *reStructuredText*:
 
 - `Editor per il testo <http://rst.ninjs.org>`__
 

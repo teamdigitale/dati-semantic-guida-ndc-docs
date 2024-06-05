@@ -78,7 +78,7 @@ semantici relativi ai propri dati, dovrà approvare, nel caso di
 ontologie, le definizioni dei concetti e delle loro relazioni, mentre,
 nel caso di vocabolari controllati, dovrà fornire la classificazione ed
 eventualmente la sua gerarchia nel caso di vocabolari più articolati in
-un formato strutturato (ad esempio CSV) che riporti: il livello di
+un formato strutturato (ad esempio, in file ``.csv``) che riporti: il livello di
 gerarchia, la relazione gerarchica padre-figlio, la codifica, il lemma e
 la descrizione delle singole voci di classificazione in italiano, in
 inglese e in altre lingue se necessario per i fini del dominio in

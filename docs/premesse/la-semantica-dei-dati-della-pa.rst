@@ -19,7 +19,7 @@ sull’attribuire a un determinato dato un unico significato.
 
 Con specifico riferimento ai dati della PA, la semantica assume
 caratteri peculiari dettati dal fatto che le relative entità concettuali
-cui i dati si riferiscono (ad es., persona anagraficamente residente,
+cui i dati si riferiscono (ad es. persona anagraficamente residente,
 persona fiscalmente residente, reddito, contribuente, imprenditore,
 società, azienda ecc.) in molti casi devono essere definite con il
 filtro dell’ordinamento giuridico che le ha create: ad esempio,

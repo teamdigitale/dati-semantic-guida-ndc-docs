@@ -9,13 +9,13 @@ definire degli URI/IRI persistenti nel tempo
 
 A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
 
-- **Utilizzare il servizio w3id.org del W3C** Permanent Identifier
-  Community Group, per la registrazione di identificativi permanenti a
+- **Utilizzare il** `servizio w3id.org del W3C Permanent Identifier
+  Community Group <https://w3id.org>`__, per la registrazione di identificativi permanenti a
   partire dai quali reindirizzare verso URL specifici come spiegato nel
   `manuale operativo <../manuale-operativo/identificativi-univoci-delle-risorse.html>`__.
   In questo caso le opzioni possono essere:
 
-   *  **w3id/dominio_specifico**: il Contributore avrà piena autonomia
+   *  ``w3id/<dominio_specifico>``: il Contributore avrà piena autonomia
       nella gestione degli URI. Il Consorzio di società che amministra
       w3id.org ha definito la seguente pratica: "la pratica attuale [di
       w3id.org] è quella di rivendicare un nome di directory di primo
@@ -28,13 +28,13 @@ A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
       servizio”. Questa soluzione è stata adottata dal 
       `progetto sui dati aperti della zootecnia italiana LEO <https://w3id.org/leo/>`__.
      
-   *  **w3id.org/italia**: il Contributore dovrà ricevere l'approvazione
+   *  ``w3id.org/italia``: il Contributore dovrà ricevere l'approvazione
       a contribuire al dominio “Italia” da parte dei relativi
       amministratori (DTD-Dipartimento per la Trasformazione Digitale)
       non dovendo, al tempo stesso, provvedere all’organizzazione dei
       reindirizzamenti; in questo caso, il Contributore beneficerà delle
       soluzioni di content negotiation e URI dereferentiation già
-      incluse. La scelta del dominio w3id.org/italia comporta, inoltre,
+      incluse. La scelta del dominio ``w3id.org/italia`` comporta, inoltre,
       necessariamente l’archiviazione delle proprie risorse semantiche
       nell'`apposito repository <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
       gestito dal DTD; dunque, ogni operazione (inserimento,
@@ -45,8 +45,8 @@ A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
       e della Ricerca o l’ontologia RPO sulla popolazione residente del
       Ministero dell’Interno.
 
-   *  **w3id.org/italia/dominio_specifico**: il Contributore dovrà
-      ricevere l’approvazione degli amministratori di w3id.org/italia
+   *  ``w3id.org/italia/<dominio_specifico>``: il Contributore dovrà
+      ricevere l’approvazione degli amministratori di ``w3id.org/italia``
       (DTD – Dipartimento per la Trasformazione Digitale) per la
       denominazione degli identificatori di secondo livello, ossia la
       denominazione nelle URI del dominio specifico. La denominazione

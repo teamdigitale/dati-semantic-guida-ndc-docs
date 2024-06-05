@@ -68,12 +68,12 @@ Aggiunta di nuove risorse
 Di seguito il dettaglio delle attività propedeutiche del Contributore
 per l’aggiunta di nuove risorse sul Catalogo:
 
-- Se vuoi **registrare URI sotto il w3id.org/italia**:
+- Se vuoi **registrare URI sotto il** ``w3id.org/italia``:
 
    * Nel caso in cui si abbiano a disposizione risorse da pubblicare
      caratterizzate da un elevato livello di generalità e
      riutilizzabilità su scala nazionale, allora si potranno registrare
-     URI sotto **w3id.org/italia,** beneficiando dei meccanismi di *URI
+     URI sotto ``w3id.org/italia``, beneficiando dei meccanismi di *URI
      dereferentiation* e *Content Negotiation* già implementate. A tale
      scopo, fai riferimento alle istruzioni contenute nel `repository
      Italia <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
@@ -84,7 +84,7 @@ per l’aggiunta di nuove risorse sul Catalogo:
    * Nel caso in cui le risorse da pubblicare non siano caratterizzate
      da un elevato livello di generalità e riutilizzabilità su scala
      nazionale, allora si potranno registrare URI sotto
-     **w3id.org/italia/dominio_specifico.** In tal caso, le istruzioni
+     ``w3id.org/italia/<dominio_specifico>``. In tal caso, le istruzioni
      sono le seguenti:
 
       + Per la **modellazione e metadatazione**, fai riferimento alle
@@ -107,18 +107,18 @@ per l’aggiunta di nuove risorse sul Catalogo:
         sono al lavoro su una pagina web “\ **Strumenti di
         validazione**\ ”, che suggerirà per ciascun use-case il
         validatore più consono da poter utilizzare. In particolare, (i)
-        per i file “index.ttl” degli schemi dati e per le ontologie
+        per i file ``index.ttl`` degli schemi dati e per le ontologie
         verrà indicato il validatore in fase di sviluppo da parte degli
         Amministratori del Catalogo; (ii) per i vocabolari controllati
         si potrà utilizzare il `validatore DCAT-AP_IT sviluppato da
         AGID <https://portaledati3-130.dati.gov.it:3030/dcat-ap_validator.html>`__
         ignorando eventuali warning ed errori sulla presenza della
-        classe “dcatapit:Catalog” e sull’uso della proprietà
-        “owl:versionInfo” quando più lingue vengono specificate per la
+        classe ``dcatapit:Catalog`` e sull’uso della proprietà
+        ``owl:versionInfo`` quando più lingue vengono specificate per la
         proprietà. In aggiunta, verrà indicato il validatore delle
         OpenAPI (`Italian API Guidelines
         Checker <https://italia.github.io/api-oas-checker/>`__), ovvero
-        per i file yaml. I controlli implementati dal validatore,
+        per i file ``.yaml``. I controlli implementati dal validatore,
         attualmente in sviluppo da parte degli Amministratori, saranno
         un sottoinsieme di quelli eseguiti in fase di harvesting dalla
         piattaforma Catalogo; in particolare, i controlli
@@ -132,7 +132,7 @@ per l’aggiunta di nuove risorse sul Catalogo:
         aggiornamento nell’ambiente di test del Catalogo e, al termine
         della fase di test, richiedere l’harvesting in produzione.
 
-- Se vuoi **registrare URI in domini come w3id.org/dominio_specifico**:
+- Se vuoi **registrare URI in domini come** ``w3id.org/<dominio_specifico>``:
 
    * Segui le istruzioni contenute nell’elenco al punto precedente. Per
      l’attività di implementazione del redirect su URI stabili, puoi

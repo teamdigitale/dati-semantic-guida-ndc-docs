@@ -15,8 +15,7 @@ di controlli che possono essere integrati sul proprio repository,
 **disattivando eventualmente alcuni hook non applicabili**, a supporto
 dell’esecuzione dei controlli di qualità propedeutici alla richiesta di
 iscrizione al Catalogo. Per ulteriori approfondimenti, è possibile far
-riferimento al file readme del cookiecutter, nel paragrafo 'Controlli
-Automatici e Test'.
+riferimento al **file readme del cookiecutter**, nel paragrafo **Controlli Automatici e Test**.
 
 I principali controlli implementati nel template sono descritti nelle
 successive sotto-sezioni.
@@ -27,34 +26,34 @@ Struttura di base del repository
 La struttura di base del repository deve rispettare il seguente
 template:
 
--  Ontologie: in 'assets/ontologies';
+-  Ontologie: in ``assets/ontologies``;
 
--  Vocabolari controllati: in 'assets/controlled-vocabularies';
+-  Vocabolari controllati: in ``assets/controlled-vocabularies``;
 
--  Schemi: in 'assets/schemas'.
+-  Schemi: in ``assets/schemas``.
 
 Contenuto del repository
 ------------------------
 
-I file devono essere codificati in UTF-8.
+I file devono essere codificati in ``UTF-8``.
 
 Le risorse semantiche devono essere presenti almeno nel seguente
 formato:
 
--  Ontologie: RDF/Turtle (media-type 'text/turtle') con estensione del
-   file .ttl;
+-  Ontologie: ``RDF/Turtle`` (*media-type* ``text/turtle``) con estensione del
+   file ``.ttl``;
 
--  Vocabolari controllati: RDF/Turtle (media-type 'text/turtle') con
-   estensione del file .ttl;
+-  Vocabolari controllati: ``RDF/Turtle`` (*media-type* ``text/turtle``) con
+   estensione del file ``.ttl``;
 
--  Schemi dati: OAS3 ('.oas3.yaml') e turtle dei metadati (file
-   'index.ttl').
+-  Schemi dati: ``OAS3`` (``.oas3.yaml``) e ``turtle`` dei metadati (file
+   ``index.ttl``).
 
-Possono essere presenti ulteriori serializzazioni (es. RDF/XML, JSON-LD,
-CSV, ...) che verranno ignorate dal processo di harvesting del Catalogo.
+Possono essere presenti ulteriori serializzazioni (es. ``RDF/XML``, ``JSON-LD``,
+``CSV``, ...) che verranno ignorate dal processo di harvesting del Catalogo.
 
 Possono essere presenti eventuali file di documentazione, ma solo in
-formato Markdown ('.md').
+formato *Markdown* (``.md``).
 
 Nomi delle cartelle e dei file
 ------------------------------
@@ -79,24 +78,23 @@ Proiezioni in CSV dei vocabolari controllati
 --------------------------------------------
 
 Le directory del vocabolario controllato possono contenere una
-proiezione in formato CSV del vocabolario insieme ai metadati necessari
-per mappare i campi del CSV alle risorse presenti nell’RDF.
+proiezione in formato ``csv`` del vocabolario insieme ai metadati necessari
+per mappare i campi del ``csv`` alle risorse presenti nel file ``rdf``.
 
-Nel caso in cui si voglia pubblicare anche la proiezione CSV per un
+Nel caso in cui si voglia pubblicare anche la proiezione ``csv`` per un
 vocabolario controllato, questo deve avere la struttura di file piatto,
 ossia riportare tutte le voci delle classificazioni dal primo livello al
 livello di foglia. Occorre rispettare le seguenti regole:
 
-- generare la proiezione possibilmente mediante strumenti come JSON-LD
-  framing;
+- generare la proiezione possibilmente mediante strumenti come *JSON-LD framing*;
 
-- eventuali commenti nel CSV devono iniziare col carattere '#';
+- eventuali commenti nel ``csv`` devono iniziare col carattere ``#``;
 
-- l’header del CSV, ovvero la prima riga contenente i nomi delle
+- l’header del ``csv`` ovvero la prima riga contenente i nomi delle
   colonne, deve rispettare le seguenti regole sulla base della presenza
-  o meno, nella stessa directory del CSV, del file di metadati in un
-  frictionless data package, annotato secondo le specifiche indicate in
-  REST API Linked Data Keywords:
+  o meno, nella stessa directory del ``csv``, del file di metadati in un
+  *frictionless data package*, annotato secondo le specifiche indicate in
+  *REST API Linked Data Keywords*:
 
    * se presente, allora i nomi delle colonne devono essere conformi a
      quanto indicato nei metadati.
@@ -105,21 +103,21 @@ livello di foglia. Occorre rispettare le seguenti regole:
 
 - si suggerisce di creare la riga di header di vocabolari controllati
   alberati introducendo tante colonne quanti sono i livelli secondo la
-  nomenclatura: codice_1_livello, label_ITA_1_livello,
-  label_ENG_1_livello, definizione, ... codice_n_livello,
-  label_ITA_n_livello, label_ENG_n_livello, definizione, NOTE (Dove 'n'
+  nomenclatura: ``codice_1_livello``, ``label_ITA_1_livello``,
+  ``label_ENG_1_livello``, ``definizione``, ... ``codice_n_livello``,
+  ``label_ITA_n_livello``, ``label_ENG_n_livello``, ``definizione``, ``NOTE`` (Dove ``n``
   rappresenta il numero di livelli della classificazione);
 
-- le righe successive del CSV devono contenere i valori delle colonne
-  separati da ','' (virgola) e, se valori relativi a campi di tipo
-  stringa, racchiusi in '"' (doppie virgolette).
+- le righe successive del ``csv`` devono contenere i valori delle colonne
+  separati da ``,`` (virgola) e, se valori relativi a campi di tipo
+  stringa, racchiusi in ``"`` (doppie virgolette).
 
 I metadati di cui al precedente elenco devono essere espressi tramite un
-file ‘datapackage’ con estensione ‘.json’, ‘.yaml’ o ‘.yml’.
+file ``datapackage`` con estensione ``.json``, ``.yaml`` o ``.yml``.
 
 Nel caso in cui le voci di un vocabolario siano già presenti in un
-repository triple store è possibile estrarne il contenuto con una query
-SPARQL secondo il seguente formato:
+*repository triple store* è possibile estrarne il contenuto con una *query SPARQL* 
+secondo il seguente formato:
 
 ::
 
@@ -157,7 +155,7 @@ versionamento. Il nome delle sub-directory rispetta il pattern:
 ``(latest|v?[0-9]+(\.[0-9]+){0,2})``.
 
 Una directory contenente asset non contiene contemporaneamente
-sub-directory versionate con e senza il prefisso 'v' perché questo
+sub-directory versionate con e senza il prefisso ``v`` perché questo
 rende impossibile ordinare le versioni.
 
 In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ 
@@ -169,28 +167,28 @@ Approfondimenti sugli schemi dati
 Gli schemi utilizzano delle directory versionate come descritto nel
 corso del documento.
 
-Gli schemi per le API vengono pubblicati in formato OpenAPI,
+Gli schemi per le API vengono pubblicati in formato *OpenAPI*,
 corrispondenti ad una estensione di `JSON Schema Draft
 4 <https://spec.openapis.org/oas/v3.0.3#data-types>`__, incorporato
-nella sezione '#/components/schema' del file OAS compatibilmente con
-le Linee Guida per l'interoperabilità tecnica. L’estensione del file è
-'.oas3.yaml'.
+nella sezione ``#/components/schema`` del file ``OAS`` compatibilmente con
+le Linee Guida per l'interoperabilità tecnica. 
+L’estensione del file è ``.oas3.yaml``.
 
 È opportuno che il file YAML contenga i riferimenti semantici descritti
 nel `documento
 I-D-polli-restapi-ld-keywords <https://datatracker.ietf.org/doc/draft-polli-restapi-ld-keywords/>`__
 attraverso:
 
--  il campo custom 'x-jsonld-context' contenente un '@context'
-   JSON-LD conforme alle indicazioni contenute in JSON-LD 1.1;
+-  il campo custom ``x-jsonld-context`` contenente un ``@context``
+   *JSON-LD* conforme alle indicazioni contenute in *JSON-LD 1.1*;
 
--  il campo custom 'x-jsonld-type' contenente il riferimento ad un
-   'rdf:type'.
+-  il campo custom ``x-jsonld-type`` contenente il riferimento ad un
+   ``rdf:type``.
 
-I metadati associati sono pubblicati solo in formato RDF/Turtle (media
-type 'text/turtle') in un apposito file 'index.ttl', uno per ciascuno
+I metadati associati sono pubblicati solo in formato ``RDF/Turtle`` (*media
+type* ``text/turtle``) in un apposito file ``index.ttl``, uno per ciascuno
 schema dati. È opportuno che questo file sia generato automaticamente
-dal documento OpenAPI.
+dal documento *OpenAPI*.
 
 È possibile verificare sintatticamente gli schemi forniti utilizzando
 l’\ `OpenAPI Checker <https://github.com/italia/api-oas-checker>`__.
@@ -198,35 +196,35 @@ l’\ `OpenAPI Checker <https://github.com/italia/api-oas-checker>`__.
 Schema bundling
 ~~~~~~~~~~~~~~~
 
-Quando si pubblica un documento OAS contenente la specifica di un’API, è
+Quando si pubblica un documento ``OAS`` contenente la specifica di un’API, è
 utile de-referenziare ed accorpare in un unico file tutti i riferimenti
 a schemi ed operazioni.
 
 Questo processo viene detto
 `bundling <https://json-schema.org/understanding-json-schema/structuring.html#bundling>`__.
 
-Il prodotto sarà un singolo OAS document (es. un file YAML) utile alla
+Il prodotto sarà un singolo ``OAS document`` (es. un file ``YAML``) utile alla
 validazione sintattica e semantica dell’API.
 
-Questo meccanismo permette di inserire nell’IDL tutte le informazioni
+Questo meccanismo permette di inserire nell'``IDL`` tutte le informazioni
 semantiche necessarie a descrivere l’API in base sia ai riferimenti
 ontologici che agli schemi utilizzati.
 
 In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__
 verrà fornito un caso specifico per illustrare in dettaglio il processo
-di bundling.
+di *bundling*.
 
 Schemi XSD
 ~~~~~~~~~~
 
 Attualmente il materiale semantico pubblicato dalla UE si basa sui
-formati RDF ed XSD.
+formati ``RDF`` ed ``XSD``.
 
-NDC non supporta il processamento di file XSD. Questi potranno essere
+Il Catalogo non supporta il processamento di file ``.xsd``. Questi potranno essere
 supportati in un secondo momento.
 
 In `Istruzioni su come predisporre il repository <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html#esempi>`__ verrà fornito un caso specifico per
-illustrare in dettaglio uno schema XSD.
+illustrare in dettaglio uno *schema XSD*.
 
 Esempi
 ------
@@ -261,37 +259,37 @@ Ad esempio, analizziamo un repository strutturato come segue:
    └─ assets/controlled-vocabularies/
      └─ ...
 
-Il repository non contiene schemi, quindi NDC non aggiungerà schemi al
+Il repository non contiene schemi, quindi il Catalogo non aggiungerà schemi al
 catalogo durante l’harvesting. Questo non rappresenta un problema e non
 è considerato un errore.
 
-I file informativi (es. README.md, notes.md) presenti sia nella radice
+I file informativi (es. ``README.md``, ``notes.md``) presenti sia nella radice
 che nelle sottodirectory vengono ignorati durante l’harversting.
 
-Per quanto riguarda la directory 'Onto1/':
+Per quanto riguarda la directory ``Onto1/``:
 
 -  essa non contiene sotto-directory né altre directory al suo interno
    ed è quindi una cartella foglia. Quindi viene processata come
    potenzialmente contenente un’ontologia;
 
--  contiene un file RDF/Turtle che verrà processato;
+-  contiene un file ``RDF/Turtle`` che verrà processato;
 
--  contiene un altro file RDF, plausibilmente una serializzazione
-   diversa degli stessi contenuti del file .ttl in RDF/XML. Poiché il
+-  contiene un altro file ``RDF``, plausibilmente una serializzazione
+   diversa degli stessi contenuti del file ``.ttl`` in ``RDF/XML``. Poiché il
    processo di harvesting di schema utilizza solo i file di tipo
-   text/turtle con estensione '.ttl', questo file non è usato nel
+   ``text/turtle`` con estensione ``.ttl``, questo file non è usato nel
    processo stesso.
 
-La directory 'Onto2/' non contiene file '.ttl': questo viene
-segnalato solamente come WARNING.
+La directory ``Onto2/`` non contiene file ``.ttl``: questo viene
+segnalato solamente come **WARNING**.
 
-La directory 'Onto3/' ha una sottodirectory, quindi non è considerata
+La directory ``Onto3/`` ha una sottodirectory, quindi non è considerata
 come contenitore di ontologia, ma come directory intermedia nel cammino
-per altre directory foglia: il file 'onto3.tll' è ignorato e non
+per altre directory foglia: il file ``onto3.ttl`` è ignorato e non
 processato.
 
-La directory 'Onto4/' contiene una sottodirectory 'latest/' che
-contiene un file '.ttl', quindi viene processata come potenzialmente
+La directory ``Onto4/`` contiene una sottodirectory ``latest/`` che
+contiene un file ``.ttl``, quindi viene processata come potenzialmente
 contenente un’ontologia.
 
 Versionamento directory degli asset semantici
@@ -299,8 +297,8 @@ Versionamento directory degli asset semantici
 
 A titolo di esempio, di seguito è fornita una possibile organizzazione
 delle directory sfruttando il versionamento. È importante notare che le
-versioni dell’ontologia 'Car' non sono prefissate da 'v' mentre
-quelle di 'Person' sono tutte prefissate da 'v'.
+versioni dell’ontologia **Car** non sono prefissate da ``v`` mentre
+quelle di **Person** sono tutte prefissate da ``v``.
 
 ::
 
@@ -318,9 +316,9 @@ quelle di 'Person' sono tutte prefissate da 'v'.
        └── Person
          └── latest
 
-Nell’esempio di seguito, invece, sono presenti sei esempi di path non
+Nell’esempio di seguito, invece, sono presenti sei esempi di percorsi non
 validi, anche perché le directory contengono contemporaneamente versioni
-prefissate da 'v' che senza prefisso.
+prefissate da ``v`` che senza prefisso.
 
 ::
 
@@ -346,7 +344,7 @@ Attualmente, il Catalogo non prende in considerazione il versionamento
 delle cartelle per schemi dati e vocabolari controllati, ma per le
 ontologie prende in considerazione:
 
-- 'latest/' se presente;
+- ``latest/`` se presente;
 
 - quella maggiore secondo il seguente ordinamento:
 
@@ -355,7 +353,7 @@ ontologie prende in considerazione:
      sinistra sono i più significativi;
    * qualora due versioni abbiano lunghezza diversa ma una sia prefisso
      dell’altra, la più lunga viene considerata più recente; ad
-     esempio, v4.5 è considerata obsoleta in presenza di v4.5.2.
+     esempio, ``v4.5`` è considerata obsoleta in presenza di ``v4.5.2``.
 
 Focus su alberatura per le ontologie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -388,10 +386,10 @@ Focus su alberatura per i vocabolari controllati
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Di seguito l’esempio di un’alberatura contenente un vocabolario
-controllato e la sua proiezione in formato CSV generata utilizzando le
-informazioni di framing indicate in 'framing.yamlld'.
+controllato e la sua proiezione in formato ``csv`` generata utilizzando le
+informazioni di *framing* indicate in ``framing.yamlld``.
 
-Il file 'datapackage.yaml' contiene i metadati del CSV.
+Il file ``datapackage.yaml`` contiene i metadati del ``csv``.
 
 ::
 
@@ -406,8 +404,8 @@ Il file 'datapackage.yaml' contiene i metadati del CSV.
       datapackage.yaml
       framing.yamlld
 
-Il file my-codelist.ttl contiene il vocabolario controllato in formato
-RDF/Turtle.
+Il file ``my-codelist.ttl`` contiene il vocabolario controllato in formato
+``RDF/Turtle``.
 
 ::
 
@@ -455,8 +453,8 @@ RDF/Turtle.
 
    .
 
-Il my-codelist.csv contiene le proiezioni del vocabolario controllato in
-formato CSV.
+Il ``my-codelist.csv`` contiene le proiezioni del vocabolario controllato in
+formato ``csv``.
 
 ::
 
@@ -474,8 +472,8 @@ formato CSV.
 
    "ESP","Spain","Spagna","Espagne"
 
-Il file Datapackage.yaml contiene tutte le informazioni sui metadati del
-file CSV.
+Il file ``Datapackage.yaml`` contiene tutte le informazioni sui metadati del
+file ``csv``.
 
 ::
 
@@ -562,8 +560,8 @@ file CSV.
 Schema bundling
 ~~~~~~~~~~~~~~~
 
-Un esempio di file OAS3 metadatato con i campi 'x-jsonld-context' e
-'x-jsonld-type':
+Un esempio di file ``OAS3`` metadatato con i campi ``x-jsonld-context`` e
+``x-jsonld-type``:
 
 ::
 
@@ -617,19 +615,19 @@ Di seguito l’esempio di un’alberatura contenente uno schema.
 Schemi XSD
 ~~~~~~~~~~
 
-L’esempio di seguito fa riferimento al "Countries Authority Table".
+L’esempio di seguito fa riferimento al **Countries Authority Table**.
 
-L'authority table dei paesi "Countries" viene pubblicata a partire
+L'*authority table* dei paesi *Countries* viene pubblicata a partire
 dall'URL su http://publications.europa.eu/resource/dataset/country
 contenente i link a tutti i dataset associati e corrispondente al suo
 URI.
 
 All'indirizzo https://publications.europa.eu/resource/authority/country
-si trova l'elenco dei paesi in formato RDF; sotto quell'URL ci sono i
+si trova l'elenco dei paesi in formato ``RDF``; sotto quell'URL ci sono i
 riferimenti ai singoli paesi, eg.
 https://publications.europa.eu/resource/authority/country/ITA.
 
-Il versionamento è contenuto all'interno degli RDF e l'URL viene
+Il versionamento è contenuto all'interno degli ``RDF`` e l'URL viene
 dereferenziato all'ultima versione.
 
 Gli URI sono versionati, ad esempio
@@ -638,7 +636,7 @@ http://publications.europa.eu/resource/expression/country/20170920-0.
 Da lì è possibile individuare una lista di dataset associati ed
 eventualmente localizzati: qui
 https://publications.europa.eu/resource/cellar/07ed8d46-2b56-11e7-9412-01aa75ed71a1.0001.12/DOC_14
-la lista delle coppie codice/paese in italiano in formato XML (ATTO
+la lista delle coppie codice/paese in italiano in formato ``XML`` (ATTO
 table, usate per le traduzioni).
 
 ::
@@ -657,9 +655,9 @@ table, usate per le traduzioni).
 
    </TABLE>
 
-Qui una codelist (estensione ".gc")
+Qui una codelist (estensione ``.gc``)
 http://publications.europa.eu/resource/distribution/country/20210616-0/xml/gc/Country.gc
-contenente tutti i dati in un formato xml analogo a quello tabellare.
+contenente tutti i dati in un formato ``xml`` analogo a quello tabellare.
 
 ::
 
