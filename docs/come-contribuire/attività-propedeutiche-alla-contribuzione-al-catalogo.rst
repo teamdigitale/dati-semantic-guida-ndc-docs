@@ -28,7 +28,7 @@ Contributore sono:
    subgraph Organizzazione Contributrice
    
    id1((START))--> id2["Individuazione degli asset da creare o modificare"]
-   id2--> id3{"Difficoltà nel determinare la modalità"}
+   id2--> id3{"Difficoltà nel <br> determinare la modalità"}
    id3--> |Sì|id4["Organizzazione chiede supporto per determinare la modalità più opportuna"]
    id4-.-> id0
    id3--> |No|id5["Individuazione della modalità di contribuzione"]
@@ -38,7 +38,7 @@ Contributore sono:
    id6--> |Aggiornamento/Creazione asset semantici|id8["Verifica sul Catalogo di risorse semantiche correlate"]
    id8--> id9{"Presenza della risorsa"}
    id9--> |Aggiunta di nuove risorse|id30["Scelta del dominio sotto cui pubblicare"]
-   id30--> id31{"Soluzione URI stabili già implementata dall'organizzazione"}
+   id30--> id31{"Soluzione URI stabili già <br> implementata dall'organizzazione"}
    id9--> |Modifiche a risorse già a Catalogo|id10["Apertura Issue sul repository relativo all'asset da modificare"]
    id10--> id11["Per lo sviluppo della proposta, riferirsi al Manuale Operativo"]
    direction TB
@@ -150,6 +150,19 @@ per l’aggiunta di nuove risorse sul Catalogo:
 
    * Invia una richiesta di contribuzione al Catalogo utilizzando la
      mail servicedesk-schema@istat.it.
+
+
+Nel caso in cui il Contributore utilizzi Github per il
+proprio repository, potrà beneficiare della funzionalità di **apertura 
+automatica di issue in caso di errori di validazione**
+riscontrati sulle proprie risorse semantiche durante l'harvesting.
+La issue riporterà i dettagli degli errori e i tag dei mantainer 
+indicati nel file ``README.md`` del repository.
+La richiesta di attivazione della funzionalità potrà
+essere effettuata in fase di `richiesta formale di contribuzione <../come-contribuire/richiesta-formale-di-contribuzione.html>`__,
+ovvero comunicandola alla mail servicedesk-schema@istat.it.
+Ulteriori dettagli in merito sono forniti nel
+`manuale operativo <../manuale-operativo/istruzioni-su-come-predisporre-il-repository-in-cui-pubblicare-le-risorse-semantiche.html>`__.
 
 Richiesta di modifica di risorse già in Catalogo
 ------------------------------------------------
