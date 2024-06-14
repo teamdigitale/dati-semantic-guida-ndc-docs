@@ -28,4 +28,9 @@ un'introduzione generale sul tema, fai riferimento alle
 .. toctree::
   :name: content_toc
   
+  docs/credits.rst
+
+.. toctree::
+  :name: content_toc
+  
   docs/pillole-di-semantica-dei-dati.rst
