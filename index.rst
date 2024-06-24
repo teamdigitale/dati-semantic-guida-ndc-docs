@@ -12,8 +12,8 @@ Per le indicazioni su come esplorare la guida, fai riferimento alla
 `sezione dedicata <docs/premesse/struttura-nella-presente-guida.html>`__.
 
 Se sei nuovo nel mondo della semantica dei dati, e hai bisogno di
-un'introduzione generale sul tema, fai riferimento alle 
-`Pillole di semantica dei dati <docs/pillole-di-semantica-dei-dati.html>`__.
+un'introduzione generale sul tema, fai riferimento 
+all'`Introduzione alla semantica dei dati e del Web Semantico <https://teamdigitale.github.io/dati-semantic-doc-introduzione-semantica/>`__.
 
 .. toctree::
   :maxdepth: 3
@@ -29,8 +29,3 @@ un'introduzione generale sul tema, fai riferimento alle
   :name: content_toc
   
   docs/credits.rst
-
-.. toctree::
-  :name: content_toc
-  
-  docs/pillole-di-semantica-dei-dati.rst
