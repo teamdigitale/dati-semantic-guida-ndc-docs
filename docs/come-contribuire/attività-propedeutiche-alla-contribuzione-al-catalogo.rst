@@ -13,54 +13,68 @@ Contributore sono:
    seguenti eventualmente richiedendo supporto agli Amministratori del
    Catalogo;
 
--  Effettuare le ulteriori azioni di competenza descritte nel seguente flowchart.
+-  Effettuare le ulteriori azioni di competenza descritte nei seguenti flowchart.
 
 .. mermaid::
    
-   flowchart TB
+  flowchart TB
+        classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
+        classDef cluster font-weight: bold,fill:none,color:darkgray,stroke:#3344d0,stroke-width:2px
+        classDef subgraph_padding fill:none, stroke:none, opacity:0
+        classDef bounded_context stroke-dasharray:5 5
+    subgraph b["Amministratori del Catalogo"]
+    id0["Analisi della richiesta <br/> di contribuzione espressa"]
+    end
+    subgraph Organizzazione Contributrice
+    
+    id1((START))--> id2["Individuazione degli asset <br/> da creare o modificare"]
+    id2--> id3{"Difficoltà nel determinare <br/> la modalità"}
+    id3--> |Sì|id4["Organizzazione chiede supporto <br/> per determinare la <br/> modalità più opportuna"]
+    id4-.-> id0
+    id3--> |No|id5["Individuazione della <br/> modalità di contribuzione"]
+    id0-.->id5
+    id5--> id6{"Modalità di contribuzione"}
+    id6--> |Richiesta di semantic stewardship|id7["Invia richiesta di contribuzione <br/> al Catalogo utilizzando l'apposita email"]
+    id6--> |Aggiornamento/Creazione asset semantici|id8["Verifica sul Catalogo <br/> di risorse semantiche correlate"]
+    id8--> id9["Valutazione della presenza <br/> della risorsa a Catalogo"]
+    end
+
+Diagramma 1 delle attività propedeutiche alla contribuzione
+
+Il seguente diagramma mostra le ulteriori attività necessarie per poter creare/modificare risorse semantiche:
+
+.. mermaid::
+
+  flowchart TB
       classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
       classDef cluster font-weight: bold,fill:none,color:darkgray,stroke:#3344d0,stroke-width:2px
       classDef subgraph_padding fill:none, stroke:none, opacity:0
       classDef bounded_context stroke-dasharray:5 5
-   subgraph b["Amministratori del Catalogo"]
-   id0["Analisi della richiesta di contribuzione espressa"]
-   end
-   subgraph Organizzazione Contributrice
-   
-   id1((START))--> id2["Individuazione degli asset da creare o modificare"]
-   id2--> id3{"Difficoltà nel determinare la modalità"}
-   id3--> |Sì|id4["Organizzazione chiede supporto per determinare la modalità più opportuna"]
-   id4-.-> id0
-   id3--> |No|id5["Individuazione della modalità di contribuzione"]
-   id0-.->id5
-   id5--> id6{"Modalità di contribuzione"}
-   id6--> |Richiesta di semantic stewardship|id7["Invia richiesta di contribuzione al Catalogo utilizzando l'apposita email"]
-   id6--> |Aggiornamento/Creazione asset semantici|id8["Verifica sul Catalogo di risorse semantiche correlate"]
-   id8--> id9{"Presenza della risorsa"}
-   id9--> |Aggiunta di nuove risorse|id30["Scelta del dominio sotto cui pubblicare"]
-   id30--> id31{"Soluzione URI stabili già implementata dall'organizzazione"}
-   id9--> |Modifiche a risorse già a Catalogo|id10["Apertura Issue sul repository relativo all'asset da modificare"]
-   id10--> id11["Per lo sviluppo della proposta, riferirsi al Manuale Operativo"]
+  subgraph Organizzazione Contributrice
+   id9["Valutazione della presenza <br/> della risorsa a Catalogo"]
+   id9--> |Aggiunta di nuove risorse|id30["Scelta del dominio <br/> sotto cui pubblicare"]
+   id30--> id31{"Soluzione URI stabili <br/> già implementata <br/> dall'organizzazione"}
+   id9--> |Modifiche a risorse già a Catalogo|id10["Apertura Issue sul repository <br/> relativo all'asset da modificare"]
+   id10--> id11["Per lo sviluppo della proposta <br/> riferirsi al Manuale Operativo"]
    direction TB
-   id31--> |Sì|id15["Modellazione e metadatazione degli asset"]
+   id31--> |Sì|id15["Modellazione e metadatazione <br/> degli asset"]
    id15--> id16["Predisposizione del repository git"]
-   id16-->id17["Utilizzo della propria soluzione per le URI stabili"]
-   id17-->id18["Test dei requsiiti tecnici per l'harvesting degli asset semantici"]
+   id16-->id17["Utilizzo della propria <br/> soluzione per le URI stabili"]
+   id17-->id18["Test dei requsiiti tecnici <br/> per l'harvesting <br/> degli asset semantici"]
    id31--> |No| id42["Valutazione risorse da pubblicare"]
    id42--> id43{"Tipologia risorsa"}
-   id43--> |Risorse con elevato livello di generalità|id44["Riferirsi alle indicazioni nel wiki del repository nazionale"]
-   id43--> |Risorse non caratterizzate da elevato livello di generalità|id46["Modellazione e metadatazione degli asset"]
-   id46-->id47["Predisposizione del repository git"]
-   id47-->id48["Implementazione redirect su URI stabili sotto w3id"]
-   id48-->id49["Test dei requsiiti tecnici per l'harvesting degli asset semantici"]
+   id43--> |Risorse con elevato livello di generalità|id44["Riferirsi alle indicazioni <br/> nel wiki del repository nazionale"]
+   id43--> |Risorse non caratterizzate da elevato livello di generalità|id46["Modellazione e metadatazione <br/> degli asset"]
+   id46-->id47["Predisposizione del <br/> repository git"]
+   id47-->id48["Implementazione redirect <br/> su URI stabili sotto w3id"]
+   id48-->id49["Test dei requsiiti tecnici <br/> per l'harvesting <br/> degli asset semantici"]
    id49-->id50((END))
    id18-->id40((END))
-   id7--> id20((END))
    id11-->id41((END))
    id44-->id45((END))
   end
 
-Diagramma delle attività propedeutiche alla contribuzione
+Diagramma 2 delle attività propedeutiche alla contribuzione
 
 Aggiunta di nuove risorse
 -------------------------
