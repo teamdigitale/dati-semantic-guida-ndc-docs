@@ -229,10 +229,28 @@ seguenti indicazioni:
 Nuovi schemi dati
 -----------------
 
-I nuovi schemi dati devono avere un collegamento con gli asset semantici
-di tipo ontologie e vocabolari controllati, qualora questi esistano in
-schema.gov.it e siano pertinenti rispetto agli attributi dello schema
-dati.
+I nuovi schemi dati devono utilizzare le risorse semantiche, come ontologie e vocabolari controllati,
+qualora siano catalogati in schema.gov.it e siano pertinenti rispetto ai dati descritti dagli schemi.
+
+Da un lato le risorse semantiche sono un valido aiuto per la modellazione degli schemi: è infatti possibile
+creare una descrizione dei dati secondo uno dei formati *linked-data* (ad esempio `JSON-LD <https://json-ld.org/>`__ ), quindi ricavare lo schema sintetizzando
+e semplificando. Si andranno quindi a includere soltanto le componenti variabili e i loro identificativi abbreviati,
+eliminando il più possibile le parti ridondanti e gli annidamenti. In particolare, per i vocabolari
+controllati saranno oggetto di trasferimento soltanto le componenti variabili delle URI.
+
+Se invece si parte da uno schema dati già definito, è importante indicare come poter convertire in modo
+non ambiguo i dati trasferiti dal loro formato al formato *linked-data*.
+
+Siccome le specifiche OpenAPI prevedono che il formato di scambio dati sia JSON, il formato *linked-data* più
+compatibile è JSON-LD, che aggiunge la possibilità di inserire alcune specifiche per la descrizione semantica,
+in particolare:
+
+- il ``@context`` che permette di definire sia le abbreviazioni comuni, che i concetti semantici a cui
+  associare ciascun attributo
+- il ``@type`` che permette di associare a ciascun oggetto il proprio oggetto semantico corrispondente
+
+Inoltre, è possibile definire gli attributi di tipo ``@id`` che fanno riferimento concetti esterni,
+che possono essere altri oggetti o elementi di un vocabolario controllato.
 
 Gli schemi dati per essere sottoposti al processo di harvesting debbono
 contenere due file: il file di metadati in formato ``RDF/Turtle``, e il
@@ -251,7 +269,15 @@ Mentre il file che riporta lo schema del servizio deve avere
 l'estensione ``.yaml`` (se viene utilizzata la versione 3.0 di *OpenAPI* si
 usa ``oas3.yaml``).
 
-Le sezioni principali e obbligatorie all’interno del file che riporta lo
+Il file OpenAPI deve essere compatibile con il `nuovo modello d'Interoperabilità (ModI) <https://www.agid.gov.it/it/infrastrutture/sistema-pubblico-connettivita/il-nuovo-modello-interoperabilita>`__.
+
+Per descrivere le connessioni fra gli schemi dati e il loro equivalente *linked-data*, si utilizzano alcuni attributi
+custom, che vengono derivati dal formato JSON-LD:
+
+- ``x-jsonld-type`` permette di indicare il tipo di oggetto che si sta descrivendo
+- ``x-jsonld-context`` permette di definire il ``@context`` di JSON-LD. Notare che è possibile definire ``@context`` annidati, via via che si esprimono i concetti
+
+In particolare, le sezioni principali e obbligatorie all’interno del file che riporta lo
 schema del servizio sono le seguenti:
 
 - ``info``: le informazioni iniziali riguardanti il titolo (``title``) e la descrizione (``description``) dello schema dati del servizio;
