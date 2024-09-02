@@ -233,15 +233,15 @@ I nuovi schemi dati devono utilizzare le risorse semantiche, come ontologie e vo
 qualora siano catalogati in schema.gov.it e siano pertinenti rispetto ai dati descritti dagli schemi.
 
 Da un lato le risorse semantiche sono un valido aiuto per la modellazione degli schemi: è infatti possibile
-creare una descrizione dei dati secondo uno dei formati *linked-data* (ad esempio `JSON-LD <https://json-ld.org/>`__ ), quindi ricavare lo schema sintetizzando
+creare una descrizione dei dati secondo uno dei formati del paradigma *linked-data* (ad esempio `JSON-LD <https://json-ld.org/>`__ ), quindi ricavare lo schema sintetizzando
 e semplificando. Si andranno quindi a includere soltanto le componenti variabili e i loro identificativi abbreviati,
 eliminando il più possibile le parti ridondanti e gli annidamenti. In particolare, per i vocabolari
 controllati saranno oggetto di trasferimento soltanto le componenti variabili delle URI.
 
 Se invece si parte da uno schema dati già definito, è importante indicare come poter convertire in modo
-non ambiguo i dati trasferiti dal loro formato al formato *linked-data*.
+non ambiguo i dati trasferiti dal loro formato al formato del paradigma *linked-data*.
 
-Siccome le specifiche OpenAPI prevedono che il formato di scambio dati sia JSON, il formato *linked-data* più
+Siccome le specifiche OpenAPI prevedono che il formato di scambio dati sia JSON, il formato del paradigma *linked-data* più
 compatibile è JSON-LD, che aggiunge la possibilità di inserire alcune specifiche per la descrizione semantica,
 in particolare:
 
@@ -271,7 +271,7 @@ usa ``oas3.yaml``).
 
 Il file OpenAPI deve essere compatibile con il `nuovo modello d'Interoperabilità (ModI) <https://www.agid.gov.it/it/infrastrutture/sistema-pubblico-connettivita/il-nuovo-modello-interoperabilita>`__.
 
-Per descrivere le connessioni fra gli schemi dati e il loro equivalente *linked-data*, si utilizzano alcuni attributi
+Per descrivere le connessioni fra gli schemi dati e il loro equivalente nel paradigma *linked-data*, si utilizzano alcuni attributi
 custom, che vengono derivati dal formato JSON-LD:
 
 - ``x-jsonld-type`` permette di indicare il tipo di oggetto che si sta descrivendo
