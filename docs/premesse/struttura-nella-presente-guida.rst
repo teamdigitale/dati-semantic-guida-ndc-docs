@@ -1,4 +1,4 @@
-Struttura nella presente guida
+Struttura della presente guida
 ==============================
 
 La presente guida, dopo una breve introduzione sul ruolo della semantica
@@ -14,7 +14,7 @@ Se sei un Contributore ti consigliamo di leggere approfonditamente
 processo di iscrizione al Catalogo, e il `Manuale operativo <../manuale-operativo.html>`__ 
 per reperire le indicazioni tecniche a supporto dello stesso.
 
-Se sei uno sviluppatore di e-services, un ricercatore o un qualsiasi
+Se sei uno sviluppatore di API/e-services, un ricercatore o un qualsiasi
 utente interessato a fruire dei contenuti semantici ti consigliamo di
 consultare `Come utilizzare le risorse <../come-utilizzare-le-risorse.html>`__.
 
