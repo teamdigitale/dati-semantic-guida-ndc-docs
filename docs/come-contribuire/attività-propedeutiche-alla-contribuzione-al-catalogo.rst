@@ -85,8 +85,8 @@ Il seguente diagramma mostra le ulteriori attività necessarie per poter aggiorn
    id11-->id41([END])
    id44-->id45([END])
   end
-        classDef default stroke:white,color:#fff,clusterBkg:none,fill:#3344d0
-        classDef cluster font-weight:bold, font-size: 11px, fill:none, color:black, stroke:#3344d0, stroke-width:1px
+        classDef default stroke:white,color:#fff,clusterBkg:none,fill:#0066CC
+        classDef cluster font-weight:bold, font-size: 11px, fill:none, color:black, stroke:#0066CC, stroke-width:1px
         classDef subgraph_padding fill:none, stroke:none, opacity:0 
         classDef bounded_context stroke-dasharray:5 5
         linkStyle 0 stroke-width:1px,fill:none,stroke:black, font-size:11px
