@@ -1,8 +1,10 @@
 Indicazioni su aggiornamento di asset semantici esistenti
 =========================================================
 
-Di seguito sono riportate le raccomandazioni in presenza di proposte che
-richiedono modifiche ad asset semantici già esistenti.
+Di seguito sono riportate le raccomandazioni in presenza di proposte, 
+da parte degli utenti, che richiedono modifiche ad asset semantici già esistenti.
+Invece, per la modifica delle proprie risorse da parte dei titolari delle stesse,
+si rinvia al `paragrafo su contribuzione continua al catalogo <../come-contribuire/contribuzione-continua-al-catalogo.html>`__
 
 Modifiche a vocabolari controllati esistenti
 --------------------------------------------
