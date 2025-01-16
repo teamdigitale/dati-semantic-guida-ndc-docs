@@ -172,7 +172,7 @@ per l’aggiunta di nuove risorse sul Catalogo:
         correttezza delle risorse semantiche rispetto ai requisiti
         tecnici per l’harvesting espressi nel `manuale
         operativo <../manuale-operativo.html>`__, è possibile richiedere,
-        utilizzando la mail servicedesk.schema@istat.it, un primo
+        utilizzando la mail info@schema.gov.it, un primo
         aggiornamento nell’ambiente di test del Catalogo e, al termine
         della fase di test, richiedere l’harvesting in produzione.
 
@@ -193,7 +193,7 @@ per l’aggiunta di nuove risorse sul Catalogo:
 - Se vuoi **chiedere semantic stewardship a Istat**:
 
    * Invia una richiesta di contribuzione al Catalogo utilizzando la
-     mail servicedesk-schema@istat.it.
+     mail info@schema.gov.it.
 
 Richiesta di modifica di risorse già in Catalogo
 ------------------------------------------------
