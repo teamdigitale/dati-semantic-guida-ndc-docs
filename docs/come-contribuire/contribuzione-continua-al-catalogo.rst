@@ -22,7 +22,7 @@ raccolte nel Catalogo.
 
 Per le modifiche alle proprie risorse, al fine di agevolare il processo 
 di caricamento tramite l’harvester su Schema.gov.it, il Titolare provvede
-a darne preventiva comunicazione a servicedesk-schema@istat.it 10 giorni 
+a darne preventiva comunicazione a info@schema.gov.it 10 giorni 
 prima della data prevista per il caricamento nel proprio repository al 
 fine di consentire l’effettuazione di test di verifica da parte degli 
 Amministratori.
