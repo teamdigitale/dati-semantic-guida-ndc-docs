@@ -36,7 +36,7 @@ A tal fine, il Contributore può scegliere una tra le seguenti opzioni:
       soluzioni di content negotiation e URI dereferentiation già
       incluse. La scelta del dominio ``w3id.org/italia`` comporta, inoltre,
       necessariamente l’archiviazione delle proprie risorse semantiche
-      nell'`apposito repository <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
+      nell'`apposito repository <https://github.com/italia/dati-semantic-assets>`__
       gestito dal DTD; dunque, ogni operazione (inserimento,
       aggiornamento, modifica) da compiersi in tale repository github è
       subordinata all’approvazione dei suoi amministratori. Questa
