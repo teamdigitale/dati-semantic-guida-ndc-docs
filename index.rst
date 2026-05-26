@@ -19,13 +19,13 @@ La guida è aggiornata a Giugno 2024
   :maxdepth: 3
   :numbered:
 
-  docs/premesse.rst
-  docs/funzionamento-generale.rst
-  docs/come-contribuire.rst
-  docs/come-utilizzare-le-risorse.rst
-  docs/manuale-operativo.rst
+  premesse.rst
+  funzionamento-generale.rst
+  come-contribuire.rst
+  come-utilizzare-le-risorse.rst
+  manuale-operativo.rst
   
 .. toctree::
   :name: content_toc
   
-  docs/credits.rst
+  credits.rst
