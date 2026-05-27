@@ -1,8 +1,7 @@
 document:
-  name: Catalogo Nazionale Dati per l'Interoperabilità Semantica
+  name: Guida al Catalogo nazionale della semantica dei dati
 
-  description: |-
-      Catalogo Nazionale Dati per l'Interoperabilità Semantica
+  description: Questa guida raccoglie indicazioni per le Pubbliche Amministrazioni per consultare e contribuire ai contenuti semantici del Catalogo schema.gov.it
   tags:
     - interoperabilità
     - API
