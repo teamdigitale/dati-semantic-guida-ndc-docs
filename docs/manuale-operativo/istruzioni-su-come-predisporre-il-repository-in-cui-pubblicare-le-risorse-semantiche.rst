@@ -17,6 +17,27 @@ dell’esecuzione dei controlli di qualità propedeutici alla richiesta di
 iscrizione al Catalogo. Per ulteriori approfondimenti, è possibile far
 riferimento al **file readme del cookiecutter**, nel paragrafo **Controlli Automatici e Test**.
 
+Nel caso in cui il Contributore utilizzi Github per il proprio repository,
+potrà beneficiare di una funzionalità di apertura automatica di issue
+contenenti informazioni utili su eventuali errori di validazione
+riscontrati durante l'harvesting delle proprie risorse semantiche.
+Se interessato, il Contributore dovrà:
+
+- verificare che la funzionalità "Issues" sia attiva sul proprio repository;
+
+- aggiungere nel file ``README.md`` del proprio repository una sezione "Maintainers"
+  in cui elencare, rispettando il seguente template, i maintainers del repository.
+
+::
+   
+   ## Maintainers 
+   - Mario Rossi: git (mariorossi) - email (mariorossi@mail.it) 
+   - Giovanni Verdi: git (giovanniverdi) - email (giovanniverdi@mail.it) 
+
+A questo punto, nel caso in cui si verifichino errori di validazione durante
+l'harvesting delle proprie risorse semantiche, verranno aperte delle issue
+che conterrano il tag ai maintainers del repository indicati nel ``README.md``.
+
 I principali controlli implementati nel template sono descritti nelle
 successive sotto-sezioni.
 
