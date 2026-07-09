@@ -120,7 +120,7 @@ per l’aggiunta di nuove risorse sul Catalogo:
      URI sotto ``w3id.org/italia``, beneficiando dei meccanismi di *URI
      dereferentiation* e *Content Negotiation* già implementate. A tale
      scopo, fai riferimento alle istruzioni contenute nel `repository
-     Italia <https://github.com/italia/daf-ontologie-vocabolari-controllati>`__
+     Italia <https://github.com/italia/dati-semantic-assets>`__
      e alle indicazioni rese disponibili nel 
      `manuale operativo <../manuale-operativo/indicazioni-su-modellazione-e-metadatazione-degli-asset-semantici.html>`__
      su come modellare e metadatare le risorse.
